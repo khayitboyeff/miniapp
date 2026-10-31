@@ -38,7 +38,9 @@ async function api(path, body) {
     : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   const data = await res.json().catch(() => ({}));
   if (!res.ok) {
-    throw new Error(typeof data.detail === 'string' ? data.detail : 'Serverda xatolik yuz berdi.');
+    const err = new Error(typeof data.detail === 'string' ? data.detail : 'Serverda xatolik yuz berdi.');
+    err.status = res.status;
+    throw err;
   }
   return data;
 }
@@ -224,6 +226,8 @@ export default function App() {
   const [examResult, setExamResult] = useState(null);
 
   const [practice, setPractice] = useState(null);
+  const [practiceLocked, setPracticeLocked] = useState(false);
+  const [buying, setBuying] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(null);
   const [practiceAnswers, setPracticeAnswers] = useState({});
   const [practiceDone, setPracticeDone] = useState(() => readStore('aifc-practice-done') || {});
@@ -367,9 +371,31 @@ export default function App() {
     if (!practice && user) {
       try {
         setPractice(await api(`/api/practice?telegram_id=${encodeURIComponent(user.telegram_id)}&init_data=${encodeURIComponent(tgApp?.initData || '')}`));
+        setPracticeLocked(false);
       } catch (e) {
-        setError(e.message);
+        if (e.status === 402) setPracticeLocked(true);
+        else setError(e.message);
       }
+    }
+  }
+
+  async function buyPractice() {
+    if (!user) return;
+    setBuying(true);
+    setError('');
+    try {
+      const { url } = await api('/api/practice/invoice', { telegram_id: user.telegram_id, init_data: tgApp?.initData || null });
+      if (tgApp?.openInvoice) {
+        tgApp.openInvoice(url, (status) => {
+          if (status === 'paid') openPractice();
+        });
+      } else {
+        window.open(url, '_blank');
+      }
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBuying(false);
     }
   }
 
@@ -732,7 +758,17 @@ export default function App() {
             <h2 className="text-xl font-bold">Amaliy loyiha — 2-bosqich</h2>
             <p className="mb-5 mt-1 text-sm text-zinc-500">Har bir darsni o'z kompyuteringizda bajaring. Mini-testni to'g'ri yechsangiz, dars tugallangan hisoblanadi.</p>
 
-            {!practice ? (
+            {practiceLocked ? (
+              <div className={`${card} p-5`}>
+                <p className="font-semibold">2-bosqich pullik</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  40 ta amaliy dars va mini-testlar. To'lov Telegram Stars orqali amalga oshiriladi.
+                </p>
+                <button onClick={buyPractice} disabled={buying} className={`${btnPrimary} mt-4`}>
+                  <Icon name="zap" className="h-4 w-4" /> {buying ? 'Yuklanmoqda…' : "Sotib olish"}
+                </button>
+              </div>
+            ) : !practice ? (
               <p className="text-sm text-zinc-500">Yuklanmoqda…</p>
             ) : (
               <div className="space-y-4">

@@ -15,6 +15,7 @@ DB_PATH = Path(os.getenv("DATABASE_PATH") or (ROOT / "ai_course.db"))
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
 TG_WEBHOOK_SECRET = os.getenv("TG_WEBHOOK_SECRET", "").strip()
 WEBAPP_URL = os.getenv("WEBAPP_URL", "").strip()
+PRACTICE_PRICE_STARS = int(os.getenv("PRACTICE_PRICE_STARS", "300") or 300)
 FRONTEND_ORIGINS = [x.strip() for x in os.getenv("FRONTEND_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if x.strip()]
 LESSONS = json.loads((ROOT / "course.json").read_text(encoding="utf-8"))
 FINAL_QUESTIONS = json.loads((ROOT / "final_exam.json").read_text(encoding="utf-8"))
@@ -56,6 +57,10 @@ def init_db():
           id INTEGER PRIMARY KEY AUTOINCREMENT, telegram_id TEXT NOT NULL REFERENCES users(telegram_id),
           score INTEGER NOT NULL, total INTEGER NOT NULL, xp_earned INTEGER NOT NULL,
           certificate TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        );
+        CREATE TABLE IF NOT EXISTS payments (
+          charge_id TEXT PRIMARY KEY, telegram_id TEXT NOT NULL,
+          amount INTEGER NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
         );
         """)
 init_db()
@@ -195,7 +200,14 @@ def exam_questions():
 
 @app.get("/api/practice")
 def practice(telegram_id: str, init_data: Optional[str] = None):
-    # Amaliy darslar matni umumiy, foydalanuvchiga bog'liq emas: initData talab qilinmaydi
+    # 2-bosqich pullik: faqat to'lov qilgan foydalanuvchi ko'ra oladi
+    if BOT_TOKEN:
+        if verify_init_data(init_data) != telegram_id:
+            raise HTTPException(403, "Telegram foydalanuvchi identifikatori mos emas.")
+        with connect() as con:
+            paid = con.execute("SELECT 1 FROM payments WHERE telegram_id=? LIMIT 1", (telegram_id,)).fetchone()
+        if not paid:
+            raise HTTPException(402, "2-bosqich pullik.")
     return [{"id":p["id"],"title":p["title"],"goal":p["goal"],"tool":p["tool"],"steps":p["steps"],
              "checkpoint":p["checkpoint"],
              "quiz":[{"question":q["question"],"options":q["options"],"correct":q["correct"],"explanation":q["explanation"]} for q in p["quiz"]]}
@@ -206,6 +218,26 @@ def leaderboard():
     with connect() as con:
         rows=con.execute("SELECT full_name name,xp,coins,current_level level FROM users ORDER BY xp DESC, coins DESC LIMIT 50").fetchall()
         return [dict(r) for r in rows]
+
+class InvoiceIn(BaseModel):
+    telegram_id: str = Field(min_length=1, max_length=64)
+    init_data: Optional[str] = None
+
+@app.post("/api/practice/invoice")
+def practice_invoice(data: InvoiceIn):
+    if not BOT_TOKEN:
+        raise HTTPException(503, "To'lov sozlanmagan.")
+    if verify_init_data(data.init_data) != data.telegram_id:
+        raise HTTPException(403, "Telegram foydalanuvchi identifikatori mos emas.")
+    res = tg_call("createInvoiceLink", {
+        "title": "AI Full Course — 2-bosqich",
+        "description": "Amaliy loyiha: 40 ta amaliy dars va mini-testlar",
+        "payload": f"practice:{data.telegram_id}",
+        "provider_token": "",
+        "currency": "XTR",
+        "prices": [{"label": "2-bosqich", "amount": PRACTICE_PRICE_STARS}],
+    })
+    return {"url": res["result"]}
 
 def tg_call(method: str, payload: dict):
     req = urllib.request.Request(
@@ -221,9 +253,23 @@ def tg_webhook(update: dict, x_telegram_bot_api_secret_token: Optional[str] = He
     # Telegram har bir xabarni shu manzilga yuboradi (setWebhook orqali ulanadi)
     if not TG_WEBHOOK_SECRET or x_telegram_bot_api_secret_token != TG_WEBHOOK_SECRET:
         raise HTTPException(403, "Ruxsat yo'q.")
+    pcq = update.get("pre_checkout_query")
+    if pcq:
+        # Telegram Stars to'lovini tasdiqlash (10 soniya ichida javob kerak)
+        tg_call("answerPreCheckoutQuery", {"pre_checkout_query_id": pcq["id"], "ok": True})
+        return {"ok": True}
     msg = update.get("message") or {}
     chat_id = (msg.get("chat") or {}).get("id")
     text = (msg.get("text") or "").strip()
+    payment = msg.get("successful_payment")
+    if payment and str(payment.get("invoice_payload", "")).startswith("practice:"):
+        tid = payment["invoice_payload"].split(":", 1)[1]
+        with connect() as con:
+            con.execute("INSERT OR IGNORE INTO payments(charge_id,telegram_id,amount) VALUES(?,?,?)",
+                        (payment["telegram_payment_charge_id"], tid, payment.get("total_amount", 0)))
+        if chat_id:
+            tg_call("sendMessage", {"chat_id": chat_id, "text": "To'lov qabul qilindi! 2-bosqich ochildi. Ilovani qayta oching."})
+        return {"ok": True}
     if chat_id and text.startswith("/start") and WEBAPP_URL.startswith("https://") and BOT_TOKEN:
         tg_call("sendMessage", {
             "chat_id": chat_id,
