@@ -195,7 +195,7 @@ def exam_questions():
 
 @app.get("/api/practice")
 def practice(telegram_id: str, init_data: Optional[str] = None):
-    # Amaliy darslar matni umumiy, foydalanuvchiga bog'liq emas: initData talab qilinmaydi
+    require_self(init_data, telegram_id)
     return [{"id":p["id"],"title":p["title"],"goal":p["goal"],"tool":p["tool"],"steps":p["steps"],
              "checkpoint":p["checkpoint"],
              "quiz":[{"question":q["question"],"options":q["options"],"correct":q["correct"],"explanation":q["explanation"]} for q in p["quiz"]]}
@@ -228,12 +228,12 @@ def tg_webhook(update: dict, x_telegram_bot_api_secret_token: Optional[str] = He
         tg_call("sendMessage", {
             "chat_id": chat_id,
             "text": "AI Full Course ga xush kelibsiz! Kursni boshlash uchun tugmani bosing.",
-            "reply_markup": {"inline_keyboard": [[{"text": "Kursni boshlash", "web_app": {"url": WEBAPP_URL}}]]},
+            "reply_markup": {"inline_keyboard": [[{"text": "Kursni boshlash", "web_app": {"url": WEBAPP_URL}}], [{"text": "AI Plan", "url": "https://ai-plan.onrender.com/chat"}]]},
         })
     return {"ok": True}
 
 # Frontend build (backend/static) bitta hostingda API bilan birga xizmat qiladi.
 # Bu qator eng oxirida turadi, shuning uchun /api manzillari avval ishlaydi.
-STATIC_DIR = ROOT / "dist"
+STATIC_DIR = ROOT / "static"
 if STATIC_DIR.exists():
     app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="site")
