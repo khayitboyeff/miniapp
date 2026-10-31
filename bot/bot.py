@@ -20,7 +20,7 @@ async def start(message: Message):
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="Kursni boshlash", web_app=WebAppInfo(url=WEBAPP_URL))],
-            [InlineKeyboardButton(text="AI Plan", url="https://ai-plan.onrender.com/chat")],
+            [InlineKeyboardButton(text="AI Chat", url="https://ai-plan.onrender.com/chat")],
         ]
     )
     await message.answer(
