@@ -1,4 +1,4 @@
-import hashlib, hmac, json, os, sqlite3, time
+import hashlib, hmac, json, os, sqlite3, time, urllib.request
 from contextlib import contextmanager
 from urllib.parse import parse_qsl
 from pathlib import Path
@@ -6,12 +6,15 @@ from dotenv import load_dotenv
 from typing import Optional
 from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT.parent / '.env')
 DB_PATH = Path(os.getenv("DATABASE_PATH") or (ROOT / "ai_course.db"))
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+TG_WEBHOOK_SECRET = os.getenv("TG_WEBHOOK_SECRET", "").strip()
+WEBAPP_URL = os.getenv("WEBAPP_URL", "").strip()
 FRONTEND_ORIGINS = [x.strip() for x in os.getenv("FRONTEND_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if x.strip()]
 LESSONS = json.loads((ROOT / "course.json").read_text(encoding="utf-8"))
 FINAL_QUESTIONS = json.loads((ROOT / "final_exam.json").read_text(encoding="utf-8"))
@@ -78,6 +81,13 @@ def verify_init_data(init_data: Optional[str]):
     except Exception:
         raise HTTPException(401, "Telegram sessiyasi tasdiqlanmadi.")
 
+def require_self(init_data: Optional[str], telegram_id: str):
+    # BOT_TOKEN bo'lsa, faqat o'z Telegram hisobining ma'lumotini ko'rsatadi
+    if not BOT_TOKEN:
+        return
+    if verify_init_data(init_data) != telegram_id:
+        raise HTTPException(403, "Bu ma'lumotga ruxsat yo'q.")
+
 class UserIn(BaseModel):
     telegram_id: str = Field(min_length=1, max_length=64)
     full_name: str = Field(min_length=1, max_length=120)
@@ -125,7 +135,8 @@ def get_user_data(con, tid):
             "certificate":best_cert}
 
 @app.get("/api/users/{telegram_id}")
-def get_user(telegram_id: str):
+def get_user(telegram_id: str, init_data: Optional[str] = None):
+    require_self(init_data, telegram_id)
     with connect() as con: return get_user_data(con, telegram_id)
 
 @app.post("/api/progress")
@@ -183,8 +194,8 @@ def exam_questions():
     return [{"id":q["id"],"question":q["question"],"options":q["options"]} for q in FINAL_QUESTIONS]
 
 @app.get("/api/practice")
-def practice(telegram_id: str):
-    # 2-bosqich hamma foydalanuvchilarga ochiq
+def practice(telegram_id: str, init_data: Optional[str] = None):
+    require_self(init_data, telegram_id)
     return [{"id":p["id"],"title":p["title"],"goal":p["goal"],"tool":p["tool"],"steps":p["steps"],
              "checkpoint":p["checkpoint"],
              "quiz":[{"question":q["question"],"options":q["options"],"correct":q["correct"],"explanation":q["explanation"]} for q in p["quiz"]]}
@@ -195,3 +206,34 @@ def leaderboard():
     with connect() as con:
         rows=con.execute("SELECT full_name name,xp,coins,current_level level FROM users ORDER BY xp DESC, coins DESC LIMIT 50").fetchall()
         return [dict(r) for r in rows]
+
+def tg_call(method: str, payload: dict):
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{BOT_TOKEN}/{method}",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=10) as r:
+        return json.loads(r.read())
+
+@app.post("/api/tg-webhook")
+def tg_webhook(update: dict, x_telegram_bot_api_secret_token: Optional[str] = Header(None)):
+    # Telegram har bir xabarni shu manzilga yuboradi (setWebhook orqali ulanadi)
+    if not TG_WEBHOOK_SECRET or x_telegram_bot_api_secret_token != TG_WEBHOOK_SECRET:
+        raise HTTPException(403, "Ruxsat yo'q.")
+    msg = update.get("message") or {}
+    chat_id = (msg.get("chat") or {}).get("id")
+    text = (msg.get("text") or "").strip()
+    if chat_id and text.startswith("/start") and WEBAPP_URL.startswith("https://") and BOT_TOKEN:
+        tg_call("sendMessage", {
+            "chat_id": chat_id,
+            "text": "AI Full Course ga xush kelibsiz! Kursni boshlash uchun tugmani bosing.",
+            "reply_markup": {"inline_keyboard": [[{"text": "Kursni boshlash", "web_app": {"url": WEBAPP_URL}}]]},
+        })
+    return {"ok": True}
+
+# Frontend build (backend/static) bitta hostingda API bilan birga xizmat qiladi.
+# Bu qator eng oxirida turadi, shuning uchun /api manzillari avval ishlaydi.
+STATIC_DIR = ROOT / "dist"
+if STATIC_DIR.exists():
+    app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="site")
