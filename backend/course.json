@@ -1,0 +1,3302 @@
+[
+  {
+    "id": 1,
+    "title": "AI nima va uning tarixi",
+    "subtitle": "Kirish: AI nima?",
+    "slides": [
+      {
+        "title": "Kirish: AI nima?",
+        "text": "Sun'iy intellekt (AI) — mashinalarga o'rganish, mulohaza yuritish va tilni tushunish kabi aqliy vazifalarni bajarish imkonini beruvchi fan yo'nalishi.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Asosiy yo'nalishlar",
+        "text": "• Mashinali o'qitish (ML) — ma'lumotlardan qoidalarni o'zi topadi.\n• Chuqur o'rganish (Deep Learning) — ko'p qatlamli neyron tarmoqlar.\n• Generativ AI — matn, tasvir va kod yaratadi.",
+        "icon": "🧠"
+      },
+      {
+        "title": "Muhim xulosa",
+        "text": "AI 'aql egasi' emas: u katta ma'lumotlardagi statistik naqshlarni o'rganadi. Shuning uchun sifatli ma'lumot va aniq maqsad hal qiluvchi ahamiyatga ega.",
+        "icon": "🔑"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Sun'iy intellekt nima?",
+        "options": [
+          "Faqat robotlarni yasash fani",
+          "Mashinalarga aqliy vazifalarni bajarish imkonini beruvchi fan yo'nalishi",
+          "Internet tezligini oshirish texnologiyasi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. AI — o'rganish, mulohaza va tilni tushunish kabi vazifalarni qamrab oluvchi keng soha. Robotika esa uning faqat bir qismi."
+      },
+      {
+        "question": "Mashinali o'qitish (ML) nimaga asoslanadi?",
+        "options": [
+          "Qat'iy yozilgan qoidalar ro'yxatiga",
+          "Tasodifiy taxminlarga",
+          "Ma'lumotlardan naqsh (pattern) o'rganishga"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. ML algoritmi misollardan qonuniyatni o'zi topadi; qoidalarni inson qo'lda yozmaydi."
+      },
+      {
+        "question": "Quyidagilardan qaysi biri generativ AI ga misol?",
+        "options": [
+          "Yangi matn yoki tasvir yaratuvchi model",
+          "Spam filtri (faqat tasniflaydi)",
+          "Oddiy kalkulyator"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Generativ model yangi kontent yaratadi; spam filtri esa faqat xabarni turkumlaydi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 2,
+    "title": "Mashinali o'qitish asoslari",
+    "subtitle": "ML nima va nega kerak?",
+    "slides": [
+      {
+        "title": "ML nima va nega kerak?",
+        "text": "Mashinali o'qitish (ML) — dasturchi har bir qoidani qo'lda yozmasdan, kompyuter ma'lumotlardan qonuniyatni o'zi topadi.\n\nAn'anaviy dasturlashda: qoida + ma'lumot → natija. ML da esa: ma'lumot + natija → qoida (model).\n\nMisol: spam filtrini barcha so'zlarni qo'lda sanab yozish o'rniga, minglab spam va oddiy xatlardan o'rgatish.",
+        "icon": "🤖"
+      },
+      {
+        "title": "Model, parametr va hyperparametr",
+        "text": "Model — ma'lumotlardan o'rgangan matematik funksiya.\n\nParametrlar (og'irliklar) o'qitish davomida o'zgaradi.\n\nHyperparametrlar (o'rganish tezligi, qatlamlar soni) esa o'qitishdan oldin inson tomonidan belgilanadi.\n\nBu farqni bilish sozlash jarayonini tushunishning asosi.",
+        "icon": "📐"
+      },
+      {
+        "title": "ML jarayonining bosqichlari",
+        "text": "1) Ma'lumot yig'ish va tozalash.\n2) Xususiyatlarni tanlash.\n3) Modelni tanlash va o'qitish.\n4) Yangi ma'lumotda baholash.\n5) Joylashtirish va kuzatish.\n\nEng ko'p vaqt odatda birinchi bosqichga ketadi: ma'lumot sifati model sifatini belgilaydi.",
+        "icon": "⚙️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Mashinali o'qitishda model nimaga asoslanib qoida o'rganadi?",
+        "options": [
+          "Dasturchi yozgan aniq qoidalarga",
+          "Tasodifiy sonlarga",
+          "Ma'lumotlardagi qonuniyatlarga"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. ML algoritmi misollardan naqsh (qonuniyat)ni o'zi topadi; qoidalarni inson qo'lda yozmaydi."
+      },
+      {
+        "question": "Model o'qitish jarayonida nimalar o'zgaradi?",
+        "options": [
+          "Parametrlar (og'irliklar)",
+          "Hyperparametrlar",
+          "Ma'lumotlar manbasi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Og'irliklar o'qitish davomida yangilanadi. Hyperparametrlar esa o'qitishdan oldin o'rnatiladi."
+      },
+      {
+        "question": "ML jarayonida odatda eng ko'p vaqt qaysi bosqichga ketadi?",
+        "options": [
+          "Modelni serverga joylashtirishga",
+          "Ma'lumot yig'ish va tozalashga",
+          "Natijani chop etishga"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Ma'lumot sifati model sifatini belgilaydi, shuning uchun uni yig'ish va tozalash ko'p vaqt oladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 3,
+    "title": "Nazoratli o'qitish",
+    "subtitle": "Label bilan o'qitish",
+    "slides": [
+      {
+        "title": "Label bilan o'qitish",
+        "text": "Nazoratli o'qitish (supervised learning) da har bir kirish misoli uchun to'g'ri javob — label beriladi.\n\nModel kirish (X) va chiqish (y) o'rtasidagi bog'liqlikni o'rganadi.\n\nMisol: uy xususiyatlari (maydon, xonalar soni) → narx.",
+        "icon": "🏷️"
+      },
+      {
+        "title": "Regressiya va tasniflash",
+        "text": "Regressiya — uzluksiz son bashorat qilish (narx, harorat).\n\nTasniflash — kategoriya tanlash (spam yoki oddiy xat, kasal yoki sog'lom).\n\nIkkalasi ham nazoratli o'qitishning asosiy turlari.",
+        "icon": "📊"
+      },
+      {
+        "title": "Cheklovlar",
+        "text": "Yorliqlar to'plash qimmat bo'lishi mumkin.\n\nYorliqlar noto'g'ri bo'lsa, model ham xato o'rganadi.\n\nQoida: 'Chiqindi kirsa, chiqindi chiqadi' (garbage in, garbage out). Shu sababli yorliqlar sifatini tekshirish muhim.",
+        "icon": "⚠️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Nazoratli o'qitishda 'label' nima?",
+        "options": [
+          "Har bir misol uchun to'g'ri javob",
+          "Modelning nomi",
+          "Ma'lumotlar bazasi jadvali"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Label — o'qitish uchun berilgan to'g'ri javob; model undan o'rganadi."
+      },
+      {
+        "question": "Uy narxini bashorat qilish qaysi turga kiradi?",
+        "options": [
+          "Klasterlash",
+          "Regressiya",
+          "Mustahkamlovchi o'qitish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Narx uzluksiz son bo'lgani uchun bu regressiya masalasi."
+      },
+      {
+        "question": "Xato yorliqlar bilan o'qitilgan model qanday bo'ladi?",
+        "options": [
+          "Har doim yaxshi natija beradi",
+          "Faqat tasvirlar bilan ishlaydi",
+          "Xato yorliqlarni o'rganib, noto'g'ri bashorat qiladi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Model berilgan yorliqlardan o'rganadi, shuning uchun ularning xatosi ham modelga o'tadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 4,
+    "title": "Nazoratsiz o'qitish",
+    "subtitle": "Yorliqsiz ma'lumot",
+    "slides": [
+      {
+        "title": "Yorliqsiz ma'lumot",
+        "text": "Nazoratsiz o'qitish (unsupervised learning) da ma'lumotda javob (label) yo'q.\n\nModel ma'lumotdagi yashirin tuzilma, guruh va naqshlarni o'zi topadi.\n\nMisol: mijozlarni xarid odatlariga qarab guruhlash.",
+        "icon": "🔍"
+      },
+      {
+        "title": "Asosiy vazifalar",
+        "text": "• Klasterlash — o'xshash obyektlarni guruhlash (masalan, K-means).\n• O'lchamni kamaytirish — PCA kabi usullar bilan muhim axborotni saqlab, xususiyatlar sonini kamaytirish.\n• Anomaliyalarni aniqlash — odatdan tashqari hodisalarni topish.",
+        "icon": "🧩"
+      },
+      {
+        "title": "Natijani baholash",
+        "text": "Yorliq bo'lmagani uchun aniqlik (accuracy) kabi standart metrikalar to'g'ridan-to'g'ri ishlamaydi.\n\nNatija ko'pincha inson tomonidan talqin qilinadi yoki ichki sifat ko'rsatkichlari (masalan, silhouette) bilan o'lchanadi.",
+        "icon": "🎯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Nazoratsiz o'qitishda nima bo'lmaydi?",
+        "options": [
+          "Ma'lumot",
+          "Label (to'g'ri javob)",
+          "Algoritm"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Nazoratsiz o'qitishda ma'lumotda label bo'lmaydi; model tuzilmani o'zi izlaydi."
+      },
+      {
+        "question": "Klasterlash nima qiladi?",
+        "options": [
+          "Yangi tasvir yaratadi",
+          "Narxni bashorat qiladi",
+          "O'xshash obyektlarni guruhlaydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Klasterlash bir-biriga o'xshash obyektlarni bir guruhga jamlaydi."
+      },
+      {
+        "question": "Quyidagilardan qaysi biri nazoratsiz o'qitish vazifasi?",
+        "options": [
+          "Mijozlarni xarid odatlari bo'yicha guruhlash",
+          "Email spam ekanini aniqlash (yorliqli ma'lumot bilan)",
+          "Harorat prognozi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Guruhlash yorliqsiz ishlaydi. B va C vazifalari yorliqli ma'lumotni talab qiladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 5,
+    "title": "Mustahkamlovchi o'qitish",
+    "subtitle": "Agent va muhit",
+    "slides": [
+      {
+        "title": "Agent va muhit",
+        "text": "Mustahkamlovchi o'qitish (RL) da agent muhitda harakat qiladi va har bir harakat uchun mukofot (reward) yoki jazo oladi.\n\nMaqsad — uzoq muddatli umumiy mukofotni maksimallashtirish.\n\nMisol: o'yin o'ynash, robot yurishi, reklama byudjetini taqsimlash.",
+        "icon": "🎮"
+      },
+      {
+        "title": "Sinov va xato tsikli",
+        "text": "Agent holatni kuzatadi, harakat tanlaydi, mukofot oladi va yangi holatga o'tadi. Bu tsikl ko'p marta takrorlanadi.\n\nMuhim tushuncha: eng katta darhol mukofot har doim ham eng yaxshi uzoq muddatli strategiya emas.",
+        "icon": "🔁"
+      },
+      {
+        "title": "Policy va exploration",
+        "text": "Policy — agentning har bir holatda harakat tanlash qoidasi.\n\nExploration — yangi harakatlarni sinab ko'rish; exploitation — ma'lum eng yaxshi harakatni tanlash.\n\nIkkalasi o'rtasida muvozanat bo'lishi kerak: faqat sinash ham, faqat tanlash ham yomon natija beradi.",
+        "icon": "📜"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "RL da agent nimani maksimallashtirishga harakat qiladi?",
+        "options": [
+          "Xatolar sonini",
+          "Ma'lumotlar hajmini",
+          "Uzoq muddatli umumiy mukofotni"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Agent kelajakdagi umumiy mukofotni maksimal qiluvchi strategiyani izlaydi."
+      },
+      {
+        "question": "Policy nima?",
+        "options": [
+          "Har bir holatda harakat tanlash strategiyasi",
+          "Muhitning modeli",
+          "Mukofot miqdori"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Policy agent xulq-atvorini belgilaydi: qaysi holatda qaysi harakat tanlanadi."
+      },
+      {
+        "question": "Exploration nima?",
+        "options": [
+          "Ma'lum eng yaxshi harakatni doim tanlash",
+          "Yangi harakatlarni sinab ko'rish",
+          "Modelni o'chirish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Exploration yangi imkoniyatlarni kashf etish, ya'ni yaxshiroq strategiyani topish uchun kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 6,
+    "title": "Ma'lumotlarni tayyorlash",
+    "subtitle": "Ma'lumotni tozalash",
+    "slides": [
+      {
+        "title": "Ma'lumotni tozalash",
+        "text": "Real ma'lumotlarda bo'sh qiymatlar, dublikatlar va xato yozuvlar uchraydi. Ularni tozalamasdan o'qitish natijani buzadi.\n\nBo'sh qiymatlarni o'rtacha yoki mediana bilan to'ldirish, yoki qatorni olib tashlash mumkin.",
+        "icon": "🧹"
+      },
+      {
+        "title": "Normallashtirish va kodlash",
+        "text": "Har xil shkaladagi raqamlarni (masalan, yosh 0–100, daromad 0–10⁹) bir xil oraliqqa keltirish — normallashtirish (scaling).\n\nKategoriya matnlarini raqamga aylantirish — kodlash (encoding), masalan one-hot usuli.\n\nBu ko'pgina algoritmlar uchun zarur.",
+        "icon": "⚖️"
+      },
+      {
+        "title": "Xavfli xato",
+        "text": "Ma'lumotni bo'lishdan oldin normallashtirish yoki bo'sh qiymatlarni butun ma'lumot bo'yicha hisoblash — data leakage (ma'lumot oqishi) ga olib keladi.\n\nTo'g'ri tartib: avval bo'lish, keyin tayyorlash (faqat train bo'yicha hisoblab, test'ga qo'llash).",
+        "icon": "🚫"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Bo'sh qiymatlar (missing values) bilan nima qilish mumkin?",
+        "options": [
+          "O'rtacha yoki mediana bilan to'ldirish, yoki qatorni olib tashlash",
+          "Hech qachon tegmaslik kerak",
+          "Modelni faqat ularda o'qitish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Bo'sh qiymatlarni to'ldirish yoki qatorni olib tashlash odatiy yechimlar."
+      },
+      {
+        "question": "One-hot encoding nima uchun ishlatiladi?",
+        "options": [
+          "Raqamni matnga aylantirish",
+          "Kategoriya qiymatlarini raqamli vektorga aylantirish",
+          "Tasvirni siqish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Model matnni emas, raqamni tushunadi; one-hot har bir kategoriyani 0/1 vektor qiladi."
+      },
+      {
+        "question": "Nega ma'lumotni bo'lishdan oldin normallashtirish xato?",
+        "options": [
+          "Tezlikni pasaytiradi",
+          "Hajmni oshiradi",
+          "Test ma'lumoti haqidagi axborot o'qitishga oqib kiradi (data leakage)"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Statistikani butun ma'lumotdan olsak, test haqidagi ma'lumot modelga oldindan yetib boradi va baho noto'g'ri chiqadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 7,
+    "title": "Feature engineering",
+    "subtitle": "Xususiyat nima?",
+    "slides": [
+      {
+        "title": "Xususiyat nima?",
+        "text": "Feature — modelga beriladigan o'lchanadigan belgi.\n\nXom ma'lumotdan yangi, foydali xususiyatlar yaratish feature engineering deyiladi.\n\nMisol: 'tug'ilgan sana' o'rniga 'yosh' yoki 'hafta kuni' xususiyatlarini berish.",
+        "icon": "🛠️"
+      },
+      {
+        "title": "Asosiy usullar",
+        "text": "• Kombinatsiya: ikki ustunni birlashtirish yoki nisbat olish (masalan, narx / maydon).\n• Sanadan ajratish: oy, hafta kuni, bayram belgisi.\n• Logarifm yoki kvadrat kabi o'zgartirishlar: tarqalishni yaxshilaydi.\n• Matnni son ko'rinishida ifodalash.",
+        "icon": "➕"
+      },
+      {
+        "title": "Domen bilimi kalit",
+        "text": "Eng kuchli xususiyatlar ko'pincha soha mutaxassisidan keladi.\n\nAmmo har bir yangi xususiyat ortiqcha moslashish (overfitting) xavfini oshirishi mumkin, shuning uchun ularning foydasini validation'da tekshirish kerak.",
+        "icon": "🎯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Feature engineering nima?",
+        "options": [
+          "Modelni serverga joylashtirish",
+          "Xom ma'lumotdan foydali xususiyatlar yaratish",
+          "Modelni tezroq ishlatish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Feature engineering — modelga eng foydali belgilarni tayyorlash jarayoni."
+      },
+      {
+        "question": "Tug'ilgan sanadan 'yosh' xususiyatini yaratish qaysi usul?",
+        "options": [
+          "Dropout",
+          "Normallashtirish",
+          "Sanadan ajratish va hisoblash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Sanani hozirgi sana bilan solishtirib, yosh kabi yangi belgi hosil qilinadi."
+      },
+      {
+        "question": "Nega yangi xususiyatlarni tekshirish kerak?",
+        "options": [
+          "Ortiqcha xususiyatlar overfitting xavfini oshirishi mumkin",
+          "Ular har doim modelni sekinlashtiradi",
+          "Ular modelni o'chirib qo'yadi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Ko'p yoki keraksiz xususiyatlar model o'quv ma'lumotiga haddan ortiq moslashishiga olib kelishi mumkin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 8,
+    "title": "Train / validation / test",
+    "subtitle": "Uch to'plam",
+    "slides": [
+      {
+        "title": "Uch to'plam",
+        "text": "Train — modelni o'rgatish uchun.\n\nValidation — giperparametrlarni va model tanlovini sozlash uchun.\n\nTest — yakuniy, kam marta ishlatiladigan baholash uchun.\n\nHar bir to'plam bir-biridan ajratilgan bo'lishi shart.",
+        "icon": "🧪"
+      },
+      {
+        "title": "Nisbat va tasodifiylik",
+        "text": "Odatda 70/15/15 yoki 80/10/10 nisbat ishlatiladi.\n\nBo'lish tasodifiy, lekin takrorlanuvchi bo'lishi kerak (seed bilan).\n\nVaqt qatorlarida esa kelajak ma'lumotni o'tmishni o'rgatishga ishlatmaslik uchun vaqt tartibi saqlanadi.",
+        "icon": "📏"
+      },
+      {
+        "title": "Asosiy xato",
+        "text": "Testni ko'p marta natijaga qarab sozlash uchun ishlatish — uni asta-sekin validation'ga aylantiradi.\n\nNatijada model haqiqiy sifatda emas, ortiqcha baholangan ko'rsatkich bilan tanlanadi.",
+        "icon": "🚨"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Validation to'plami nima uchun ishlatiladi?",
+        "options": [
+          "Modelni o'rgatish uchun",
+          "Faqat yakuniy baholash uchun",
+          "Giperparametr va model tanlash uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Validation tanlov qarorlarini qabul qilish uchun, test esa oxirida bir marta ishlatiladi."
+      },
+      {
+        "question": "Test to'plami qanday ishlatilishi kerak?",
+        "options": [
+          "Yakuniy baholash uchun, kam marta",
+          "Har bir epoxada",
+          "Modelni o'qitish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Test ma'lumoti model tanlovida qatnashmasligi kerak, aks holda baho ortiqcha chiqadi."
+      },
+      {
+        "question": "Vaqt qatorlarida ma'lumotni bo'lishda nima muhim?",
+        "options": [
+          "Tasodifiy aralashtirish",
+          "Vaqt tartibini saqlash",
+          "Hech narsa muhim emas"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kelajak ma'lumotni o'tmishni o'rgatishga aralashtirmaslik uchun vaqt tartibi saqlanadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 9,
+    "title": "Overfitting va underfitting",
+    "subtitle": "Ikki xato turi",
+    "slides": [
+      {
+        "title": "Ikki xato turi",
+        "text": "Underfitting — model juda sodda: na o'quv, na yangi ma'lumotda yaxshi ishlamaydi.\n\nOverfitting — model o'quv ma'lumotini yodlab oladi, lekin yangi ma'lumotda yomon ishlaydi.\n\nMaqsad — ikkisi o'rtasidagi muvozanat.",
+        "icon": "📈"
+      },
+      {
+        "title": "Belgilarini ajratish",
+        "text": "Train xatosi kichik, validation xatosi katta — overfitting.\n\nIkkala xato ham katta — underfitting.\n\nIkkala xato ham kichik va bir-biriga yaqin — yaxshi umumlashtirish.",
+        "icon": "🔎"
+      },
+      {
+        "title": "Yechimlar",
+        "text": "Overfitting uchun: ko'proq ma'lumot, regularizatsiya, dropout, soddaroq model, erta to'xtatish (early stopping).\n\nUnderfitting uchun: murakkabroq model, yaxshiroq xususiyatlar, uzoqroq o'qitish.",
+        "icon": "🛡️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Train'da juda yaxshi, validation'da yomon natija qaysi holat?",
+        "options": [
+          "Overfitting",
+          "Underfitting",
+          "Ideal model"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Model o'quv ma'lumotiga haddan ortiq moslashgan, shu sababli yangi ma'lumotda yomon ishlaydi."
+      },
+      {
+        "question": "Underfitting belgisi qaysi?",
+        "options": [
+          "Train xatosi kichik, validation katta",
+          "Train va validation xatolari ikkalasi ham katta",
+          "Ikkalasi ham nol"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Model ma'lumotdagi qonuniyatni umuman ushlay olmagan, shuning uchun ikkala xato ham yuqori."
+      },
+      {
+        "question": "Overfittingga qarshi usul qaysi?",
+        "options": [
+          "Modelni yanada soddalashtirmaslik",
+          "Validation'ni o'chirib qo'yish",
+          "Regularizatsiya yoki erta to'xtatish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Regularizatsiya va erta to'xtatish modelning haddan ortiq moslashishini cheklaydi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 10,
+    "title": "Bias-variance muvozanati",
+    "subtitle": "Bias nima?",
+    "slides": [
+      {
+        "title": "Bias nima?",
+        "text": "Bias — model taxminlarining noto'g'riligi: model haqiqiy bog'liqlikni juda sodda ko'rsatishi.\n\nYuqori bias — ko'pincha underfitting belgisi.\n\nMisol: chiziqli model egri chiziqli bog'liqlikni tasvirlay olmaydi.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Variance nima?",
+        "text": "Variance — model o'quv ma'lumotining kichik o'zgarishlariga qanchalik sezgir ekanligi.\n\nYuqori variance — ko'pincha overfitting belgisi.\n\nBunday model har safar boshqa ma'lumotda juda boshqacha natija beradi.",
+        "icon": "🌊"
+      },
+      {
+        "title": "Muvozanat",
+        "text": "Model murakkabligi oshsa, bias odatda kamayadi, variance esa ortadi.\n\nUmumiy xatoni eng kichik qiladigan nuqtani topish — bias-variance tradeoff.\n\nMaqsad: na juda sodda, na juda murakkab model.",
+        "icon": "⚖️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Yuqori bias qaysi muammoga mos keladi?",
+        "options": [
+          "Overfitting",
+          "Underfitting",
+          "Data leakage"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Yuqori bias — model juda sodda, shuning uchun ma'lumotdagi qonuniyatni o'tkazib yuboradi."
+      },
+      {
+        "question": "Model murakkabligi oshsa, odatda nima bo'ladi?",
+        "options": [
+          "Variance kamayadi, bias ortadi",
+          "Ikkalasi ham o'zgarmaydi",
+          "Bias kamayadi, variance ortadi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Murakkab model ma'lumotga yaxshiroq moslashadi (bias kamayadi), lekin barqarorligi pasayadi (variance ortadi)."
+      },
+      {
+        "question": "Bias-variance muvozanati nimani ifodalaydi?",
+        "options": [
+          "Xatoning ikki manbasi o'rtasidagi kompromissni",
+          "Ma'lumot hajmini",
+          "Modelning tezligini"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Umumiy xato bias va variance yig'indisidan iborat; ularni birgalikda optimallashtirish kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 11,
+    "title": "Baholash metrikalari",
+    "subtitle": "Tasniflash metrikalari",
+    "slides": [
+      {
+        "title": "Tasniflash metrikalari",
+        "text": "Accuracy — barcha to'g'ri javoblar ulushi. Lekin nomutanosib ma'lumotda aldamchi bo'lishi mumkin.\n\nPrecision — musbat deb topilganlarning qancha qismi haqiqatan musbat.\n\nRecall — haqiqiy musbatlarning qancha qismi topilgani.\n\nF1-score — precision va recall ning garmonik o'rtachasi.",
+        "icon": "📏"
+      },
+      {
+        "title": "Regressiya metrikalari",
+        "text": "MAE — o'rtacha mutlaq xato; tushunish oson.\n\nMSE — xatolarning kvadrati o'rtachasi; katta xatolarni qattiqroq jazolaydi.\n\nR² — model ma'lumot o'zgaruvchanligini qancha tushuntirganini ko'rsatadi (1 ga yaqin bo'lsa yaxshi).",
+        "icon": "📉"
+      },
+      {
+        "title": "Qaysi metrikani tanlash?",
+        "text": "Kasallikni aniqlashda recall muhim: kasalni o'tkazib yubormaslik kerak.\n\nSpam filtrida precision muhim: oddiy xatni spamga tashlamaslik kerak.\n\nMetrikani biznes maqsadidan kelib chiqib tanlang.",
+        "icon": "🧭"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Nomutanosib ma'lumotda accuracy nega aldamchi bo'lishi mumkin?",
+        "options": [
+          "Hisoblash juda sekin",
+          "Accuracy umuman hisoblanmaydi",
+          "Ko'pchilik sinf bo'yicha model hamma narsani to'g'ri deb ayta oladi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Agar 99% ma'lumot bir sinfda bo'lsa, doim o'sha sinfni aytadigan model yuqori accuracy beradi."
+      },
+      {
+        "question": "Recall nimani o'lchaydi?",
+        "options": [
+          "Haqiqiy musbatlarning qancha qismi topilganini",
+          "Musbat bashoratlar ichida to'g'ri topilganlar ulushini",
+          "Modelning tezligini"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Recall = TP / (TP + FN): haqiqiy musbatlardan qanchasi ushlanganini bildiradi."
+      },
+      {
+        "question": "Kasallikni aniqlash tizimida qaysi metrika ayniqsa muhim?",
+        "options": [
+          "MSE",
+          "Recall",
+          "R²"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kasalni o'tkazib yuborish xavfli, shuning uchun haqiqiy kasallarni topish (recall) muhim."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 12,
+    "title": "Confusion matrix",
+    "subtitle": "Confusion matrix tuzilishi",
+    "slides": [
+      {
+        "title": "Confusion matrix tuzilishi",
+        "text": "Tasniflash natijalari to'rt guruhga bo'linadi:\n\n• TP (True Positive) — to'g'ri musbat.\n• TN (True Negative) — to'g'ri manfiy.\n• FP (False Positive) — xato musbat (I tur xato).\n• FN (False Negative) — xato manfiy (II tur xato).",
+        "icon": "🧮"
+      },
+      {
+        "title": "Metrikalarni hisoblash",
+        "text": "Accuracy = (TP + TN) / barcha namunalar.\nPrecision = TP / (TP + FP).\nRecall = TP / (TP + FN).\n\nBu formulalar confusion matrix dagi to'rt sonning kombinatsiyasidan kelib chiqadi.",
+        "icon": "🔢"
+      },
+      {
+        "title": "Amaliy o'qish",
+        "text": "Matrixni o'qishda diagonal (yuqoridan pastga) to'g'ri bashoratlar, qolgan katakchalar xatolardir.\n\nQaysi katakcha katta bo'lsa, model qaysi xatoga ko'proq moyil ekanini ko'rasiz.",
+        "icon": "🔬"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Confusion matrix da FN nimani anglatadi?",
+        "options": [
+          "Xato manfiy (haqiqiy musbat, lekin manfiy deb topilgan)",
+          "Xato musbat",
+          "To'g'ri manfiy"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. FN — haqiqatda musbat bo'lgan, lekin model manfiy deb bashorat qilgan holat."
+      },
+      {
+        "question": "Precision formulasi qaysi?",
+        "options": [
+          "TP / (TP + FN)",
+          "TP / (TP + FP)",
+          "(TP + TN) / barchasi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Precision musbat deb aytilganlar ichida haqiqatan musbatlar ulushini ko'rsatadi."
+      },
+      {
+        "question": "Confusion matrix ning asosiy vazifasi nima?",
+        "options": [
+          "Modelni tezlashtirish",
+          "Ma'lumotni shifrlash",
+          "Bashoratlarning to'g'ri va xato turlarini ko'rsatish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Matrix faqat umumiy accuracy emas, balki xatolarning qaysi turi ko'proq ekanini ko'rsatadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 13,
+    "title": "Cross-validation",
+    "subtitle": "Kesishgan tekshiruv nima?",
+    "slides": [
+      {
+        "title": "Kesishgan tekshiruv nima?",
+        "text": "Cross-validation (CV) da ma'lumot k ta qismga bo'linadi. Har bir qism navbatma-navbat validation, qolganlari train bo'ladi.\n\nNatija k ta baholashning o'rtachasi bilan olinadi.",
+        "icon": "🔄"
+      },
+      {
+        "title": "Nega kerak?",
+        "text": "Bitta tasodifiy bo'linish natijani omadga bog'liq qilib qo'yishi mumkin.\n\nCV baholashni barqarorroq va ishonchliroq qiladi, ayniqsa ma'lumot kam bo'lganda.\n\nKo'pincha k = 5 yoki k = 10 ishlatiladi.",
+        "icon": "🎲"
+      },
+      {
+        "title": "Kamchiligi",
+        "text": "Har bir fold uchun modelni qayta o'qitish kerak, shuning uchun vaqt k marta ko'proq ketadi.\n\nVaqt qatorlarida oddiy k-fold noto'g'ri, chunki kelajak o'tmishni o'rgatadi; buning uchun vaqt bo'yicha bo'linadigan usullar kerak.",
+        "icon": "⏱️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Cross-validation'da ma'lumot nechta qismga bo'linadi?",
+        "options": [
+          "Har doim 2 ta",
+          "k ta",
+          "Faqat 1 ta"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. k-fold CV da ma'lumot k ta qismga bo'linadi va har biri navbatma-navbat validation bo'ladi."
+      },
+      {
+        "question": "CV nima uchun ishlatiladi?",
+        "options": [
+          "O'qitish vaqtini qisqartirish",
+          "Ma'lumotdagi shovqinni o'chirish",
+          "Baholashni barqarorroq va ishonchliroq qilish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Bir marta tasodifiy bo'lishdagi omad ta'sirini kamaytiradi."
+      },
+      {
+        "question": "Vaqt qatorlarida oddiy k-fold nega xavfli?",
+        "options": [
+          "Kelajak ma'lumot o'tmishni o'rgatishga aralashib qoladi",
+          "Juda kichik natija beradi",
+          "Hech qanday xavf yo'q"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Tasodifiy bo'lish vaqt tartibini buzadi va baho haddan tashqari optimistik bo'ladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 14,
+    "title": "Neyron tarmoq asoslari",
+    "subtitle": "Sun'iy neyron",
+    "slides": [
+      {
+        "title": "Sun'iy neyron",
+        "text": "Neyron kirish signallarini oladi, ularni og'irliklar (weights) bilan ko'paytiradi, bias qo'shadi va natijani aktivatsiya funksiyasidan o'tkazadi.\n\nFormula: chiqish = f(w·x + b).",
+        "icon": "🧠"
+      },
+      {
+        "title": "Qatlamlar",
+        "text": "Kirish qatlami — ma'lumotni qabul qiladi.\nYashirin qatlamlar — xususiyatlarni bosqichma-bosqich o'rganadi.\nChiqish qatlami — yakuniy bashorat.\n\nQatlamlar qanchalik chuqur bo'lsa, model shunchalik murakkab naqshlarni ushlaydi.",
+        "icon": "🏗️"
+      },
+      {
+        "title": "Chuqur o'rganish",
+        "text": "Ko'p yashirin qatlamli tarmoq chuqur neyron tarmoq (deep learning) deyiladi.\n\nTasvir, ovoz va matnni tanishda aynan shunday tarmoqlar katta muvaffaqiyat qozongan.",
+        "icon": "🧗"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Neyronda og'irliklar (weights) nima qiladi?",
+        "options": [
+          "Ma'lumotni o'chiradi",
+          "Natijani chop etadi",
+          "Kirish signallarini kuchaytiradi yoki susaytiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Og'irlik har bir kirish signalining ta'sir kuchini belgilaydi."
+      },
+      {
+        "question": "Yashirin qatlamlarning vazifasi nima?",
+        "options": [
+          "Xususiyatlarni bosqichma-bosqich o'rganish",
+          "Ma'lumotni yuklash",
+          "Tarmoqni o'chirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Yashirin qatlamlar xom signaldan tobora murakkab xususiyatlarni shakllantiradi."
+      },
+      {
+        "question": "Ko'p yashirin qatlamli tarmoq qanday ataladi?",
+        "options": [
+          "Chiziqli regressiya",
+          "Chuqur neyron tarmoq (deep learning)",
+          "Klasterlash modeli"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Ko'p qatlamli (chuqur) tarmoqlar deep learning nomini oladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 15,
+    "title": "Aktivatsiya funksiyalari",
+    "subtitle": "Nega kerak?",
+    "slides": [
+      {
+        "title": "Nega kerak?",
+        "text": "Aktivatsiya funksiyasi neyron chiqishiga chiziqsizlik (nonlinearity) kiritadi.\n\nAgar aktivatsiya bo'lmasa, butun tarmoq baribir bitta chiziqli funksiya kabi ishlardi.\n\nChiziqsizlik murakkab bog'liqliklarni o'rganish imkonini beradi.",
+        "icon": "⚡"
+      },
+      {
+        "title": "Asosiy turlari",
+        "text": "• ReLU — max(0, x). Eng ko'p ishlatiladigan; hisoblash oson.\n• Sigmoid — 0 va 1 orasidagi qiymat; ehtimollik kabi.\n• Tanh — -1 va 1 orasida; markazlashgan chiqish.\n• Softmax — ko'p sinfli tasniflashda ehtimolliklar yig'indisi 1 ga teng.",
+        "icon": "📊"
+      },
+      {
+        "title": "Muammolar",
+        "text": "Sigmoid va tanh chuqur tarmoqda gradientni juda kichraytirishi mumkin (vanishing gradient).\n\nReLU ning kamchiligi — ba'zi neyronlar doim 0 beradi (dying ReLU), buning uchun Leaky ReLU kabi variantlar bor.",
+        "icon": "🚧"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Aktivatsiya funksiyasining asosiy vazifasi nima?",
+        "options": [
+          "Tarmoqqa chiziqsizlik kiritish",
+          "Ma'lumotlarni normallashtirish",
+          "Og'irliklarni tasodifiy yangilash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Chiziqsizlik bo'lmasa, qancha qatlam qo'shsak ham tarmoq oddiy chiziqli model bo'lib qoladi."
+      },
+      {
+        "question": "Ko'p sinfli tasniflashning chiqish qatlamida qaysi funksiya odatda ishlatiladi?",
+        "options": [
+          "ReLU",
+          "Softmax",
+          "Tanh"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Softmax sinflar bo'yicha ehtimolliklar taqsimotini hosil qiladi va ularning yig'indisi 1 bo'ladi."
+      },
+      {
+        "question": "ReLU funksiyasi qanday hisoblanadi?",
+        "options": [
+          "x²",
+          "1 / (1 + e^-x)",
+          "max(0, x)"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Manfiy kirishlarni 0 qiladi, musbatlarini o'zgartirmasdan qoldiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 16,
+    "title": "Gradient descent",
+    "subtitle": "Gradiyent tushish g'oyasi",
+    "slides": [
+      {
+        "title": "Gradiyent tushish g'oyasi",
+        "text": "Loss funksiyasi — model qanchalik xato qilayotganini o'lchaydi. Maqsad — uni minimallashtirish.\n\nGradiyent — funksiya eng tez o'sadigan yo'nalish. Unga teskari yo'nalishda kichik qadam qo'yib, tepalikdan vodiyga tushamiz.",
+        "icon": "⛰️"
+      },
+      {
+        "title": "Yangilash qoidasi",
+        "text": "Og'irlik yangilanadi: w = w − η · (∂Loss/∂w).\n\nBu yerda η (eta) — o'rganish tezligi (learning rate).\n\nJuda katta η — model minimumdan sakrab o'tadi, juda kichik η — o'rganish juda sekin bo'ladi.",
+        "icon": "🔧"
+      },
+      {
+        "title": "Variantlari",
+        "text": "• Batch GD — butun ma'lumot bo'yicha bir qadam.\n• Stochastic GD (SGD) — har bir misol bo'yicha tez-tez yangilash.\n• Mini-batch — ikkisining aralashmasi; amalda eng ko'p ishlatiladi.\n• Adam — o'rganish tezligini moslashtiruvchi zamonaviy usul.",
+        "icon": "🔀"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Gradient descent nimani minimallashtiradi?",
+        "options": [
+          "Ma'lumot hajmini",
+          "Loss (yo'qotish) funksiyasini",
+          "Modelning nomini"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Algoritm loss ni kamaytiruvchi parametrlarni topishga harakat qiladi."
+      },
+      {
+        "question": "Learning rate juda katta bo'lsa, nima bo'ladi?",
+        "options": [
+          "O'qitish to'xtaydi",
+          "Model doim aniq bo'ladi",
+          "Model minimumdan sakrab o'tishi yoki tebranishi mumkin"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Katta qadamlar minimum atrofida tebranishga yoki undan uzoqlashishga olib keladi."
+      },
+      {
+        "question": "Amalda eng ko'p ishlatiladigan variant qaysi?",
+        "options": [
+          "Mini-batch gradient descent",
+          "Har bir epoxada bir marta yangilash",
+          "Tasodifiy qidiruv"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Mini-batch tezlik va barqarorlik o'rtasida yaxshi muvozanat beradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 17,
+    "title": "Backpropagation",
+    "subtitle": "Backpropagation nima?",
+    "slides": [
+      {
+        "title": "Backpropagation nima?",
+        "text": "Backpropagation — xatoni chiqish qatlamidan kirish tomon orqaga tarqatib, har bir og'irlik xatoga qanchalik ta'sir qilganini hisoblash usuli.\n\nBu zanjir qoidasi (chain rule) asosida ishlaydi.",
+        "icon": "↩️"
+      },
+      {
+        "title": "Zanjir qoidasi",
+        "text": "Murakkab funksiya ko'p oddiy funksiyalardan tashkil topgan. Hosilalar zanjir bo'ylab ko'paytiriladi.\n\nNatijada har bir qatlam uchun gradiyent olinadi va gradient descent yangilash uchun ishlatiladi.",
+        "icon": "🔗"
+      },
+      {
+        "title": "Amalda",
+        "text": "Forward pass — kirishdan chiqishga hisoblash.\nBackward pass — chiqishdan kirishga gradiyent hisoblash.\n\nZamonaviy framework lar (PyTorch, TensorFlow) bu jarayonni avtomatik bajaradi.",
+        "icon": "🧾"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Backpropagation nima qiladi?",
+        "options": [
+          "Ma'lumotni tozalaydi",
+          "Yangi qatlam qo'shadi",
+          "Xatoni orqaga tarqatib gradiyentlarni hisoblaydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Backprop har bir og'irlikning xatoga ta'sirini zanjir qoidasi bilan hisoblaydi."
+      },
+      {
+        "question": "Backpropagation qaysi matematik qoidaga asoslanadi?",
+        "options": [
+          "Zanjir qoidasi (chain rule)",
+          "Bayes teoremasi",
+          "Pifagor teoremasi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Murakkab funksiya hosilasi zanjir qoidasi orqali bo'laklarga bo'linadi."
+      },
+      {
+        "question": "Forward pass nima?",
+        "options": [
+          "Chiqishdan kirishga gradiyent hisoblash",
+          "Kirishdan chiqishga hisoblash",
+          "Ma'lumotni bo'lish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Avval bashorat hisoblanadi (forward), keyin gradiyent orqaga hisoblanadi (backward)."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 18,
+    "title": "Regularizatsiya va Dropout",
+    "subtitle": "Regularizatsiya nima?",
+    "slides": [
+      {
+        "title": "Regularizatsiya nima?",
+        "text": "Regularizatsiya — modelning haddan ortiq murakkablashishini jazolash orqali overfitting ni kamaytirish.\n\nLoss ga og'irliklar kattaligiga bog'liq jarima qo'shiladi.",
+        "icon": "🧱"
+      },
+      {
+        "title": "L1 va L2",
+        "text": "L1 (Lasso) — ba'zi og'irliklarni aynan nolga yaqinlashtiradi; xususiyatlarni tanlashga yordam beradi.\n\nL2 (Ridge) — og'irliklarni kichik qiladi, lekin nolga teng qilmaydi; eng keng tarqalgan usul.",
+        "icon": "📐"
+      },
+      {
+        "title": "Dropout",
+        "text": "Dropout o'qitish paytida neyronlarning bir qismini tasodifiy o'chirib turadi (masalan, 50%).\n\nNatijada tarmoq bitta neyronga tayanib qolmaydi va bir nechta mustaqil yo'l o'rganadi.\n\nBaholash paytida dropout o'chiriladi.",
+        "icon": "🎲"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Regularizatsiyaning asosiy maqsadi nima?",
+        "options": [
+          "Overfitting ni kamaytirish",
+          "Modelni tezlashtirish",
+          "Ma'lumot hajmini oshirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Haddan ortiq murakkablikni jazolash modelni yangi ma'lumotga yaxshiroq umumlashtirishga undaydi."
+      },
+      {
+        "question": "Qaysi usul ba'zi og'irliklarni aynan nolga yaqinlashtiradi?",
+        "options": [
+          "L2 (Ridge)",
+          "L1 (Lasso)",
+          "Batch normalization"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. L1 jarima ortiqcha xususiyatlarni nolga olib keladi, shu sababli u xususiyatlarni tanlashda ham ishlatiladi."
+      },
+      {
+        "question": "Dropout o'qitish paytida nima qiladi?",
+        "options": [
+          "Ma'lumotlarni o'chiradi",
+          "Barcha neyronlarni kuchaytiradi",
+          "Neyronlarning bir qismini tasodifiy o'chiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Tasodifiy o'chirish tarmoqni bitta yo'lga tayanib qolishdan saqlaydi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 19,
+    "title": "Batch normalization",
+    "subtitle": "Batch normalization g'oyasi",
+    "slides": [
+      {
+        "title": "Batch normalization g'oyasi",
+        "text": "Har bir qatlam kirishlarining taqsimoti o'qitish davomida o'zgarib turadi (internal covariate shift).\n\nBatch normalization har bir mini-batch ichida qiymatlarni o'rtacha 0 va dispersiya 1 ga yaqin qiladi.",
+        "icon": "📦"
+      },
+      {
+        "title": "Foydasi",
+        "text": "• O'qitish tezroq va barqaror bo'ladi.\n• Kattaroq learning rate ishlatish imkonini beradi.\n• Ma'lum darajada regularizatsiya effektini ham beradi.\n\nBu hozirgi chuqur tarmoqlarda keng qo'llaniladi.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Eslatma",
+        "text": "Batch normalization ni o'qitishda mini-batch bilan, baholashda esa o'qitish davomida yig'ilgan statistikalar bilan ishlatiladi.\n\nJuda kichik batch hajmida bu usul kam samarali bo'ladi.",
+        "icon": "🔧"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Batch normalization nima uchun qo'llaniladi?",
+        "options": [
+          "Ma'lumotlar to'plamini kichraytirish",
+          "Qatlam kirishlari taqsimotini barqarorlashtirib, o'qitishni tezlashtirish",
+          "Tasvirlarni rangli qilish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Barqaror taqsimot gradientlarni yaxshilaydi va o'qitishni tezlashtiradi."
+      },
+      {
+        "question": "Baholash (inference) paytida batch normalization qanday ishlaydi?",
+        "options": [
+          "Har bir so'rovda yangi batch statistikasi hisoblanadi",
+          "U o'chiriladi",
+          "O'qitish davomida yig'ilgan statistikalar ishlatiladi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Baholashda bitta misol uchun batch statistikasi noaniq bo'lgani sababli saqlangan statistikalar ishlatiladi."
+      },
+      {
+        "question": "Batch normalization ning asosiy muammosi qaysi?",
+        "options": [
+          "Juda kichik batch hajmida samaradorligi pasayadi",
+          "Har doim modelni buzadi",
+          "Faqat matn bilan ishlaydi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kichik batch da statistika ishonchsiz bo'ladi, shu sababli usul yomonlashadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 20,
+    "title": "Konvolyutsion tarmoqlar (CNN)",
+    "subtitle": "CNN nima uchun?",
+    "slides": [
+      {
+        "title": "CNN nima uchun?",
+        "text": "Convolutional Neural Network (CNN) tasvirlarni tahlil qilish uchun maxsus yaratilgan.\n\nTasvirdagi har bir piksel bilan alohida bog'lanish o'rniga, kichik oyna (filtr, kernel) tasvir bo'ylab siljiydi.",
+        "icon": "🖼️"
+      },
+      {
+        "title": "Konvolyutsiya va pooling",
+        "text": "Konvolyutsiya qatlami — filtr chekka, tekstura, shakl kabi xususiyatlarni topadi.\n\nPooling qatlami — o'lchamni kamaytiradi va kichik siljishlarga chidamlilikni oshiradi (masalan, max pooling).\n\nBir necha qatlam o'tgach, tarmoq murakkab obyektlarni tanib oladi.",
+        "icon": "🔍"
+      },
+      {
+        "title": "Qo'llanilishi",
+        "text": "Yuzni aniqlash, tibbiy tasvir tahlili, avtonom haydash va sifat nazoratida CNN keng ishlatiladi.\n\nCNN aslida tasvir uchun 'xususiyat muhandisligi'ni avtomatlashtiradi.",
+        "icon": "🏁"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "CNN asosan qaysi vazifada keng qo'llaniladi?",
+        "options": [
+          "Vaqt qatorlarini bashorat qilishda",
+          "Jadval ma'lumotlarini saralashda",
+          "Tasvirlarni tahlil qilish va tasniflashda"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. CNN tasvir tarkibidagi mahalliy naqshlarni ushlash uchun mo'ljallangan."
+      },
+      {
+        "question": "Pooling qatlamining vazifasi nima?",
+        "options": [
+          "O'lchamni kamaytirish va chidamlilikni oshirish",
+          "Ranglarni o'zgartirish",
+          "Ma'lumotni shifrlash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Pooling muhim signalni saqlab, tasvir o'lchamini va hisoblashni kamaytiradi."
+      },
+      {
+        "question": "Konvolyutsion filtr nima qiladi?",
+        "options": [
+          "Tasvirni butunlay o'chiradi",
+          "Tasvirning kichik qismlaridan xususiyatlarni topadi",
+          "Faqat matnni o'qiydi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Filtr tasvir bo'ylab siljib, chekka va tekstura kabi mahalliy xususiyatlarni aniqlaydi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 21,
+    "title": "RNN, LSTM va GRU",
+    "subtitle": "Ketma-ketlik uchun tarmoq",
+    "slides": [
+      {
+        "title": "Ketma-ketlik uchun tarmoq",
+        "text": "Matn, nutq va vaqt qatorlari ketma-ketlikdan iborat: tartib muhim.\n\nRNN (rekurrent tarmoq) har bir qadamda oldingi holatni yangi kirish bilan birga qayta ishlatadi.",
+        "icon": "🔁"
+      },
+      {
+        "title": "LSTM va GRU",
+        "text": "Oddiy RNN uzun ketma-ketlikda oldingi ma'lumotni unutadi (vanishing gradient).\n\nLSTM — xotira holati (cell state) va uchta darvoza (kirish, unutish, chiqish) bilan uzoq bog'liqlikni saqlaydi.\n\nGRU — LSTM ning soddaroq variantı; ikkita darvoza bilan ishlaydi.",
+        "icon": "🧠"
+      },
+      {
+        "title": "Cheklovi",
+        "text": "RNN lar ketma-ketlikni qadam-baqadam ishlaydi, shuning uchun parallel hisoblash qiyin va sekin.\n\nBu cheklov Transformer arxitekturasi paydo bo'lishiga sabab bo'ldi.",
+        "icon": "⏳"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "LSTM ning GRU dan asosiy farqi nimada?",
+        "options": [
+          "LSTM da alohida xotira holati (cell state) va ko'proq darvoza bor",
+          "LSTM faqat tasvirlar bilan ishlaydi",
+          "LSTM umuman rekurrent emas"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. LSTM cell state va uchta darvozaga ega; GRU esa soddaroq, ikki darvozali tuzilma."
+      },
+      {
+        "question": "Oddiy RNN uzun ketma-ketlikda nega qiynaladi?",
+        "options": [
+          "Juda kichik ma'lumotni qabul qiladi",
+          "Gradient kichrayib, uzoq bog'liqliklarni yo'qotadi (vanishing gradient)",
+          "Har doim tasodifiy javob beradi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Orqaga tarqatishda gradient ko'p qadamda kichrayadi va uzoqdagi ma'lumot ta'sirini yo'qotadi."
+      },
+      {
+        "question": "RNN ning asosiy cheklovi nima?",
+        "options": [
+          "Faqat raqamli ma'lumot bilan ishlaydi",
+          "Hech qanday cheklovi yo'q",
+          "Ketma-ketlikni qadam-baqadam ishlashi, parallel hisoblashni qiyinlashtiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Har bir qadam oldingi qadamga bog'liq, shuning uchun hisoblashni parallellashtirish qiyin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 22,
+    "title": "So'z embedding'lari",
+    "subtitle": "So'zni vektorga aylantirish",
+    "slides": [
+      {
+        "title": "So'zni vektorga aylantirish",
+        "text": "Kompyuter so'zni emas, sonlarni tushunadi. Word embedding — har bir so'zga ma'noni aks ettiruvchi son vektorini berish.\n\nMasalan, 'shoh' va 'malika' vektorlari bir-biriga yaqin, 'olma' esa uzoqroq bo'ladi.",
+        "icon": "🔤"
+      },
+      {
+        "title": "Vektorlar ma'noni saqlaydi",
+        "text": "Mashhur misol: vektor('qirol') − vektor('erkak') + vektor('ayol') ≈ vektor('malika').\n\nBu o'xshash so'zlar geometrik yaqinlikda joylashishini ko'rsatadi.\n\nMashhur usullar: Word2Vec, GloVe, FastText.",
+        "icon": "📐"
+      },
+      {
+        "title": "Kontekstdan o'rganish",
+        "text": "Embedding lar 'so'z o'z kontekstida qanday ishlatiladi' g'oyasiga asoslanadi: o'xshash kontekstdagi so'zlar o'xshash vektorlar oladi.\n\nZamonaviy modellarda embedding lar kontekstga qarab o'zgaradi (contextual embeddings).",
+        "icon": "📚"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Word embedding nima?",
+        "options": [
+          "So'zlarni faqat raqamlar bilan belgilash",
+          "So'zlarni ma'noli past o'lchamli vektorlarda ifodalash",
+          "Matnni shifrlash"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Embedding so'zning semantik ma'nosini vektor ko'rinishida saqlaydi."
+      },
+      {
+        "question": "Quyidagilardan qaysi biri embedding g'oyasiga ko'ra to'g'ri?",
+        "options": [
+          "Vektorlar hech qachon o'zgarmaydi",
+          "Har bir so'z tasodifiy vektor oladi",
+          "O'xshash kontekstdagi so'zlar o'xshash vektor oladi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Embedding lar kontekst o'xshashligi asosida o'rganiladi."
+      },
+      {
+        "question": "Qaysi usullar word embedding ga misol?",
+        "options": [
+          "Word2Vec va GloVe",
+          "CNN va ReLU",
+          "PCA va K-means"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Word2Vec va GloVe so'zlar uchun vektorlarni o'rganadigan klassik usullardir."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 23,
+    "title": "Attention mexanizmi",
+    "subtitle": "Diqqat nima?",
+    "slides": [
+      {
+        "title": "Diqqat nima?",
+        "text": "Attention mexanizmi modelga kirishning qaysi qismi hozirgi bashorat uchun muhimroq ekanini aniqlashga yordam beradi.\n\nMasalan, tarjimada 'it' so'zi tarjima qilinayotganda gapdagi 'hayvon' so'ziga ko'proq e'tibor qaratiladi.",
+        "icon": "👁️"
+      },
+      {
+        "title": "Query, Key, Value",
+        "text": "• Query (Q) — hozirgi element nimani qidirayotgani.\n• Key (K) — har bir element o'zini qanday tavsiflaydi.\n• Value (V) — elementning haqiqiy ma'lumoti.\n\nQ va K o'rtasidagi o'xshashlik og'irlik beradi, bu og'irliklar V bilan birlashtiriladi.",
+        "icon": "🔑"
+      },
+      {
+        "title": "Og'irliklar",
+        "text": "Og'irliklar softmax orqali 0 va 1 orasida, yig'indisi 1 bo'ladigan qilib normallashtiriladi.\n\nNatija — har bir elementga berilgan e'tibor ulushi bilan hisoblangan yangi, kontekstga boy vektor.",
+        "icon": "⚖️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Attention mexanizmi \"query, key, value\" bilan nima qiladi?",
+        "options": [
+          "Ma'lumotlarni shifrlaydi",
+          "Tasvirlarni kichraytiradi",
+          "Kirish elementlari orasidagi bog'liqlik og'irligini hisoblaydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Q va K o'xshashligi e'tibor og'irligini beradi, u V ga qo'llanadi."
+      },
+      {
+        "question": "Attention og'irliklari qanday normallashtiriladi?",
+        "options": [
+          "Softmax orqali",
+          "Logarifm orqali",
+          "Hech qanday"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Softmax og'irliklarni yig'indisi 1 bo'ladigan ehtimolliklarga aylantiradi."
+      },
+      {
+        "question": "Tarjimada 'it' so'zini tarjima qilishda attention nima qiladi?",
+        "options": [
+          "Barcha so'zlarga bir xil e'tibor beradi",
+          "Gapdagi tegishli so'zga ko'proq e'tibor beradi",
+          "Gapni o'chiradi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Attention kontekstdagi eng mos so'zlarni ajratib, to'g'ri tarjimani tanlashga yordam beradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 24,
+    "title": "Transformer arxitekturasi",
+    "subtitle": "Transformer g'oyasi",
+    "slides": [
+      {
+        "title": "Transformer g'oyasi",
+        "text": "Transformer (2017, 'Attention Is All You Need') RNN larni butunlay attention bilan almashtirdi.\n\nBarcha so'zlar bir vaqtda qayta ishlanadi, bu esa parallel hisoblashni juda tezlashtiradi.",
+        "icon": "🏛️"
+      },
+      {
+        "title": "Asosiy qismlar",
+        "text": "• Self-attention — ketma-ketlikning har bir elementi boshqa barcha elementlarga qaraydi.\n• Multi-head attention — bir nechta 'bosh' turli bog'liqliklarni parallel o'rganadi.\n• Positional encoding — tartib ma'lumotini qo'shadi, chunki attention o'zi tartibni bilmaydi.\n• Feed-forward qatlamlar va residual bog'lanishlar.",
+        "icon": "🧩"
+      },
+      {
+        "title": "Nega muhim?",
+        "text": "GPT, BERT va boshqa zamonaviy katta modellarning asosi aynan Transformer.\n\nTil, tasvir va ovoz sohalarida ham shu arxitektura keng qo'llanilmoqda.",
+        "icon": "🚀"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Transformer arxitekturasining eng muhim yangiligi qaysi?",
+        "options": [
+          "Self-attention mexanizmi",
+          "Konvolyutsion qatlamlardan foydalanish",
+          "Rekurrent aloqalar"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Self-attention ketma-ketlikning barcha elementlari orasidagi bog'liqlikni bevosita hisoblaydi."
+      },
+      {
+        "question": "Attention o'zi tartibni bilmasligi sababli nima qo'shiladi?",
+        "options": [
+          "Dropout",
+          "Positional encoding",
+          "Batch size"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Positional encoding har bir elementning o'rnini vektorga qo'shib, tartib ma'lumotini beradi."
+      },
+      {
+        "question": "Transformer nega RNN dan tezroq o'qiydi?",
+        "options": [
+          "Ma'lumotni kamaytiradi",
+          "Faqat bitta so'zni ko'radi",
+          "Barcha elementlarni bir vaqtda parallel qayta ishlaydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Qadam-baqadam ishlash o'rniga parallel hisoblash GPU da ancha samarali."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 25,
+    "title": "Pretraining va fine-tuning",
+    "subtitle": "Pretraining nima?",
+    "slides": [
+      {
+        "title": "Pretraining nima?",
+        "text": "Pretraining — modelni katta, umumiy ma'lumotlar to'plamida (masalan, internet matnlari) dastlabki o'qitish.\n\nBu bosqichda model tilning grammatikasi, faktlar va umumiy mantiqni o'rganadi.",
+        "icon": "📚"
+      },
+      {
+        "title": "Fine-tuning nima?",
+        "text": "Fine-tuning — oldindan o'qitilgan modelni muayyan vazifa yoki soha ma'lumotida qisqa qo'shimcha o'qitish.\n\nMisol: yuridik hujjatlar, tibbiy matnlar yoki mijoz xizmati suhbatlari bilan moslashtirish.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Nega shunday?",
+        "text": "Katta modelni noldan o'qitish juda qimmat. Pretraining bilimni bir marta yig'adi, fine-tuning esa uni arzon va tez moslashtiradi.\n\nSizning kichik ma'lumotingiz bilan natija yaxshilanadi.",
+        "icon": "💡"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Pretraining va fine-tuning o'rtasidagi farq nimada?",
+        "options": [
+          "Pretraining — modelni o'chirish, fine-tuning — yangilash",
+          "Pretraining — katta umumiy ma'lumotda dastlabki o'qitish, fine-tuning — muayyan vazifaga moslashtirish",
+          "Ikkalasi bir xil jarayon"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Avval keng bilim, keyin esa aniq vazifa uchun moslashtirish."
+      },
+      {
+        "question": "Fine-tuning odatda nimaga asoslanadi?",
+        "options": [
+          "Faqat tasodifiy og'irliklarga",
+          "Har doim noldan yangi model",
+          "Oldindan o'qitilgan modelga"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Fine-tuning mavjud bilimdan foydalanadi, shu sababli kam ma'lumot va vaqt kerak bo'ladi."
+      },
+      {
+        "question": "Katta modelni pretraining qilish nega qimmat?",
+        "options": [
+          "Juda ko'p hisoblash resursi va ma'lumot talab qiladi",
+          "Model umuman o'rganmaydi",
+          "Ma'lumot kerak emas"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Katta modelni noldan o'qitish ko'p GPU vaqti va katta ma'lumot talab qiladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 26,
+    "title": "Transfer learning",
+    "subtitle": "Transfer learning g'oyasi",
+    "slides": [
+      {
+        "title": "Transfer learning g'oyasi",
+        "text": "Transfer learning — bir masala uchun o'rgangan bilimni boshqa, o'xshash masalaga ko'chirish.\n\nInsonga o'xshash: velosiped haydashni bilgan odam mototsiklni tezroq o'rganadi.",
+        "icon": "🔀"
+      },
+      {
+        "title": "Qanday amalga oshadi?",
+        "text": "Oldindan o'qitilgan tarmoqning quyi qatlamlari (chetlar, shakllar, umumiy xususiyatlar) saqlanadi.\n\nYuqori qatlamlar yangi vazifa uchun qayta o'qitiladi yoki almashtiriladi.",
+        "icon": "🧱"
+      },
+      {
+        "title": "Afzalligi",
+        "text": "Ma'lumot kam bo'lganda ham yaxshi natija olish mumkin.\n\nO'qitish vaqti va hisoblash xarajati ancha kamayadi.\n\nKo'pincha ko'p ma'lumotli manbadan kichik ma'lumotli vazifaga bilim ko'chiriladi.",
+        "icon": "📉"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Transfer learning qanday afzallik beradi?",
+        "options": [
+          "Hech qanday ma'lumot talab qilmaydi",
+          "Model hajmini har doim oshiradi",
+          "Ma'lumot kam bo'lganda oldindan o'qitilgan bilimdan foydalanish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Oldindan o'rganilgan umumiy xususiyatlar kichik ma'lumotda ham yaxshi natija berishga yordam beradi."
+      },
+      {
+        "question": "Transfer learning da quyi qatlamlar odatda nima uchun saqlanadi?",
+        "options": [
+          "Ular umumiy xususiyatlarni (chetlar, shakllar) o'rganadi",
+          "Ular har doim buziladi",
+          "Ular faqat ma'lumotni o'chiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Quyi qatlamlar umumiy tuzilmalarni o'rganadi, ular ko'pincha turli vazifalarda foydali."
+      },
+      {
+        "question": "Transfer learning ga eng mos misol qaysi?",
+        "options": [
+          "Har bir ma'lumotni tasodifiy o'chirish",
+          "Tasvir modelini katta datasetda o'qitib, kichik sinf uchun moslashtirish",
+          "Hech qanday model ishlatmaslik"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Katta datasetda o'rgangan bilimni kichik, o'xshash vazifaga ko'chirish — transfer learning."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 27,
+    "title": "Katta til modellari (LLM)",
+    "subtitle": "LLM nima?",
+    "slides": [
+      {
+        "title": "LLM nima?",
+        "text": "Katta til modeli (LLM) — milliardlab parametrli, internetdagi katta matnlarda o'qitilgan Transformer asosidagi model.\n\nU asosan keyingi tokenni bashorat qilish orqali o'qitiladi, lekin shu oddiy vazifa murakkab bilim va mantiqni shakllantiradi.",
+        "icon": "🗣️"
+      },
+      {
+        "title": "Asosiy bosqichlar",
+        "text": "1) Pretraining — keng matnlarda keyingi so'zni bashorat qilish.\n2) Fine-tuning — ko'rsatmalarga javob berishni o'rgatish.\n3) Hizalash (alignment) — foydali, xavfsiz va halol javoblar uchun insonning baholashi (RLHF kabi usullar).",
+        "icon": "🧭"
+      },
+      {
+        "title": "Cheklovlari",
+        "text": "LLM haqiqatni 'bilmaydi', balki statistik ehtimollik bo'yicha matn yaratadi.\n\nShuning uchun u ishonchli ko'rinadigan, lekin noto'g'ri javob berishi mumkin (hallucination).",
+        "icon": "⚠️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "LLM asosan nimani bashorat qilish orqali o'qitiladi?",
+        "options": [
+          "Keyingi tokenni",
+          "Rasmning rangini",
+          "Ob-havoni"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Ko'pchilik LLM lar keyingi tokenni bashorat qilish vazifasida o'qitiladi."
+      },
+      {
+        "question": "LLM nega noto'g'ri, lekin ishonchli javob berishi mumkin?",
+        "options": [
+          "U doim to'g'ri javob beradi",
+          "U haqiqatni tekshirib bilmaydi, statistik ehtimollik bo'yicha yozadi",
+          "U javob bermaydi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. LLM faktlar bazasi emas, balki ehtimollik asosida matn yaratadi."
+      },
+      {
+        "question": "Hizalash (alignment) bosqichining maqsadi nima?",
+        "options": [
+          "Modelni tezlashtirish",
+          "Modelni o'chirish",
+          "Javoblarni foydali va xavfsiz qilish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Hizalash modelni inson qadriyatlari va ko'rsatmalariga moslashtiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 28,
+    "title": "Token va kontekst oynasi",
+    "subtitle": "Context window nima?",
+    "slides": [
+      {
+        "title": "Context window nima?",
+        "text": "Context window — model bir vaqtda qayta ishlay oladigan maksimal matn hajmi, tokenlarda o'lchanadi.\n\nSuhbatdagi oldingi xabarlar, hujjat va ko'rsatmalar — hammasi shu oynaga sig'ishi kerak.",
+        "icon": "🪟"
+      },
+      {
+        "title": "Nega muhim?",
+        "text": "Oyna to'lib ketsa, eng eski ma'lumot chiqarib tashlanadi yoki model uni e'tiborsiz qoldiradi.\n\nUzun hujjat bilan ishlaganda muhim qismlarni oyna ichida saqlash kerak.\n\nKontekst oynasi kattalashgan sari hisoblash xarajati ham ortadi.",
+        "icon": "📏"
+      },
+      {
+        "title": "Amaliy maslahat",
+        "text": "Keraksiz takrorlarni olib tashlang, muhim ko'rsatmalarni boshida yoki oxirida yozing.\n\nKatta hujjatlarni bo'laklarga bo'lib, faqat kerakli qismni yuboring.",
+        "icon": "✂️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Context window nimani anglatadi?",
+        "options": [
+          "Ekran o'lchami",
+          "Model bir vaqtda qayta ishlay oladigan token hajmi",
+          "Wi-Fi tezligi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Context window modelning bir martalik 'xotira' chegarasi, tokenlarda o'lchanadi."
+      },
+      {
+        "question": "Kontekst oynasi to'lib ketsa nima bo'ladi?",
+        "options": [
+          "Javob avtomatik to'g'ri bo'ladi",
+          "Model tezlashadi",
+          "Eng eski ma'lumot chiqib ketishi yoki e'tiborsiz qolishi mumkin"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Oynadan tashqaridagi matn modelga ko'rinmaydi, shuning uchun unutilgandek bo'ladi."
+      },
+      {
+        "question": "Uzun hujjatni kontekst oynasiga sig'dirish uchun eng yaxshi amaliy usul qaysi?",
+        "options": [
+          "Hujjatni bo'laklarga bo'lib, kerakli qismini yuborish",
+          "Hujjatni ataylab buzish",
+          "Hech narsa qilmaslik"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kerakli qismni tanlash sifatni saqlaydi va token sarfini kamaytiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 29,
+    "title": "Tokenizatsiya",
+    "subtitle": "Token nima?",
+    "slides": [
+      {
+        "title": "Token nima?",
+        "text": "Token — modelning eng kichik matn birligi. U so'z, so'z bo'lagi, harf yoki belgi bo'lishi mumkin.\n\nMasalan, 'programmalash' so'zi bir nechta tokenga bo'linishi mumkin.",
+        "icon": "✂️"
+      },
+      {
+        "title": "Tokenizatsiya usullari",
+        "text": "• So'z darajasi — lug'at juda katta bo'ladi, yangi so'zlar muammo.\n• Harf darajasi — lug'at kichik, lekin ketma-ketlik uzun.\n• Subword (BPE, WordPiece) — eng ko'p ishlatiladigan o'rta yo'l: tez-tez uchraydigan qismlar bitta token bo'ladi.",
+        "icon": "🧩"
+      },
+      {
+        "title": "Nega til bo'yicha farq qiladi?",
+        "text": "Ko'p tilli tokenizatorlarda o'zbek kabi kam ishlatiladigan tillar ko'proq token talab qilishi mumkin.\n\nBu esa bir xil matn narxini va context window dagi o'rnini o'zgartiradi.",
+        "icon": "🌍"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Token nima?",
+        "options": [
+          "Serverning nomi",
+          "Model o'lchami",
+          "Modelning eng kichik matn birligi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Token — matn modelga beriladigan asosiy bo'lak; u so'z, bo'lak yoki harf bo'lishi mumkin."
+      },
+      {
+        "question": "Subword tokenizatsiya qanday afzallik beradi?",
+        "options": [
+          "Lug'at kichik va yangi so'zlarni bo'laklarga bo'lib ishlash imkoni",
+          "Hech qanday afzallik yo'q",
+          "Faqat raqamlarni saqlaydi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. BPE/WordPiece kabi usullar lug'atni ixcham saqlab, noma'lum so'zlarni ham bo'lak-bo'lak tushuna oladi."
+      },
+      {
+        "question": "Kam ishlatiladigan tillar nega ko'proq token talab qilishi mumkin?",
+        "options": [
+          "Ular umuman tokenlanmaydi",
+          "Tokenizator ularning so'zlarini kam bo'laklaridan biladi",
+          "Ular juda qisqa"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Tokenizator asosan ko'p uchraydigan tillar uchun o'qitilgan bo'lishi mumkin, shuning uchun bir so'z ko'proq bo'lakka bo'linadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 30,
+    "title": "Temperature va sampling",
+    "subtitle": "Sampling nima?",
+    "slides": [
+      {
+        "title": "Sampling nima?",
+        "text": "LLM har bir qadamda keyingi token uchun ehtimollik taqsimoti hosil qiladi. Sampling — shu taqsimotdan bittasini tanlash jarayoni.\n\nTanlash usuli javobning ijodiyligi va barqarorligini belgilaydi.",
+        "icon": "🎚️"
+      },
+      {
+        "title": "Temperature",
+        "text": "Temperature past bo'lsa (masalan, 0.2) — model eng ehtimolli tokenni tanlaydi: javob barqaror, aniq.\n\nTemperature yuqori bo'lsa (masalan, 1.0+) — variantlar ko'proq tanlanadi: javob ijodiy, lekin noaniqroq.",
+        "icon": "🌡️"
+      },
+      {
+        "title": "Top-p va amaliyot",
+        "text": "Top-p (nucleus) sampling — ehtimolliklari yig'indisi p bo'lgunicha tokenlar orasidan tanlaydi.\n\nFaktli vazifalarda past temperature, ijodiy yozuvda yuqoriroq temperature mos keladi.",
+        "icon": "🎯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Temperature past bo'lganda javob qanday bo'ladi?",
+        "options": [
+          "Barqaror va aniqroq",
+          "Juda ijodiy va tasodifiy",
+          "Har doim bo'sh"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Past temperature eng ehtimolli tokenni afzal ko'radi, shu sababli javob barqaror bo'ladi."
+      },
+      {
+        "question": "Top-p sampling nimani belgilaydi?",
+        "options": [
+          "Modelning hajmini",
+          "Tokenlarning ehtimolliklari yig'indisi p bo'lguncha tanlov doirasini",
+          "Matn tilini"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Top-p tanlovni eng ehtimolli tokenlar to'plamiga cheklaydi."
+      },
+      {
+        "question": "Faktli savollar uchun odatda qaysi sozlama mos?",
+        "options": [
+          "Temperature ahamiyatga ega emas",
+          "Juda yuqori temperature",
+          "Past temperature"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Faktli javobda aniqlik va takrorlanuvchanlik muhim, shuning uchun past temperature afzal."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 31,
+    "title": "Prompt engineering asoslari",
+    "subtitle": "Prompt nima?",
+    "slides": [
+      {
+        "title": "Prompt nima?",
+        "text": "Prompt — modelga berilgan matnli ko'rsatma va kontekst. Model javobi asosan prompt sifatiga bog'liq.\n\nPrompt engineering — modelning aniq, foydali javob berishi uchun prompt ni loyihalash san'ati va usullari.",
+        "icon": "✍️"
+      },
+      {
+        "title": "Yaxshi promptning tarkibi",
+        "text": "• Vazifa — nima qilish kerak, aniq.\n• Kontekst — vaziyat, maqsad, auditoriya.\n• Cheklovlar — uzunlik, uslub, taqiqlar.\n• Format — javob qanday ko'rinishda bo'lishi (jadval, ro'yxat, JSON).\n• Misollar (ixtiyoriy).",
+        "icon": "🧱"
+      },
+      {
+        "title": "Iterativ yondashuv",
+        "text": "Birinchi prompt odatda mukammal bo'lmaydi. Natijani tekshiring, aniq nuqsonni nomlang va promptni yaxshilang.\n\nBir nechta variantni solishtirish — sifatni o'lchashning oddiy usuli.",
+        "icon": "🔁"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Prompt engineering nima?",
+        "options": [
+          "Modelning og'irliklarini qayta yozish",
+          "Aniq va samarali ko'rsatmalar yozish orqali natijani yaxshilash",
+          "Ma'lumotlarni tozalash"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Prompt engineering modelni qayta o'qitmasdan, yaxshi ko'rsatmalar bilan natijani yaxshilash san'ati."
+      },
+      {
+        "question": "Yaxshi promptga kiradigan element qaysi?",
+        "options": [
+          "Hech qanday kontekst",
+          "Faqat bitta so'z",
+          "Aniq vazifa va format"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Aniq vazifa va kutilayotgan format modelga yo'nalish beradi."
+      },
+      {
+        "question": "Prompt natijasi noto'g'ri bo'lsa, eng to'g'ri qadam nima?",
+        "options": [
+          "Promptni tekshirib, aniq nuqsonni nomlab, yaxshilash",
+          "Modelni darhol o'chirish",
+          "Javobni o'zgartirmasdan qabul qilish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Iterativ yaxshilash eng samarali yo'l: nuqsonni aniqlash va promptni tuzatish."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 32,
+    "title": "Rol berish (Persona)",
+    "subtitle": "Persona nima?",
+    "slides": [
+      {
+        "title": "Persona nima?",
+        "text": "Persona — modelga rol berish: 'Siz tajribali yuridik maslahatchisiz' kabi.\n\nRol berish modelni shu sohaning til va bilim qatlamiga yo'naltiradi.",
+        "icon": "🎭"
+      },
+      {
+        "title": "Qachon foydali?",
+        "text": "Rol aniq auditoriya va uslub belgilaganda eng samarali: masalan, 'boshlang'ich o'quvchi uchun tushuntiring' yoki 'dasturchi sifatida kod ko'rib chiqing'.\n\nRol faqat dekor emas: u javobning chuqurligi va tilini o'zgartiradi.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Cheklov",
+        "text": "Rol bilan model haqiqiy ekspert bo'lib qolmaydi: u hali ham xato qilishi mumkin.\n\nMuhim qarorlarda javobni mutaxassis bilan tekshirish zarur.",
+        "icon": "⚠️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Prompt ichida 'Persona' (rol) berish nima uchun muhim?",
+        "options": [
+          "Internet tezligini oshirish uchun",
+          "Faqat matnni uzun qilish uchun",
+          "Professional va aniq javob olish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Rol modelni mos bilim va uslub qatlamiga yo'naltiradi."
+      },
+      {
+        "question": "Persona berish modelni haqiqiy ekspertga aylantiradimi?",
+        "options": [
+          "Yo'q, u hali ham xato qilishi mumkin",
+          "Ha, to'liq",
+          "Ha, endi hech qachon xato qilmaydi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Rol uslub va yo'nalishni o'zgartiradi, lekin ishonchlilikni kafolatlamaydi."
+      },
+      {
+        "question": "Qaysi rol ko'rsatmasi aniqroq?",
+        "options": [
+          "Yaxshi yoz",
+          "Boshlang'ich o'quvchi uchun oddiy tilda tushuntiring",
+          "Nimadir qil"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Aniq auditoriya va uslub javob sifatini sezilarli oshiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 33,
+    "title": "Chain of Thought",
+    "subtitle": "Chain of Thought (CoT)",
+    "slides": [
+      {
+        "title": "Chain of Thought (CoT)",
+        "text": "Chain of Thought — modelni masalani bosqichma-bosqich, oraliq qadamlar bilan yechishga undash.\n\nMisol: 'Bosqichma-bosqich fikrlang, keyin javobni yozing.'",
+        "icon": "🪜"
+      },
+      {
+        "title": "Nega ishlaydi?",
+        "text": "Model har bir qadamda oldingi natijani kontekst sifatida ishlatadi. Murakkab masala kichik qismlarga bo'linadi.\n\nBu, ayniqsa, matematik va mantiqiy masalalarda xatolarni kamaytiradi.",
+        "icon": "📝"
+      },
+      {
+        "title": "Amaliy eslatma",
+        "text": "Oraliq qadamlar uzun bo'lishi mumkin, shuning uchun token va vaqt sarfi ortadi.\n\nOddiy savollarda CoT shart emas; murakkab mantiqda esa juda foydali.",
+        "icon": "🔍"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Chain of Thought nima?",
+        "options": [
+          "Bosqichma-bosqich mantiqiy tahlil",
+          "Qisqa javoblar berish",
+          "Rasm chizish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. CoT masalani oraliq qadamlarga bo'lib yechishni rag'batlantiradi."
+      },
+      {
+        "question": "CoT qaysi masalalarda ayniqsa foydali?",
+        "options": [
+          "Faqat rasm tanish",
+          "Murakkab matematik va mantiqiy masalalar",
+          "Oddiy salomlashish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Ko'p bosqichli masalalarda oraliq qadamlar xatoni kamaytiradi."
+      },
+      {
+        "question": "CoT ning kamchiligi nima?",
+        "options": [
+          "U faqat tasvir bilan ishlaydi",
+          "U umuman ishlamaydi",
+          "Oraliq qadamlar tufayli token va vaqt sarfi ortadi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Uzun fikr zanjiri ko'proq resurs talab qiladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 34,
+    "title": "Few-shot va zero-shot",
+    "subtitle": "Zero-shot",
+    "slides": [
+      {
+        "title": "Zero-shot",
+        "text": "Zero-shot — modelga misolsiz faqat vazifani aytish: 'Ushbu sharhning kayfiyatini aniqlang.'\n\nOddiy vazifalarda ko'pincha yetarli.",
+        "icon": "0️⃣"
+      },
+      {
+        "title": "Few-shot",
+        "text": "Few-shot — promptga bir nechta misol (kirish → chiqish) qo'shish. Model shu namunaga qarab formatni va mantiqni taqlid qiladi.\n\nMisol: 2–5 ta to'g'ri juftlik.",
+        "icon": "🔢"
+      },
+      {
+        "title": "Qachon qaysi?",
+        "text": "Vazifa keng tarqalgan va aniq bo'lsa — zero-shot.\nFormat noodatiy yoki mezon noaniq bo'lsa — few-shot.\n\nMisollarni xilma-xil va to'g'ri tanlash muhim: noto'g'ri misol modelni chalg'itadi.",
+        "icon": "⚖️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Few-shot prompting nima?",
+        "options": [
+          "Modelni umuman ishlatmaslik",
+          "Promptga bir nechta misol qo'shish",
+          "Faqat bitta so'z yozish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Few-shot misollar orqali modelga kutilayotgan format va mantiqni ko'rsatadi."
+      },
+      {
+        "question": "Zero-shot ning mohiyati nima?",
+        "options": [
+          "Modelni qayta o'qitish",
+          "Har bir so'zga misol berish",
+          "Misolsiz, faqat vazifa tavsifi bilan so'rash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Zero-shot da modelga misol berilmaydi, faqat vazifa aytiladi."
+      },
+      {
+        "question": "Few-shot misollari haqida qaysi gap to'g'ri?",
+        "options": [
+          "Ular xilma-xil va to'g'ri bo'lishi kerak",
+          "Ular qanday bo'lsa ham mayli",
+          "Ularni umuman bermaslik kerak"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Noto'g'ri yoki bir xil misollar modelni noto'g'ri yo'nalishga olib boradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 35,
+    "title": "Cheklovlar va format talablari",
+    "subtitle": "Cheklovlar nega kerak?",
+    "slides": [
+      {
+        "title": "Cheklovlar nega kerak?",
+        "text": "Model cheklov qo'yilmasa, javobni o'zi xohlagancha uzun yoki noaniq qilishi mumkin.\n\nUzunlik, til, uslub va mavzu chegarasini aniq yozing.",
+        "icon": "📐"
+      },
+      {
+        "title": "Format talablari",
+        "text": "Javob formatini aniq ko'rsating: 'Faqat JSON qaytaring', 'Uch bandli ro'yxat', 'Jadval ko'rinishida'.\n\nDasturiy ishlatiladigan javoblar uchun qat'iy format muhim.",
+        "icon": "🗂️"
+      },
+      {
+        "title": "Salbiy cheklovlar",
+        "text": "'Nima qilmaslik kerak' ham muhim: 'Taxmin qilmang; ma'lumot yetmasa, ayting' — hallucination xavfini kamaytiradi.\n\nIjobiy va salbiy ko'rsatmalarni birga yozing.",
+        "icon": "🚫"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Prompt ga cheklov qo'yish nima uchun kerak?",
+        "options": [
+          "Ma'lumotni yashirish uchun",
+          "Modelni o'chirish uchun",
+          "Javobni aniq va boshqariladigan qilish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Cheklovlar uzunlik, uslub va formatni boshqarib, javob sifatini oshiradi."
+      },
+      {
+        "question": "Dasturiy tizimga javob uchun eng muhim talab qaysi?",
+        "options": [
+          "Qat'iy, oldindan belgilangan format (masalan, JSON)",
+          "Har xil shakl",
+          "Uzun she'r"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Dastur javobni parse qilishi uchun format qat'iy bo'lishi kerak."
+      },
+      {
+        "question": "'Ma'lumot yetmasa, taxmin qilmang' kabi salbiy cheklov nimaga yordam beradi?",
+        "options": [
+          "Javobni uzunroq qiladi",
+          "Hallucination xavfini kamaytiradi",
+          "Modelni tezlashtiradi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Modelga 'bilmasligini aytish'ni ruxsat berish o'ylab topilgan javoblarni kamaytiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 36,
+    "title": "Kontekstni boshqarish",
+    "subtitle": "Kontekstni boshqarish",
+    "slides": [
+      {
+        "title": "Kontekstni boshqarish",
+        "text": "Suhbat uzaygan sari kontekst oynasi to'ladi, va model eski ma'lumotlarni yo'qotadi.\n\nKontekstni boshqarish — qaysi ma'lumot qolishi, qaysi biri olib tashlanishini hal qilish.",
+        "icon": "🧠"
+      },
+      {
+        "title": "Usullar",
+        "text": "• Muhim ko'rsatmalar va qaror-qabullarni qisqa xulosa qilib saqlash.\n• Eski xabarlarni umumlashtirish (summarization).\n• Faqat dolzarb hujjat bo'lagini yuborish.\n• Ko'rsatmalarni har so'rovda takrorlash, ayniqsa uzun suhbatda.",
+        "icon": "📌"
+      },
+      {
+        "title": "Tartib",
+        "text": "Eng muhim ma'lumot kontekstning boshiga yoki oxiriga qo'yilsa, model unga yaxshiroq e'tibor beradi.\n\nO'rtada joylashgan uzun matnlar ko'pincha e'tibordan chetda qoladi.",
+        "icon": "🎯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Suhbat uzaygan sari nima muammo bo'ladi?",
+        "options": [
+          "Kontekst oynasi to'lib, eski ma'lumot yo'qoladi",
+          "Model ovozini yo'qotadi",
+          "Javob tezlashadi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Chegara to'lgach, oldingi muhim ma'lumotlar modelga yetib bormaydi."
+      },
+      {
+        "question": "Uzun suhbatda kontekstni saqlashning yaxshi usuli qaysi?",
+        "options": [
+          "Hamma xabarlarni o'chirish",
+          "Muhim qarorlarni qisqa xulosa qilib takrorlash",
+          "Hech narsa qilmaslik"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Qisqa xulosa muhim axborotni kam token bilan saqlaydi."
+      },
+      {
+        "question": "Muhim ko'rsatma qayerga qo'yilsa, model unga yaxshiroq e'tibor beradi?",
+        "options": [
+          "Hech qayerga",
+          "Eng o'rtasiga, ko'p matn ichida",
+          "Kontekstning boshi yoki oxiriga"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Boshi va oxiri ko'pincha yuqori e'tiborga ega; o'rtadagi uzun matn ko'proq chetda qoladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 37,
+    "title": "Prompt zanjirlari",
+    "subtitle": "Prompt zanjiri nima?",
+    "slides": [
+      {
+        "title": "Prompt zanjiri nima?",
+        "text": "Murakkab vazifani bir promptda emas, ketma-ket bir nechta kichik promptlarda bajarish — prompt chaining.\n\nHar bir qadamning natijasi keyingi qadamning kirishiga aylanadi.",
+        "icon": "🔗"
+      },
+      {
+        "title": "Misol",
+        "text": "Hujjatni xulosa qilish uchun: 1) bo'limlarga ajrat, 2) har bir bo'limni xulosa qil, 3) xulosalarni birlashtirib yakuniy javob yoz.\n\nBunday yondashuv uzun hujjatni ham nazorat ostida qayta ishlash imkonini beradi.",
+        "icon": "🧪"
+      },
+      {
+        "title": "Afzalliklari",
+        "text": "• Har bir qadamni alohida tekshirish mumkin.\n• Xato qayerda ekani aniqroq topiladi.\n• Murakkab vazifalar barqarorroq bajariladi.",
+        "icon": "✅"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Prompt chaining nima?",
+        "options": [
+          "Bitta promptni bir necha marta takrorlash",
+          "Murakkab vazifani ketma-ket kichik promptlarga bo'lish",
+          "Modelni zanjirga bog'lash"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Har bir qadam oldingi natijaga tayanib, murakkab vazifani bosqichma-bosqich bajaradi."
+      },
+      {
+        "question": "Uzun hujjatni xulosa qilish uchun zanjir usuli nima beradi?",
+        "options": [
+          "Hujjatni o'chirish",
+          "Hech qanday foyda",
+          "Uzun matnni qismlarga bo'lib, har birini nazorat qilish imkonini"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Bo'lib qayta ishlash kontekst chegarasi muammosini yengillashtiradi."
+      },
+      {
+        "question": "Zanjirning asosiy afzalligi qaysi?",
+        "options": [
+          "Har bir qadamni alohida tekshirish mumkin",
+          "U hech qachon xato qilmaydi",
+          "U faqat bitta token ishlatadi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Qadamma-qadam yondashuvda xato qaysi bosqichda sodir bo'lganini topish osonlashadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 38,
+    "title": "RAG (qidiruv bilan generatsiya)",
+    "subtitle": "RAG nima?",
+    "slides": [
+      {
+        "title": "RAG nima?",
+        "text": "RAG (Retrieval-Augmented Generation) — model javob yozishdan oldin tashqi bilim bazasidan tegishli hujjatlarni qidirib topadi va promptga qo'shadi.\n\nNatija: javob aniq manbaga asoslanadi.",
+        "icon": "🔎"
+      },
+      {
+        "title": "Ishlash bosqichlari",
+        "text": "1) Hujjatlarni bo'laklarga bo'lish.\n2) Har bir bo'lakni embedding vektoriga aylantirish.\n3) So'rov bo'yicha eng o'xshash bo'laklarni topish.\n4) Ularni prompt ichiga qo'shib, javob yaratish.",
+        "icon": "⚙️"
+      },
+      {
+        "title": "Nega afzal?",
+        "text": "Modelni qayta o'qitmasdan, yangi va maxfiy ma'lumotdan foydalanish mumkin.\n\nJavobda manbaga havola berish, tekshirishni osonlashtiradi.",
+        "icon": "💰"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "RAG da 'R' nimani anglatadi?",
+        "options": [
+          "Reset (qayta o'rnatish)",
+          "Random (tasodifiy)",
+          "Retrieval (qidiruv)"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Retrieval — tegishli hujjatlarni qidirib topish bosqichi."
+      },
+      {
+        "question": "RAG modelni qayta o'qitmasdan nima beradi?",
+        "options": [
+          "Tashqi ma'lumotga asoslangan javob",
+          "Model hajmini kamaytirish",
+          "Tasvir yaratish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Qidirilgan hujjatlar promptga qo'shilib, javob aniq manbaga tayanadi."
+      },
+      {
+        "question": "RAG da embedding nima uchun kerak?",
+        "options": [
+          "Matnni shifrlash uchun",
+          "So'rovga o'xshash hujjat bo'laklarini topish uchun",
+          "Ranglarni tanlash uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Vektor o'xshashligi bo'yicha eng mos bo'laklar qidiriladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 39,
+    "title": "Vektor bazalari",
+    "subtitle": "Vektor bazasi nima?",
+    "slides": [
+      {
+        "title": "Vektor bazasi nima?",
+        "text": "Vektor bazasi — embedding vektorlarini saqlaydigan va ular orasidagi o'xshashlikni tez topadigan ma'lumotlar bazasi.\n\nRAG tizimining 'xotirasi' sifatida ishlatiladi.",
+        "icon": "🗄️"
+      },
+      {
+        "title": "O'xshashlik o'lchovi",
+        "text": "Ko'pincha kosinus o'xshashligi (cosine similarity) ishlatiladi: vektorlar orasidagi burchak qanchalik kichik bo'lsa, ma'no shunchalik yaqin.\n\nMillionlab vektor orasida tez qidiruv uchun taxminiy qidiruv (ANN) algoritmlari kerak.",
+        "icon": "📏"
+      },
+      {
+        "title": "Amaliy jihat",
+        "text": "Embedding modeli o'zgarsa, barcha vektorlarni qayta hisoblash kerak bo'ladi.\n\nBo'laklar hajmi (chunk size) va qoplanish (overlap) qidiruv sifatiga katta ta'sir qiladi.",
+        "icon": "🧰"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Vektor bazasining asosiy vazifasi nima?",
+        "options": [
+          "Embedding vektorlarini saqlash va o'xshash vektorlarni tez topish",
+          "Modelni o'qitish",
+          "Video tahrirlash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Vektor bazasi o'xshashlik qidiruvi uchun optimallashgan."
+      },
+      {
+        "question": "Kosinus o'xshashligi nimani o'lchaydi?",
+        "options": [
+          "Fayl hajmini",
+          "Vektorlar orasidagi burchakni (yo'nalish o'xshashligini)",
+          "Modelning yoshini"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Burchak qanchalik kichik bo'lsa, vektorlar shunchalik o'xshash."
+      },
+      {
+        "question": "Embedding modeli o'zgarsa nima qilish kerak?",
+        "options": [
+          "Bazani o'chirib tashlash",
+          "Hech narsa qilmaslik",
+          "Barcha vektorlarni qayta hisoblash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Turli modellar turli vektor fazosi yaratadi, shuning uchun hammasini qayta hisoblash kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 40,
+    "title": "AI agentlar",
+    "subtitle": "AI agent nima?",
+    "slides": [
+      {
+        "title": "AI agent nima?",
+        "text": "AI agent — maqsadga erishish uchun rejalashtiradigan, qaror qabul qiladigan va tashqi vositalarni (tool) ishlatadigan tizim.\n\nOddiy chatbot faqat javob beradi, agent esa harakat qiladi.",
+        "icon": "🤖"
+      },
+      {
+        "title": "Agent sikli",
+        "text": "1) Maqsadni tushunish.\n2) Rejani tuzish.\n3) Vositani tanlab chaqirish (qidiruv, kalkulyator, API).\n4) Natijani ko'rib chiqish.\n5) Maqsadga yetguncha takrorlash.",
+        "icon": "🔄"
+      },
+      {
+        "title": "Xavfsizlik",
+        "text": "Agent haqiqiy harakat qilgani uchun xato xarajati katta bo'lishi mumkin.\n\nMuhim amallar (to'lov, o'chirish, yuborish) oldidan inson tasdig'i va ruxsat chegaralari kerak.",
+        "icon": "🛡️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "AI agent chatbot dan nimasi bilan farq qiladi?",
+        "options": [
+          "Faqat rasm chizadi",
+          "Maqsad uchun rejalashtiradi va vositalar bilan harakat qiladi",
+          "Hech narsa qila olmaydi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Agent maqsadga erishish uchun qadamlarni rejalashtirib, tashqi vositalarni ishlatadi."
+      },
+      {
+        "question": "Agent sikli qanday tartibda ishlaydi?",
+        "options": [
+          "Tasodifiy tartibda",
+          "Faqat bitta qadam",
+          "Maqsad → reja → vosita → natijani ko'rish → takror"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Agent maqsadga yetguncha rejani amalga oshirib, natijani baholab boradi."
+      },
+      {
+        "question": "Agent uchun eng muhim xavfsizlik choralari qaysi?",
+        "options": [
+          "Muhim amallarda inson tasdig'i va ruxsat chegaralari",
+          "Hech qanday chegara qo'ymaslik",
+          "Agentni internetdan butunlay ajratish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Haqiqiy harakatlar qaytarib bo'lmaydigan zararga olib kelishi mumkin, shu sababli nazorat kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 41,
+    "title": "Tool use (vositalardan foydalanish)",
+    "subtitle": "Tool use nima?",
+    "slides": [
+      {
+        "title": "Tool use nima?",
+        "text": "Tool use — model o'zi bilmagan yoki hisoblay olmaydigan ishlar uchun tashqi vositani (kalkulyator, qidiruv, API) chaqirishi.\n\nMasalan, aniq hisob-kitob yoki joriy kurs ma'lumoti uchun vosita ishlatiladi.",
+        "icon": "🧰"
+      },
+      {
+        "title": "Qanday ishlaydi?",
+        "text": "1) Model vosita tavsifini biladi (nomi, parametrlari).\n2) Kerak bo'lganda vositani tuzilgan so'rov (masalan, JSON) bilan chaqiradi.\n3) Dastur vositani bajaradi va natijani modelga qaytaradi.\n4) Model yakuniy javobni natija asosida yozadi.",
+        "icon": "📋"
+      },
+      {
+        "title": "Ehtiyotkorlik",
+        "text": "Vositalar tashqi dunyoga ta'sir qilishi mumkin, shuning uchun ruxsatlar cheklangan bo'lishi kerak.\n\nVosita natijasini ham ishonchli deb qabul qilmasdan, tekshirish foydali.",
+        "icon": "🔒"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Tool use nima?",
+        "options": [
+          "Matnni tarjima qilish",
+          "Modelning ichki og'irliklarini o'zgartirishi",
+          "Model tashqi vositani chaqirib, natijadan foydalanishi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Vositalar modelning imkoniyatlarini kengaytiradi: hisoblash, qidiruv, API."
+      },
+      {
+        "question": "Aniq matematik hisob uchun model nima qilishi yaxshi?",
+        "options": [
+          "Kalkulyator vositasini chaqirishi",
+          "Faqat taxmin qilishi",
+          "Javobni o'ylab topishi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Vosita aniq hisoblaydi, model esa natijani to'g'ri tushuntiradi."
+      },
+      {
+        "question": "Vosita ishlatishda eng muhim ehtiyot choralari qaysi?",
+        "options": [
+          "Hamma ruxsatlarni berish",
+          "Ruxsatlarni cheklash va natijani tekshirish",
+          "Vositalarni hech qachon tekshirmaslik"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Vositalar real ta'sir qilgani uchun cheklov va tekshiruv kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 42,
+    "title": "Gallyutsinatsiyalar",
+    "subtitle": "Gallyutsinatsiya nima?",
+    "slides": [
+      {
+        "title": "Gallyutsinatsiya nima?",
+        "text": "Gallyutsinatsiya — model ishonchli va ravon ko'rinadigan, lekin noto'g'ri yoki asossiz ma'lumot yaratishi.\n\nMasalan, mavjud bo'lmagan kitob, sana yoki ilmiy maqola keltirishi mumkin.",
+        "icon": "🌀"
+      },
+      {
+        "title": "Nega yuz beradi?",
+        "text": "Model faktlarni bazada qidirmaydi, balki keyingi tokenni ehtimollik bo'yicha tanlaydi.\n\nAgar mos ma'lumot kam bo'lsa, u 'to'ldirib' yuboradi, chunki ravon matn yozish uning asosiy vazifasi.",
+        "icon": "🧐"
+      },
+      {
+        "title": "Kamaytirish usullari",
+        "text": "• RAG bilan javobni manbaga asoslash.\n• Promptda 'bilmasangiz, ayting' deb cheklash.\n• Past temperature.\n• Muhim faktlarni inson tomonidan tekshirish.",
+        "icon": "🩹"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Gallyutsinatsiya nima?",
+        "options": [
+          "Model ishonchli ko'rinadigan, lekin noto'g'ri ma'lumot yaratishi",
+          "Model tasvirni noto'g'ri tanishi",
+          "Model javob berishdan bosh tortishi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Gallyutsinatsiyada javob ravon va ishonarli, lekin haqiqatga mos emas."
+      },
+      {
+        "question": "LLM nega gallyutsinatsiya qiladi?",
+        "options": [
+          "U hech qachon xato qilmaydi",
+          "Faktlarni bazadan qidirmay, ehtimollik bo'yicha matn yaratgani uchun",
+          "U faqat raqam biladi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Model asosan keyingi tokenni bashorat qiladi, shuning uchun mos ma'lumot yo'q bo'lsa to'ldirib yuboradi."
+      },
+      {
+        "question": "Gallyutsinatsiyani kamaytiruvchi usul qaysi?",
+        "options": [
+          "Tekshirishni to'xtatish",
+          "Temperatureni maksimal qilish",
+          "RAG bilan javobni manbaga asoslash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Tashqi manbadan olingan ma'lumot javobni haqiqatga yaqinlashtiradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 43,
+    "title": "Faktlarni tekshirish",
+    "subtitle": "Faktlarni tekshirish",
+    "slides": [
+      {
+        "title": "Faktlarni tekshirish",
+        "text": "AI javobini hech qachon so'zsiz ishonchli deb qabul qilmang. Ayniqsa sana, raqam, qonun, tibbiy va ilmiy ma'lumotlarni tekshirish shart.\n\nTekshirish — AI bilan ishlashning ajralmas qismi.",
+        "icon": "✅"
+      },
+      {
+        "title": "Tekshirish usullari",
+        "text": "• Birlamchi manbalarni (rasmiy hujjat, asl maqola) toping.\n• Bir nechta mustaqil manbada tasdiqlang.\n• Model keltirgan havola va iqtiboslar haqiqiyligini ayniqsa tekshiring.\n• Raqamlarni hisob-kitob bilan qayta tekshiring.",
+        "icon": "🔗"
+      },
+      {
+        "title": "Qoida",
+        "text": "Model qanchalik ishonch bilan gapirsa ham, ishonchlilik haqiqat degani emas.\n\nYuqori xavfli qarorlarda AI faqat yordamchi, yakuniy mas'uliyat esa inson zimmasida bo'lishi kerak.",
+        "icon": "🧾"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "AI javobini qanday qabul qilish kerak?",
+        "options": [
+          "So'zsiz ishonchli deb",
+          "Muhim faktlarni tekshirib",
+          "Hech qachon o'qimasdan"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. AI xato qilishi mumkin, shuning uchun muhim ma'lumotlar manbalar orqali tasdiqlanadi."
+      },
+      {
+        "question": "Model keltirgan manba haqida nima qilish kerak?",
+        "options": [
+          "O'chirib tashlash",
+          "Doim to'g'ri deb hisoblash",
+          "Uning haqiqiyligini tekshirish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Gallyutsinatsiya tufayli model mavjud bo'lmagan manbalarni ham keltirishi mumkin."
+      },
+      {
+        "question": "Ishonchli ko'rinadigan javob haqiqat ekanini anglatadimi?",
+        "options": [
+          "Yo'q, ishonch va haqiqat bir narsa emas",
+          "Ha, doim",
+          "Faqat raqamlar bo'lsa"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Model ravon va qat'iy gapirishi mumkin, ammo noto'g'ri bo'lishi ham mumkin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 44,
+    "title": "Generativ AI: GAN",
+    "subtitle": "GAN nima?",
+    "slides": [
+      {
+        "title": "GAN nima?",
+        "text": "GAN (Generative Adversarial Network) — ikki tarmoqdan iborat: generator yangi ma'lumot (masalan, tasvir) yaratadi, diskriminator esa uni haqiqiy yoki soxta deb baholaydi.\n\nIkkalasi bir-biriga qarshi o'qiydi.",
+        "icon": "🎨"
+      },
+      {
+        "title": "Raqobat jarayoni",
+        "text": "Generator diskriminatorni aldashga, diskriminator esa soxtani aniqlashga harakat qiladi.\n\nHar bir tomon yaxshilangani sayin ikkinchisi ham kuchayadi.\n\nNatijada generator juda realistik tasvirlar yaratishni o'rganadi.",
+        "icon": "🥊"
+      },
+      {
+        "title": "Qiyinchiliklar",
+        "text": "GAN o'qitish beqaror bo'lishi mumkin: tomonlardan biri juda kuchli bo'lib qolsa, o'qitish buziladi.\n\nBundan tashqari, mode collapse — generator bir xil natijalarni chiqarib qolishi muammosi bor.",
+        "icon": "⚠️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "GAN tarkibida nechta asosiy tarmoq bor?",
+        "options": [
+          "Bitta",
+          "Uchta: kirish, yashirin, chiqish",
+          "Ikkita: generator va diskriminator"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Generator yangi ma'lumot yaratadi, diskriminator esa uni haqiqiy yoki soxta deb baholaydi."
+      },
+      {
+        "question": "GAN da generator nimani maqsad qiladi?",
+        "options": [
+          "Diskriminatorni aldash",
+          "Ma'lumotni o'chirish",
+          "Learning rate ni nolga tushirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Generator shunday ma'lumot yaratadiki, diskriminator uni haqiqiy deb o'ylasin."
+      },
+      {
+        "question": "GAN o'qitishidagi muammo qaysi?",
+        "options": [
+          "Hech qanday muammo yo'q",
+          "Beqarorlik va mode collapse",
+          "Faqat matnda ishlamasligi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Raqobatdagi nomutanosiblik o'qitishni buzishi va generator xilma-xilligini yo'qotishi mumkin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 45,
+    "title": "Diffusion modellari",
+    "subtitle": "Diffusion g'oyasi",
+    "slides": [
+      {
+        "title": "Diffusion g'oyasi",
+        "text": "Diffusion modellari avval ma'lumotga asta-sekin shovqin qo'shishni, keyin esa shu shovqindan asl tasvirni tiklashni o'rganadi.\n\nGeneratsiya paytida toza shovqindan boshlanib, bosqichma-bosqich tasvir hosil qilinadi.",
+        "icon": "🌫️"
+      },
+      {
+        "title": "Ikki bosqich",
+        "text": "• Forward (diffusion): tasvirga bosqichma-bosqich Gauss shovqini qo'shiladi.\n• Reverse (denoising): model har bir bosqichda shovqinni olib tashlashni o'rganadi.\n\nGeneratsiya — bu tiklash jarayonining amalga oshirilishi.",
+        "icon": "🔄"
+      },
+      {
+        "title": "Afzalligi",
+        "text": "Diffusion modellari barqaror o'qitiladi va yuqori sifatli, xilma-xil tasvirlar beradi.\n\nHozirgi matn-dan-tasvir (text-to-image) tizimlarining aksariyati shu g'oyaga asoslangan.",
+        "icon": "🏆"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Diffusion modellari qanday g'oyaga asoslangan?",
+        "options": [
+          "Shovqin qo'shish va uni olib tashlashni o'rganish",
+          "Tasvirni kichraytirish",
+          "Faqat matn yozish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Model shovqindan toza tasvirni tiklashni o'rganadi."
+      },
+      {
+        "question": "Diffusion generatsiyasi qayerdan boshlanadi?",
+        "options": [
+          "Tayyor tasvirning nusxasidan",
+          "Toza shovqindan",
+          "Bo'sh matndan"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Teskari jarayonda avval tasodifiy shovqin olinadi va u bosqichma-bosqich tasvirga aylantiriladi."
+      },
+      {
+        "question": "GAN bilan solishtirganda diffusion modellarning afzalligi nima?",
+        "options": [
+          "Faqat matn yaratishi",
+          "Hech qanday afzalligi yo'q",
+          "Barqaror o'qitish va yuqori sifatli xilma-xil natijalar"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Diffusion modellari ko'pincha o'qitish barqarorligi va xilma-xillik jihatidan qulay."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 46,
+    "title": "Tasvir generatsiyasi",
+    "subtitle": "Tasvir generatsiyasi",
+    "slides": [
+      {
+        "title": "Tasvir generatsiyasi",
+        "text": "Matn-dan-tasvir (text-to-image) modellari tavsifga qarab yangi tasvir yaratadi.\n\nMisol: 'oqshom shahrida ko'l bo'yidagi qadimiy qal'a, akvarel uslubida'.",
+        "icon": "🖌️"
+      },
+      {
+        "title": "Promptdan natijagacha",
+        "text": "Yaxshi natija uchun: obyekt, uslub, yorug'lik, kompozitsiya va rangni aniq yozing.\n\nSalbiy prompt (negative prompt) orqali istalmagan elementlarni chiqarib tashlash mumkin.",
+        "icon": "✏️"
+      },
+      {
+        "title": "Huquqiy va etik jihat",
+        "text": "Tasvirlar o'qitilgan ma'lumot mualliflarining huquqini va real odamlarning yuzini suiiste'mol qilish xavfini tug'dirishi mumkin.\n\nGenerativ tasvirni belgilash (watermark, label) va ruxsat masalalariga e'tibor berish kerak.",
+        "icon": "⚖️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Matn-dan-tasvir modeli nima qiladi?",
+        "options": [
+          "Tasvirni matnga aylantiradi",
+          "Tavsifga qarab yangi tasvir yaratadi",
+          "Faqat ovozni tanib oladi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Matn tavsifi asosida yangi tasvir generatsiya qilinadi."
+      },
+      {
+        "question": "Yaxshi tasvir uchun promptda nima aniq ko'rsatilishi kerak?",
+        "options": [
+          "Hech narsa",
+          "Faqat bitta so'z",
+          "Obyekt, uslub, yorug'lik va kompozitsiya"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Aniq tafsilotlar natija sifati va yo'nalishini yaxshilaydi."
+      },
+      {
+        "question": "Generativ tasvirlar bilan bog'liq etik xavf qaysi?",
+        "options": [
+          "Real odamning yuzini ruxsatsiz soxtalashtirish",
+          "Tasvir juda tez chiqishi",
+          "Rang sxemasi tanlash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Ruxsatsiz deepfake va mualliflik huquqi buzilishi jiddiy etik-huquqiy masala."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 47,
+    "title": "Ovozli AI (ASR va TTS)",
+    "subtitle": "ASR — nutqdan matnga",
+    "slides": [
+      {
+        "title": "ASR — nutqdan matnga",
+        "text": "ASR (Automatic Speech Recognition) — ovozli yozuvni matnga aylantiradi.\n\nZamonaviy tizimlar turli shevalar va shovqinli muhitda ham yaxshi ishlashga intiladi, lekin xatolar hali mumkin.",
+        "icon": "🎙️"
+      },
+      {
+        "title": "TTS — matndan nutqqa",
+        "text": "TTS (Text-to-Speech) — matnni tabiiy ovozga aylantiradi.\n\nZamonaviy modellar intonatsiya, pauza va hissiyotni ham ifodalay oladi.",
+        "icon": "🔊"
+      },
+      {
+        "title": "Amaliy qo'llanilishi",
+        "text": "Ovozli yordamchilar, qo'ng'iroq markazi tahlili, yozuvlarni transkripsiya qilish, nogironlar uchun qulaylik.\n\nMaxfiy suhbatlarni yozishda rozilik va maxfiylik qoidalariga rioya qilish shart.",
+        "icon": "🧭"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "ASR nima qiladi?",
+        "options": [
+          "Tasvirni tanib oladi",
+          "Matnni ovozga aylantiradi",
+          "Ovozni matnga aylantiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. ASR — nutqni tanish va uni matn ko'rinishiga o'tkazish."
+      },
+      {
+        "question": "TTS nima?",
+        "options": [
+          "Matnni tabiiy ovozga aylantirish",
+          "Ovozni o'chirish",
+          "Video tahrirlash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. TTS yozma matnni eshitiladigan nutqqa aylantiradi."
+      },
+      {
+        "question": "Maxfiy suhbatni yozishda nima muhim?",
+        "options": [
+          "Yozuvni hamma bilan ulashish",
+          "Rozilik va maxfiylik qoidalariga rioya qilish",
+          "Hech qanday qoida yo'q"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Ovoz shaxsiy ma'lumot hisoblanadi; ruxsat va maxfiylik qoidalari majburiy."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 48,
+    "title": "Computer vision asoslari",
+    "subtitle": "Computer vision nima?",
+    "slides": [
+      {
+        "title": "Computer vision nima?",
+        "text": "Computer vision — kompyuterning tasvir va videodan ma'no ajratib olish fani.\n\nAsosiy vazifalar: tasniflash (rasmda nima bor), aniqlash (qayerda), segmentatsiya (har bir pikselni sinfga bog'lash).",
+        "icon": "👀"
+      },
+      {
+        "title": "Tasvir qanday ko'rinadi?",
+        "text": "Kompyuter uchun tasvir — piksellar matritsasi. Rang kanallari (RGB) uchta matritsa sifatida saqlanadi.\n\nModel shu sonlardan chekka, tekstura va shakllarni o'rganadi.",
+        "icon": "🧱"
+      },
+      {
+        "title": "Qo'llanilishi",
+        "text": "Sanoatda nuqson aniqlash, tibbiyotda rentgen tahlili, yo'l belgilarini tanish, do'konlarda mahsulot hisobi.\n\nHar bir sohada aniqlik va xatolar narxi muhim.",
+        "icon": "🏭"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Computer vision nima?",
+        "options": [
+          "Tasvir va videodan ma'no ajratish",
+          "Faqat matn yozish",
+          "Ovoz yozish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Computer vision kompyuterga ko'rish qobiliyatini berish sohasi."
+      },
+      {
+        "question": "Kompyuter uchun tasvir nimadan iborat?",
+        "options": [
+          "Tayyor so'zlardan",
+          "Piksellar sonlari matritsasidan",
+          "Ovoz to'lqinlaridan"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Har bir piksel son bilan ifodalanadi, rang kanallari alohida matritsalar bo'ladi."
+      },
+      {
+        "question": "Segmentatsiya nima qiladi?",
+        "options": [
+          "Faqat rang o'zgartiradi",
+          "Tasvirni o'chiradi",
+          "Har bir pikselni sinfga bog'laydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Segmentatsiya tasvirdagi har bir pikselni tegishli obyekt yoki sinfga ajratadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 49,
+    "title": "Object detection",
+    "subtitle": "Object detection nima?",
+    "slides": [
+      {
+        "title": "Object detection nima?",
+        "text": "Object detection — tasvirdagi obyektlarni topish va ularni to'rtburchak (bounding box) ichiga olish, har biriga sinf berish.\n\nMasalan, ko'chadagi mashina, odam, svetofor.",
+        "icon": "📦"
+      },
+      {
+        "title": "Asosiy ko'rsatkich",
+        "text": "IoU (Intersection over Union) — bashorat qilingan box bilan haqiqiy box qanchalik ustma-ust tushganini o'lchaydi.\n\nOdatda IoU ≥ 0.5 bo'lsa, aniqlash to'g'ri deb hisoblanadi.",
+        "icon": "📐"
+      },
+      {
+        "title": "Real vaqt",
+        "text": "Avtonom haydash va kamera kuzatuvi kabi tizimlarda tezlik ham muhim.\n\nTezlik va aniqlik o'rtasida kompromiss bo'ladi: tezkor modellar kamroq aniq bo'lishi mumkin.",
+        "icon": "⚡"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Object detection nimani beradi?",
+        "options": [
+          "Faqat tasvir hajmini",
+          "Obyektlarning joylashuvi (box) va sinfini",
+          "Faqat rang"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Har bir obyekt uchun to'rtburchak va sinf nomi chiqariladi."
+      },
+      {
+        "question": "IoU nimani o'lchaydi?",
+        "options": [
+          "Ma'lumot hajmini",
+          "Modelning yoshini",
+          "Bashorat va haqiqiy boxning ustma-ust tushishini"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. IoU ikki to'rtburchak kesishgan va birlashgan maydon nisbati."
+      },
+      {
+        "question": "Real vaqt tizimida qanday kompromiss bor?",
+        "options": [
+          "Tezlik va aniqlik o'rtasida",
+          "Rang va shakl o'rtasida",
+          "Hech qanday"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Tez modellar ko'pincha aniqlikdan biroz voz kechadi, va aksincha."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 50,
+    "title": "NLP: matnni qayta ishlash",
+    "subtitle": "NLP nima?",
+    "slides": [
+      {
+        "title": "NLP nima?",
+        "text": "NLP (Natural Language Processing) — kompyuterning inson tilini tushunish va yaratish fani.\n\nTarjima, xulosa, savol-javob, matn tasnifi — barchasi NLP vazifalari.",
+        "icon": "📝"
+      },
+      {
+        "title": "Matnni tayyorlash",
+        "text": "• Tokenizatsiya — matnni bo'laklarga bo'lish.\n• Kichik harfga o'tkazish va tinish belgilarini tozalash (vazifaga qarab).\n• Stop-so'zlarni olib tashlash (ba'zi usullarda).\n• Lemmatizatsiya — so'zni lug'aviy asosiga keltirish.",
+        "icon": "✂️"
+      },
+      {
+        "title": "Zamonaviy yondashuv",
+        "text": "Hozirgi NLP ko'pincha Transformer asosidagi oldindan o'qitilgan modellarga tayanadi.\n\nKo'p hollarda qo'lda qoidalar o'rniga model kontekstdan ma'noni o'zi aniqlaydi.",
+        "icon": "🧠"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "NLP nima?",
+        "options": [
+          "Grafik dizayn",
+          "Tarmoq xavfsizligi",
+          "Inson tilini qayta ishlash va tushunish fani"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. NLP — kompyuterning matn va nutq bilan ishlashi sohasi."
+      },
+      {
+        "question": "Lemmatizatsiya nima?",
+        "options": [
+          "So'zni lug'aviy asosiga keltirish",
+          "Matnni shifrlash",
+          "Matnni ovozga aylantirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Masalan, 'kitoblar' → 'kitob'; bu so'zning ma'noli asosini saqlaydi."
+      },
+      {
+        "question": "Zamonaviy NLP ko'pincha nimaga tayanadi?",
+        "options": [
+          "Faqat qo'lda yozilgan qoidalarga",
+          "Transformer asosidagi oldindan o'qitilgan modellarga",
+          "Faqat raqamli jadvallarga"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Transformer va pretraining zamonaviy NLP ning asosiy yondashuvi bo'ldi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 51,
+    "title": "Sentiment tahlili",
+    "subtitle": "Sentiment tahlili",
+    "slides": [
+      {
+        "title": "Sentiment tahlili",
+        "text": "Sentiment tahlili — matnda ijobiy, salbiy yoki neytral kayfiyat borligini aniqlash.\n\nMisol: mijoz sharhlari, ijtimoiy tarmoq postlari, qo'llab-quvvatlash xabarlari.",
+        "icon": "😊"
+      },
+      {
+        "title": "Yondashuvlar",
+        "text": "• Lug'at asosidagi usul — so'zlarning ijobiy/salbiy ballari yig'iladi.\n• Mashinali o'qitish — yorliqli sharhlar bilan model o'qitiladi.\n• Transformer asosidagi modellar — kontekstni hisobga olib, ustunlik, kinoya va inkorni yaxshiroq tushunadi.",
+        "icon": "🧪"
+      },
+      {
+        "title": "Qiyinchilik",
+        "text": "Kinoya (sarcasm) va inkor ('yomon emas') kabi holatlar qiyin.\n\nSoha va til o'zgarsa, model natijasi pasayishi mumkin, shuning uchun o'sha sohadagi ma'lumotda sinash kerak.",
+        "icon": "🎭"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Sentiment tahlili nimani aniqlaydi?",
+        "options": [
+          "Matndagi kayfiyatni (ijobiy, salbiy, neytral)",
+          "Matn uzunligini",
+          "Fayl formatini"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Sentiment tahlil matnning emotsional yo'nalishini baholaydi."
+      },
+      {
+        "question": "Qaysi holat sentiment tahlilida qiyin hisoblanadi?",
+        "options": [
+          "Oddiy ijobiy so'z",
+          "Kinoya va inkor",
+          "Raqamli jadval"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kinoya so'zlar ma'nosiga emas, kontekstga bog'liq bo'lgani uchun qiyin."
+      },
+      {
+        "question": "Model boshqa sohada yomon ishlashi nimaga bog'liq?",
+        "options": [
+          "Matn juda qisqa bo'lgani uchun",
+          "Modelga rang yo'qligi uchun",
+          "Soha va til o'zgarganda ma'lumot taqsimoti farq qilgani uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Ma'lumot o'zgarsa model ham yomonlashishi mumkin; shuning uchun o'sha sohada sinash kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 52,
+    "title": "AI etikasi",
+    "subtitle": "AI etikasi nima?",
+    "slides": [
+      {
+        "title": "AI etikasi nima?",
+        "text": "AI etikasi — sun'iy intellektni insonga foydali, adolatli, xavfsiz va ishonchli qilish qoidalari va qadriyatlari to'plami.\n\nTexnik imkoniyat har doim to'g'ri foydalanishga kafolat bermaydi.",
+        "icon": "⚖️"
+      },
+      {
+        "title": "Asosiy tamoyillar",
+        "text": "• Adolat — guruhlar o'rtasida kamsitmaslik.\n• Shaffoflik — qaror qanday qabul qilingani tushunarli bo'lishi.\n• Mas'uliyat — xato uchun kim javobgar ekani aniq bo'lishi.\n• Maxfiylik va xavfsizlik — foydalanuvchi ma'lumotini himoya qilish.",
+        "icon": "🧭"
+      },
+      {
+        "title": "Amaliyotda",
+        "text": "Ishga qabul, kredit berish, sog'liqni saqlash kabi sohalarda AI qarorlari odamlar hayotiga kuchli ta'sir qiladi.\n\nBunday tizimlarda inson nazorati va apellyatsiya imkoniyati bo'lishi kerak.",
+        "icon": "🤝"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "AI etikasi nimani anglatadi?",
+        "options": [
+          "AI ni tezroq ishlatish usuli",
+          "AI ni foydali, adolatli va xavfsiz qilish qoidalari",
+          "Kompyuter dasturlash tili"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Etika texnik imkoniyatni inson manfaati va huquqlari bilan muvozanatlaydi."
+      },
+      {
+        "question": "Qaror qanday qabul qilingani tushunarli bo'lishi qaysi tamoyil?",
+        "options": [
+          "Hajm",
+          "Tezlik",
+          "Shaffoflik"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Shaffoflik foydalanuvchi va nazoratchi modelning mantiqini tekshirishiga imkon beradi."
+      },
+      {
+        "question": "Yuqori ta'sirli qarorlarda (masalan, kredit) nima zarur?",
+        "options": [
+          "Inson nazorati va apellyatsiya imkoniyati",
+          "Qarorni hech kim ko'rmasligi",
+          "Tasodifiy tanlov"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Odamlar hayotiga ta'sir qiluvchi qarorlarda inson nazorati va noroziliklarni ko'rib chiqish majburiy."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 53,
+    "title": "Algoritmik xolislik (bias)",
+    "subtitle": "Algoritmik bias",
+    "slides": [
+      {
+        "title": "Algoritmik bias",
+        "text": "Algoritmik bias — ma'lumot yoki dizayndagi kamchiliklar tufayli tizim ma'lum guruhlarga adolatsiz natija berishi.\n\nModel o'zi yomon niyatli emas, lekin u o'rgatilgan ma'lumotdagi noadolatlikni takrorlaydi.",
+        "icon": "⚠️"
+      },
+      {
+        "title": "Qayerdan keladi?",
+        "text": "• Tarixiy bias: o'tmishdagi kamsitish ma'lumotda aks etadi.\n• Namunaviylik bias: ba'zi guruhlar ma'lumotda kam vakil.\n• Yorliqlash bias: insonlarning subyektiv baholari.\n• Xususiyat tanlashdagi bias: proksi o'zgaruvchilar orqali kamsitish.",
+        "icon": "🔍"
+      },
+      {
+        "title": "Kamaytirish",
+        "text": "Ma'lumotni turli guruhlar bo'yicha tekshirish, adolat metrikalarini o'lchash, va natijalarni qisman tuzatish (masalan, qayta vaznlash).\n\nBias to'liq yo'qolmaydi, lekin uni aniqlash va boshqarish mumkin.",
+        "icon": "🛠️"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Algoritmik bias nima?",
+        "options": [
+          "Algoritm sekinligi",
+          "Kod uzunligi",
+          "Tizim ma'lum guruhlarga adolatsiz natija berishi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Bias ma'lumot va dizayndagi kamchiliklardan kelib chiqib, ayrim guruhlarga zarar yetkazadi."
+      },
+      {
+        "question": "Ma'lumotda kam vakil guruh bo'lishi qaysi bias turi?",
+        "options": [
+          "Namunaviylik (representation) bias",
+          "Tezlik bias",
+          "Rang bias"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kam vakil guruh modelda yomonroq ishlaydi, chunki undan kam o'rganilgan."
+      },
+      {
+        "question": "Bias haqida qaysi gap to'g'ri?",
+        "options": [
+          "U hech qachon mavjud bo'lmaydi",
+          "Uni aniqlash va boshqarish mumkin, lekin to'liq yo'qotish qiyin",
+          "U faqat dasturchi niyatidan kelib chiqadi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Bias ko'pincha ma'lumotda yashirin bo'ladi; uni monitoring va tekshiruv bilan kamaytirish mumkin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 54,
+    "title": "Maxfiylik va xavfsizlik",
+    "subtitle": "Maxfiylik nima?",
+    "slides": [
+      {
+        "title": "Maxfiylik nima?",
+        "text": "Maxfiylik — shaxsiy ma'lumotlarni to'plash, saqlash va ishlatishda foydalanuvchi huquqlarini hurmat qilish.\n\nAI tizimlari katta ma'lumot talab qilgani uchun bu masala ayniqsa dolzarb.",
+        "icon": "🔐"
+      },
+      {
+        "title": "Himoya usullari",
+        "text": "• Ma'lumotni minimallashtirish: faqat kerakli narsani to'plash.\n• Anonimlashtirish va pseudonimizatsiya.\n• Maxfiylikni saqlovchi usullar (masalan, differential privacy).\n• Xavfsiz saqlash va kirish nazorati.",
+        "icon": "🧹"
+      },
+      {
+        "title": "Xavf nuqtalari",
+        "text": "Model o'qitish ma'lumotini ba'zan qaytarib yuborishi (memorization) mumkin.\n\nPromptga maxfiy ma'lumot qo'yish ham xavf: uni tashqi xizmat qayta ishlashi mumkin. Shaxsiy va korporativ sirlarni ehtiyotkorlik bilan ulashing.",
+        "icon": "🚨"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Maxfiylik tamoyili nimani nazarda tutadi?",
+        "options": [
+          "Shaxsiy ma'lumotni minimal va ehtiyotkor ishlatish",
+          "Ma'lumotni hamma bilan ulashish",
+          "Ma'lumotni yig'ishni cheklamaslik"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Faqat kerakli ma'lumotni to'plash va xavfsiz saqlash maxfiylikning asosi."
+      },
+      {
+        "question": "Differential privacy nima uchun ishlatiladi?",
+        "options": [
+          "Modelni tezlashtirish",
+          "Bitta shaxs ma'lumotini natijada aniqlash xavfini kamaytirish",
+          "Matnni tarjima qilish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Usul natijadan alohida shaxsni ajratib bo'lmaslik darajasida shovqin qo'shadi."
+      },
+      {
+        "question": "Promptga maxfiy korporativ ma'lumot qo'yish nega xavfli?",
+        "options": [
+          "Bu hech qanday xavf tug'dirmaydi",
+          "Model uni darhol o'chiradi",
+          "Uni tashqi xizmat qayta ishlashi yoki saqlashi mumkin"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Tashqi xizmatga yuborilgan ma'lumot nazoringizdan chiqib ketishi mumkin."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 55,
+    "title": "Explainable AI (XAI)",
+    "subtitle": "XAI nima?",
+    "slides": [
+      {
+        "title": "XAI nima?",
+        "text": "Explainable AI (XAI) — model qarorlarini inson tushunadigan darajada tushuntirishga qaratilgan usullar to'plami.\n\nAyniqsa 'qora quti' (black box) modellar uchun muhim.",
+        "icon": "🔦"
+      },
+      {
+        "title": "Usullar",
+        "text": "• Xususiyatlar ahamiyati (feature importance) — qaysi belgi qarorga ko'proq ta'sir qilgani.\n• SHAP va LIME — bitta bashoratni tushuntirish.\n• Attention vizualizatsiyasi — model qaysi so'z yoki pikselga e'tibor berganini ko'rsatish.",
+        "icon": "📊"
+      },
+      {
+        "title": "Nega muhim?",
+        "text": "Tibbiyot va moliyada 'nega' degan savolga javob berish talab qilinadi.\n\nTushuntirish modelni xatolarni topishda, ishonchni oshirishda va qonunlarga rioya qilishda ham yordam beradi.",
+        "icon": "🎯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "XAI ning maqsadi nima?",
+        "options": [
+          "Modelni tezroq ishlatish",
+          "Model qarorlarini inson tushunadigan darajada tushuntirish",
+          "Modelni hajmini kamaytirish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Explainable AI qaror sabablarini ochiq va tushunarli qilishga qaratilgan."
+      },
+      {
+        "question": "SHAP yoki LIME nima uchun ishlatiladi?",
+        "options": [
+          "Modelni shifrlash",
+          "Ma'lumotni o'chirish",
+          "Bitta bashoratning sababini tushuntirish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Bu usullar aniq bir natija uchun qaysi belgilar hissa qo'shganini ko'rsatadi."
+      },
+      {
+        "question": "Tibbiyotda nega tushuntirish muhim?",
+        "options": [
+          "Shifokor va bemor qaror sababini tekshirishi va ishonishi uchun",
+          "Model rangli bo'lishi uchun",
+          "Ma'lumot kamayishi uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Muhim sohalarda 'nega' degan savolga javob berish ishonch va mas'uliyat uchun kerak."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 56,
+    "title": "Data leakage",
+    "subtitle": "Data leakage nima?",
+    "slides": [
+      {
+        "title": "Data leakage nima?",
+        "text": "Data leakage — modelning o'qitish jarayoniga test yoki kelajak ma'lumot haqida axborot noto'g'ri kirib qolishi.\n\nNatijada model yaxshi ko'rinadi, lekin real ma'lumotda yomon ishlaydi.",
+        "icon": "🕳️"
+      },
+      {
+        "title": "Keng tarqalgan turlari",
+        "text": "• Test ma'lumotini oldindan normallashtirish yoki to'ldirish.\n• Maqsad (target) bilan bog'liq, lekin bashoratdan keyin paydo bo'ladigan belgini ishlatish.\n• Vaqt qatorida kelajak ma'lumotni aralashtirish.\n• Bir xil foydalanuvchi yozuvlarini train va test ga bo'lib yuborish.",
+        "icon": "🔎"
+      },
+      {
+        "title": "Oldini olish",
+        "text": "Ma'lumotni birinchi bo'lib ajrating, keyin tayyorlang.\nHar bir qadamni (scaling, encoding) faqat train da o'rgating va test ga qo'llang.\n\nJuda mukammal natija (masalan, 99.9%) ko'rsangiz, leakage ni birinchi tekshiring.",
+        "icon": "🧯"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Data leakage nima?",
+        "options": [
+          "Ma'lumot hajmining kamayishi",
+          "Ma'lumotning serverdan o'g'irlanishi",
+          "Test yoki kelajak ma'lumot haqida axborotning o'qitishga kirishi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Leakage tufayli model baho yuqori bo'lsa ham real dunyoda yomon ishlaydi."
+      },
+      {
+        "question": "Quyidagilardan qaysi biri leakage ga misol?",
+        "options": [
+          "Scaling ni butun ma'lumot bo'yicha hisoblash",
+          "Ma'lumotni alohida to'plamlarga bo'lish",
+          "Validation to'plamidan foydalanish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Test haqidagi statistika oldindan modelga yetib boradi — bu leakage."
+      },
+      {
+        "question": "Juda mukammal natija ko'rganda birinchi nima qilish kerak?",
+        "options": [
+          "Natijani darhol e'lon qilish",
+          "Data leakage ni tekshirish",
+          "Modelni tezlashtirish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Haddan tashqari yaxshi natija ko'pincha leakage yoki xato bo'linishdan dalolat beradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 57,
+    "title": "MLOps: modelni joylashtirish",
+    "subtitle": "MLOps nima?",
+    "slides": [
+      {
+        "title": "MLOps nima?",
+        "text": "MLOps — ML modelini ishlab chiqish, sinash, joylashtirish va ishlatish jarayonini avtomatlashtirish va boshqarish amaliyoti.\n\nDasturiy ta'minotdagi DevOps g'oyasining ML dagi davomi.",
+        "icon": "🚢"
+      },
+      {
+        "title": "Joylashtirish bosqichlari",
+        "text": "• Model versiyalari va ma'lumot versiyalarini saqlash.\n• Tajribalarni kuzatish (experiment tracking).\n• Modelni API yoki xizmat sifatida chiqarish.\n• Avtomatik test va qayta o'qitish (pipeline).",
+        "icon": "📦"
+      },
+      {
+        "title": "Nega kerak?",
+        "text": "Laboratoriyada ishlaydigan model real tizimda xato qilishi mumkin: kutish, xotira, ma'lumot formati muammolari.\n\nMLOps bu uzilishlarni kamaytiradi va natijalarni takrorlanuvchan qiladi.",
+        "icon": "🧪"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "MLOps nimaga qaratilgan?",
+        "options": [
+          "ML modelini joylashtirish va boshqarish jarayonini avtomatlashtirishga",
+          "Faqat ma'lumot to'plashga",
+          "Faqat grafik dizaynga"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. MLOps ishlab chiqish va ishlatish oralig'ini boshqaradi."
+      },
+      {
+        "question": "Model va ma'lumot versiyalarini saqlash nima uchun kerak?",
+        "options": [
+          "Fayl hajmini oshirish uchun",
+          "Natijani takrorlash va orqaga qaytish imkoni uchun",
+          "Modelni o'chirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Qaysi ma'lumot va qaysi model natija bergani ma'lum bo'lsa, tajribani takrorlash mumkin."
+      },
+      {
+        "question": "MLOps ning DevOps bilan o'xshashligi nimada?",
+        "options": [
+          "Ularda hech qanday o'xshashlik yo'q",
+          "Ikkalasi ham faqat matn bilan ishlaydi",
+          "Avtomatlashtirish va uzluksiz joylashtirish g'oyasi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Ikkala yondashuv ham sifatli va takrorlanuvchan joylashtirish uchun avtomatlashtirishga tayanadi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 58,
+    "title": "Monitoring va drift",
+    "subtitle": "Monitoring nima?",
+    "slides": [
+      {
+        "title": "Monitoring nima?",
+        "text": "Model ishga tushgandan keyin uning sifati vaqt o'tishi bilan o'zgarishi mumkin. Monitoring — ishlash ko'rsatkichlarini doimiy kuzatish.\n\nKuzatiladigan narsalar: aniqlik, kechikish (latency), xato darajasi, resurs sarfi.",
+        "icon": "📡"
+      },
+      {
+        "title": "Data drift va concept drift",
+        "text": "Data drift — kirish ma'lumotining taqsimoti o'zgarishi (masalan, yangi foydalanuvchi turi).\n\nConcept drift — kirish va natija o'rtasidagi bog'liqlik o'zgarishi (masalan, bozor qoidalari o'zgardi).\n\nIkkalasi ham modelning eskirishiga olib keladi.",
+        "icon": "🌊"
+      },
+      {
+        "title": "Javob berish",
+        "text": "Drift aniqlansa: ma'lumotni yangilang, modelni qayta o'rgating, yoki alohida ogohlantirish yuboring.\n\nQayta o'qitish jarayoni ham avtomatlashtirilgan bo'lishi mumkin.",
+        "icon": "🔁"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Data drift nima?",
+        "options": [
+          "Modelning nomi o'zgarishi",
+          "Kirish ma'lumotining taqsimoti o'zgarishi",
+          "Serverning tezligi pasayishi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kirish ma'lumotlari o'qitish davridagidan boshqacha bo'lib qoladi."
+      },
+      {
+        "question": "Concept drift nimani anglatadi?",
+        "options": [
+          "Tasvir rangining o'zgarishi",
+          "Faqat fayl hajmining o'zgarishi",
+          "Kirish va natija o'rtasidagi bog'liqlikning o'zgarishi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Dunyo qoidalari o'zgarganda model o'rgangan bog'liqlik ham eskiradi."
+      },
+      {
+        "question": "Modelni vaqt o'tishi bilan kuzatishning asosiy maqsadi nima?",
+        "options": [
+          "Sifat pasayishini erta aniqlash",
+          "Modelni tezda o'chirish",
+          "Ma'lumotni yashirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Erta aniqlangan drift modelni yangilash yoki qayta o'qitishga vaqtida imkon beradi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 59,
+    "title": "AI loyiha bosqichlari",
+    "subtitle": "AI loyiha bosqichlari",
+    "slides": [
+      {
+        "title": "AI loyiha bosqichlari",
+        "text": "1) Muammoni aniqlash — qanday biznes yoki foydalanuvchi muammosi hal qilinadi?\n2) Ma'lumot yig'ish va tushunish.\n3) Baza chiziq (baseline) yaratish — oddiy model bilan boshlash.\n4) Modelni yaxshilash.\n5) Baholash va joylashtirish.\n6) Monitoring va yangilash.",
+        "icon": "🗺️"
+      },
+      {
+        "title": "Muvaffaqiyat mezoni",
+        "text": "Loyiha boshida 'yaxshi' nimani anglatishini belgilang: aniqlik, tezlik, xarajat yoki foydalanuvchi qoniqishi.\n\nAniq mezon bo'lmasa, natijani baholash va qarorlar qabul qilish qiyin bo'ladi.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Eng katta xato",
+        "text": "Murakkab modeldan boshlash va muammoni yetarlicha tushunmaslik keng tarqalgan xato.\n\nOddiy baseline ko'pincha katta foyda beradi va yaxshilash nuqtasini ko'rsatadi.",
+        "icon": "🧭"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "AI loyihani boshlashda birinchi qadam nima?",
+        "options": [
+          "Serverni sotib olish",
+          "Eng murakkab modelni tanlash",
+          "Muammoni aniqlash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Muammo aniq bo'lmasa, model ham, ma'lumot ham yo'naltirilmagan bo'ladi."
+      },
+      {
+        "question": "Baseline nima?",
+        "options": [
+          "Oddiy boshlang'ich model, solishtirish uchun",
+          "Eng murakkab tarmoq",
+          "Ma'lumotlar bazasi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Baseline oddiy model bo'lib, keyingi yaxshilanishlarni o'lchashga xizmat qiladi."
+      },
+      {
+        "question": "Loyiha boshida muvaffaqiyat mezoni nega kerak?",
+        "options": [
+          "Hujjat sahifalarini ko'paytirish uchun",
+          "Natijani aniq baholash va qaror qabul qilish uchun",
+          "Ma'lumotni o'chirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Aniq mezon 'yaxshi' tushunchasini o'lchanadigan qiladi."
+      }
+    ],
+    "reward_per_correct": 10
+  },
+  {
+    "id": 60,
+    "title": "Yakuniy takrorlash",
+    "subtitle": "Kursni takrorlash",
+    "slides": [
+      {
+        "title": "Kursni takrorlash",
+        "text": "Siz kursda AI ning asosiy tushunchalaridan tortib zamonaviy LLM va prompt engineering gacha o'tdingiz.\n\nTakrorlang: ML turlari, metrikalar, overfitting, neyron tarmoq, Transformer, RAG, etika va MLOps.",
+        "icon": "🏁"
+      },
+      {
+        "title": "Asosiy g'oyalar",
+        "text": "• Model ma'lumotdan o'rganadi — ma'lumot sifati hal qiluvchi.\n• Baholashni test ma'lumotiga tegmasdan qiling.\n• LLM ishonchli gapiradi, lekin har doim ham to'g'ri emas — tekshiring.\n• Aniq prompt, kontekst va cheklovlar natijani yaxshilaydi.\n• AI ni odamlar uchun adolatli va xavfsiz qilish — texnik vazifa va mas'uliyat.",
+        "icon": "🧠"
+      },
+      {
+        "title": "Keyingi qadam",
+        "text": "Yakuniy imtihonga tayyorlaning: 30 ta savol, har biri uchun +10 XP.\n\n100% natija — AI Mutaxassisi sertifikati, 60% va undan yuqori — AI Pro sertifikati.\n\nOmad tilaymiz!",
+        "icon": "🎓"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Model baholashda test ma'lumotidan qanday foydalanish kerak?",
+        "options": [
+          "Oxirida, yakuniy baholash uchun bir marta",
+          "Model tanlash va sozlash uchun ko'p marta",
+          "O'qitish jarayonida har bir epoxada"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Test ma'lumoti model tanlovida qatnashmasligi kerak, aks holda baho ortiqcha optimistik bo'ladi."
+      },
+      {
+        "question": "LLM javobini qanday qabul qilish to'g'ri?",
+        "options": [
+          "Har doim so'zsiz ishonish",
+          "Muhim faktlarni tekshirib, manbaga tayanib",
+          "Umuman o'qimaslik"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. LLM gallyutsinatsiya qilishi mumkin, shu sababli muhim faktlarni tekshirish kerak."
+      },
+      {
+        "question": "AI ni odamlar uchun xavfsiz va adolatli qilish nimani anglatadi?",
+        "options": [
+          "Faqat tezlikni oshirish",
+          "Ma'lumotni hamma bilan ulashish",
+          "Adolat, shaffoflik, maxfiylik va mas'uliyatga rioya qilish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Etika tamoyillari texnik muvaffaqiyatning ajralmas qismi."
+      }
+    ],
+    "reward_per_correct": 10
+  }
+]

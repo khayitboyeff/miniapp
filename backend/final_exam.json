@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "Mashinali o'qitishda \"overfitting\" nimani anglatadi?",
+    "options": [
+      "Model o'quv ma'lumotlarida yomon, yangi ma'lumotlarda yaxshi natija beradi",
+      "Model o'quv ma'lumotlarida juda yaxshi, lekin yangi ma'lumotlarda yomon natija beradi",
+      "Model juda sodda bo'lib, hech narsani o'rganmaydi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Model o'quv ma'lumotlarida juda yaxshi, lekin yangi ma'lumotlarda yomon natija beradi"
+  },
+  {
+    "id": 2,
+    "question": "Supervised learning (nazoratli o'qitish) uchun to'g'ri ta'rif qaysi?",
+    "options": [
+      "Model belgilanmagan ma'lumotlardan yashirin tuzilmalarni topadi",
+      "Model belgilangan (label) ma'lumotlar asosida kirish va chiqish o'rtasidagi bog'liqlikni o'rganadi",
+      "Model muhit bilan o'zaro ta'sir qilib, mukofot orqali o'rganadi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Model belgilangan (label) ma'lumotlar asosida kirish va chiqish o'rtasidagi bog'liqlikni o'rganadi"
+  },
+  {
+    "id": 3,
+    "question": "Neyron tarmoqda aktivatsiya funksiyasining asosiy vazifasi nima?",
+    "options": [
+      "Ma'lumotlarni normallashtirish",
+      "Tarmoqqa chiziqsizlik (nonlinearity) kiritish",
+      "Og'irliklarni tasodifiy yangilash"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Tarmoqqa chiziqsizlik (nonlinearity) kiritish"
+  },
+  {
+    "id": 4,
+    "question": "Gradient descent algoritmi nima uchun ishlatiladi?",
+    "options": [
+      "Ma'lumotlar bazasidan kerakli yozuvlarni qidirish uchun",
+      "Yo'qotish funksiyasini (loss) minimallashtirish uchun parametrlarni yangilash uchun",
+      "Tasvirlarni siqish uchun"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Yo'qotish funksiyasini (loss) minimallashtirish uchun parametrlarni yangilash uchun"
+  },
+  {
+    "id": 5,
+    "question": "Transformer arxitekturasining eng muhim yangiligi qaysi?",
+    "options": [
+      "Konvolyutsion qatlamlardan foydalanish",
+      "Self-attention (o'zini-o'zi diqqat) mexanizmi",
+      "Rekurrent aloqalar orqali ketma-ketlikni qayta ishlash"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Self-attention (o'zini-o'zi diqqat) mexanizmi"
+  },
+  {
+    "id": 6,
+    "question": "Confusion matrix (chalkashlik matritsasi) nima uchun ishlatiladi?",
+    "options": [
+      "Modelning o'qitish tezligini o'lchash uchun",
+      "Tasniflash modelining to'g'ri va noto'g'ri bashoratlarini ko'rish uchun",
+      "Ma'lumotlardagi bo'sh qiymatlarni aniqlash uchun"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Tasniflash modelining to'g'ri va noto'g'ri bashoratlarini ko'rish uchun"
+  },
+  {
+    "id": 7,
+    "question": "Precision (aniqlik) nimani o'lchaydi?",
+    "options": [
+      "Barcha haqiqiy musbat natijalarning qancha qismi topilganini",
+      "Musbat deb bashorat qilingan natijalarning qancha qismi haqiqatan musbat ekanini",
+      "Modelning umumiy to'g'ri javoblar ulushini"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Musbat deb bashorat qilingan natijalarning qancha qismi haqiqatan musbat ekanini"
+  },
+  {
+    "id": 8,
+    "question": "Recall (eslab qolish) ko'rsatkichi qanday hisoblanadi?",
+    "options": [
+      "TP / (TP + FP)",
+      "TP / (TP + FN)",
+      "(TP + TN) / barcha namunalar"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) TP / (TP + FN)"
+  },
+  {
+    "id": 9,
+    "question": "Batch normalization nima uchun qo'llaniladi?",
+    "options": [
+      "Ma'lumotlar to'plamini kichraytirish uchun",
+      "Qatlam kirishlarining taqsimotini barqarorlashtirib, o'qitishni tezlashtirish uchun",
+      "Modelni tasodifiy o'chirish orqali ortiqcha moslashishni oldini olish uchun"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Qatlam kirishlarining taqsimotini barqarorlashtirib, o'qitishni tezlashtirish uchun"
+  },
+  {
+    "id": 10,
+    "question": "Dropout texnikasining mohiyati nima?",
+    "options": [
+      "O'qitish paytida neyronlarning bir qismini tasodifiy o'chirib turish",
+      "Ma'lumotlarning bir qismini o'chirib tashlash",
+      "O'rganish tezligini har bir epoxada nolga tushirish"
+    ],
+    "correct": 0,
+    "explanation": "To'g'ri javob: A) O'qitish paytida neyronlarning bir qismini tasodifiy o'chirib turish"
+  },
+  {
+    "id": 11,
+    "question": "Convolutional Neural Network (CNN) asosan qaysi vazifada keng qo'llaniladi?",
+    "options": [
+      "Vaqt qatorlarini bashorat qilishda",
+      "Tasvirlarni tahlil qilish va tasniflashda",
+      "Jadval ma'lumotlarini saralashda"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Tasvirlarni tahlil qilish va tasniflashda"
+  },
+  {
+    "id": 12,
+    "question": "Word embedding (so'zlarni vektorlash) nimani anglatadi?",
+    "options": [
+      "So'zlarni faqat raqamlar bilan belgilash",
+      "So'zlarni ma'noli semantik xususiyatlarga ega past o'lchamli vektorlar ko'rinishida ifodalash",
+      "Matnni shifrlash usuli"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) So'zlarni ma'noli semantik xususiyatlarga ega past o'lchamli vektorlar ko'rinishida ifodalash"
+  },
+  {
+    "id": 13,
+    "question": "Reinforcement learning (mustahkamlovchi o'qitish)da \"policy\" nima?",
+    "options": [
+      "Agentning har bir holatda qanday harakat qilishi kerakligini belgilovchi strategiya",
+      "Mukofotlarning umumiy yig'indisi",
+      "Muhitning ichki modeli"
+    ],
+    "correct": 0,
+    "explanation": "To'g'ri javob: A) Agentning har bir holatda qanday harakat qilishi kerakligini belgilovchi strategiya"
+  },
+  {
+    "id": 14,
+    "question": "Clustering (klasterlash) qanday turdagi o'qitishga kiradi?",
+    "options": [
+      "Nazoratli o'qitish (supervised)",
+      "Nazoratsiz o'qitish (unsupervised)",
+      "Mustahkamlovchi o'qitish (reinforcement)"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Nazoratsiz o'qitish (unsupervised)"
+  },
+  {
+    "id": 15,
+    "question": "Train, validation va test to'plamlarining vazifasi qaysi javobda to'g'ri berilgan?",
+    "options": [
+      "Train — baholash, validation — o'qitish, test — sozlash",
+      "Train — o'qitish, validation — giperparametrlarni sozlash, test — yakuniy baholash",
+      "Train — sozlash, validation — o'qitish, test — ma'lumot yig'ish"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Train — o'qitish, validation — giperparametrlarni sozlash, test — yakuniy baholash"
+  },
+  {
+    "id": 16,
+    "question": "Cross-validation (kesishgan tekshiruv) nima uchun ishlatiladi?",
+    "options": [
+      "Modelning baholash natijasini barqarorroq va ishonchliroq qilish uchun",
+      "O'qitish vaqtini qisqartirish uchun",
+      "Ma'lumotlardagi shovqinni olib tashlash uchun"
+    ],
+    "correct": 0,
+    "explanation": "To'g'ri javob: A) Modelning baholash natijasini barqarorroq va ishonchliroq qilish uchun"
+  },
+  {
+    "id": 17,
+    "question": "LSTM tarmog'ining GRU'dan asosiy farqi nimada?",
+    "options": [
+      "LSTM faqat tasvirlar bilan ishlaydi",
+      "LSTM'da alohida xotira holati (cell state) va ko'proq darvoza (gate) mavjud",
+      "LSTM umuman rekurrent emas"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) LSTM'da alohida xotira holati (cell state) va ko'proq darvoza (gate) mavjud"
+  },
+  {
+    "id": 18,
+    "question": "Feature engineering (xususiyatlarni muhandislik qilish) nima?",
+    "options": [
+      "Modelning arxitekturasini avtomatik yaratish",
+      "Xom ma'lumotlardan model uchun foydali xususiyatlar yaratish va tanlash jarayoni",
+      "Modelni serverga joylashtirish"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Xom ma'lumotlardan model uchun foydali xususiyatlar yaratish va tanlash jarayoni"
+  },
+  {
+    "id": 19,
+    "question": "Bias-variance tradeoff (xatolik-tebranish muvozanati) nimani ifodalaydi?",
+    "options": [
+      "Model murakkabligi oshgani sayin bias ortib, variance kamayishi",
+      "Model murakkabligi oshgani sayin variance odatda ortib, bias kamayishi",
+      "Bias va variance har doim bir xil o'zgarishi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Model murakkabligi oshgani sayin variance odatda ortib, bias kamayishi"
+  },
+  {
+    "id": 20,
+    "question": "Generative AI modellariga misol bo'lmaydigan variant qaysi?",
+    "options": [
+      "GAN",
+      "Diffusion modellari",
+      "Lineer regressiya"
+    ],
+    "correct": 2,
+    "explanation": "To'g'ri javob: C) Lineer regressiya"
+  },
+  {
+    "id": 21,
+    "question": "GAN (Generative Adversarial Network) ning tuzilishi qanday?",
+    "options": [
+      "Bitta tarmoq ikki xil vazifani bajaradi",
+      "Generator va diskriminator bir-biriga qarshi o'qiydi",
+      "Ikki tarmoq ketma-ket ishlaydi va bir-birini o'zgartirmaydi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Generator va diskriminator bir-biriga qarshi o'qiydi"
+  },
+  {
+    "id": 22,
+    "question": "Attention mexanizmi \"query, key, value\" tushunchalari bilan nima qiladi?",
+    "options": [
+      "Ma'lumotlarni shifrlaydi",
+      "Kirish elementlari orasidagi o'zaro bog'liqlik og'irligini hisoblaydi",
+      "Tasvirlarni kichraytiradi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Kirish elementlari orasidagi o'zaro bog'liqlik og'irligini hisoblaydi"
+  },
+  {
+    "id": 23,
+    "question": "Pretraining va fine-tuning o'rtasidagi farq nimada?",
+    "options": [
+      "Pretraining — katta umumiy ma'lumotlarda dastlabki o'qitish, fine-tuning — muayyan vazifaga moslashtirish",
+      "Pretraining — modelni o'chirish, fine-tuning — yangilash",
+      "Ikkalasi bir xil jarayon"
+    ],
+    "correct": 0,
+    "explanation": "To'g'ri javob: A) Pretraining — katta umumiy ma'lumotlarda dastlabki o'qitish, fine-tuning — muayyan vazifaga moslashtirish"
+  },
+  {
+    "id": 24,
+    "question": "Hallucination (gallyutsinatsiya) LLM'larda nimani anglatadi?",
+    "options": [
+      "Model tasvirlarni noto'g'ri tanishi",
+      "Model ishonchli ko'rinadigan, lekin noto'g'ri yoki asossiz ma'lumot yaratishi",
+      "Model javob berishdan bosh tortishi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Model ishonchli ko'rinadigan, lekin noto'g'ri yoki asossiz ma'lumot yaratishi"
+  },
+  {
+    "id": 25,
+    "question": "Prompt engineering nima?",
+    "options": [
+      "Modelning og'irliklarini qayta yozish",
+      "Modelga aniq va samarali ko'rsatmalar (prompt) yozish orqali natijani yaxshilash san'ati",
+      "Ma'lumotlarni tozalash jarayoni"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Modelga aniq va samarali ko'rsatmalar (prompt) yozish orqali natijani yaxshilash san'ati"
+  },
+  {
+    "id": 26,
+    "question": "AI etikasida \"algoritmik bias\" (algoritmik xolislik) nimani bildiradi?",
+    "options": [
+      "Algoritm tezligining sekinligi",
+      "Ma'lumotlar yoki dizayndagi kamchiliklar tufayli tizim ma'lum guruhlarga adolatsiz natija berishi",
+      "Algoritmning kod uzunligi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Ma'lumotlar yoki dizayndagi kamchiliklar tufayli tizim ma'lum guruhlarga adolatsiz natija berishi"
+  },
+  {
+    "id": 27,
+    "question": "Explainable AI (XAI) ning maqsadi nima?",
+    "options": [
+      "Modelni tezroq ishlatish",
+      "Model qarorlarini inson tushunadigan darajada tushuntirish",
+      "Modelni hajmini kamaytirish"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Model qarorlarini inson tushunadigan darajada tushuntirish"
+  },
+  {
+    "id": 28,
+    "question": "Data leakage (ma'lumot oqishi) nima?",
+    "options": [
+      "Ma'lumotlarning serverdan o'g'irlanishi",
+      "Test ma'lumotlari haqidagi axborotning o'qitish jarayoniga noto'g'ri kirib qolishi",
+      "Ma'lumotlar hajmining kamayishi"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Test ma'lumotlari haqidagi axborotning o'qitish jarayoniga noto'g'ri kirib qolishi"
+  },
+  {
+    "id": 29,
+    "question": "Transfer learning (ko'chirma o'qitish) qanday afzallik beradi?",
+    "options": [
+      "Ma'lumot kam bo'lganda oldindan o'qitilgan bilimdan foydalanib yaxshi natija olish imkonini beradi",
+      "Model hajmini har doim oshiradi",
+      "Hech qanday ma'lumot talab qilmaydi"
+    ],
+    "correct": 0,
+    "explanation": "To'g'ri javob: A) Ma'lumot kam bo'lganda oldindan o'qitilgan bilimdan foydalanib yaxshi natija olish imkonini beradi"
+  },
+  {
+    "id": 30,
+    "question": "Quyidagilardan qaysi biri AI modelini baholashda ishlatiladigan regressiya metrikasi?",
+    "options": [
+      "F1-score",
+      "Mean Squared Error (MSE)",
+      "Accuracy"
+    ],
+    "correct": 1,
+    "explanation": "To'g'ri javob: B) Mean Squared Error (MSE)"
+  }
+]

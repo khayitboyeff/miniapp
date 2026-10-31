@@ -1,0 +1,1842 @@
+[
+  {
+    "id": 1,
+    "title": "Muhitni tayyorlash",
+    "goal": "Kompyuteringizda Python va kod muharririni o'rnatib, birinchi dastur ishlashini ko'rish.",
+    "tool": "VS Code (tavsiya) yoki brauzerdagi onlayn Python muharriri",
+    "steps": [
+      "Python 3.11 yoki 3.12 ni python.org dan o'rnating. O'rnatishda 'Add Python to PATH' belgisini qo'ying.",
+      "VS Code ni o'rnating va 'Python' kengaytmasini qo'shing.",
+      "Kompyuterda 'ai-yordamchi' nomli papka yarating va VS Code da shu papkani oching.",
+      "Terminalni oching va 'python --version' buyrug'ini yozing. Versiya chiqishi kerak.",
+      "Bitta fayl yarating: 'salom.py' va ichiga print('Salom, AI!') yozing. Faylni 'python salom.py' bilan ishga tushiring."
+    ],
+    "checkpoint": "Terminalda 'Salom, AI!' yozuvi chiqsa, muhit tayyor.",
+    "quiz": [
+      {
+        "question": "Python dasturini ishga tushirish uchun terminalda qaysi buyruq ishlatiladi?",
+        "options": [
+          "salom.py open",
+          "python salom.py",
+          "run salom"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. 'python fayl.py' buyrug'i Python interpretatorini fayl bilan ishga tushiradi."
+      },
+      {
+        "question": "Python o'rnatishda 'Add Python to PATH' nima uchun kerak?",
+        "options": [
+          "Internet tezligini oshirish uchun",
+          "Faylni shifrlash uchun",
+          "Python'ni terminaldan topish imkonini berish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. PATH belgilanmasa, terminal 'python' buyrug'ini tanimaydi."
+      },
+      {
+        "question": "Loyiha uchun alohida papka yaratishning foydasi nimada?",
+        "options": [
+          "Fayllar tartibli saqlanadi va keyin hostingga yuklash osonlashadi",
+          "Kompyuter tezroq ishlaydi",
+          "Papka Python'ni o'zgartiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Loyiha fayllari bir joyda bo'lsa, boshqarish va joylashtirish oson bo'ladi."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Birinchi Python dasturi: o'zgaruvchi va kiritish",
+    "goal": "Foydalanuvchidan ma'lumot olish va uni qayta ishlashni o'rganish.",
+    "tool": "VS Code yoki brauzerdagi Python muharriri",
+    "steps": [
+      "Yangi fayl yarating: 'ism.py'.",
+      "ism = input('Ismingiz: ') deb yozing, so'ng print('Salom,', ism) deb davom eting.",
+      "Dasturni ishga tushiring va o'z ismingizni kiriting.",
+      "Yosh so'rab, keyingi yilgi yoshni hisoblang: yosh = int(input('Yoshingiz: ')) va print(yosh + 1).",
+      "Xato kiritib ko'ring: 'abc' yozing. Qanday xato chiqishini yozib qo'ying."
+    ],
+    "checkpoint": "Dastur ismingizni va keyingi yilgi yoshingizni to'g'ri ko'rsatsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "input() funksiyasi nima qaytaradi?",
+        "options": [
+          "Son (int) har doim",
+          "Hech narsa",
+          "Matn (str)"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. input() har doim matn qaytaradi, shuning uchun songa aylantirish kerak bo'lsa int() ishlatiladi."
+      },
+      {
+        "question": "'abc' ni int() ga bersangiz nima bo'ladi?",
+        "options": [
+          "Dastur xato beradi (ValueError)",
+          "0 chiqadi",
+          "abc sonlarga aylanadi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Matnni songa o'tkazib bo'lmasa, Python ValueError xatosini beradi."
+      },
+      {
+        "question": "O'zgaruvchi nima?",
+        "options": [
+          "Faqat sonlar uchun funksiya",
+          "Qiymatni nomlab saqlaydigan joy",
+          "Fayl turi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. O'zgaruvchi qiymatga nom beradi va uni keyin ishlatish imkonini beradi."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Loyiha g'oyasini aniqlash",
+    "goal": "AI loyihangiz uchun aniq vazifa va foydalanuvchini tanlash.",
+    "tool": "Matn muharriri yoki VS Code (README.md fayli)",
+    "steps": [
+      "'README.md' fayl yarating va loyiha nomini yozing.",
+      "Muammoni bir jumlada yozing: 'Men ... uchun ... ni hal qilaman'.",
+      "Foydalanuvchini tavsiflang: kim ishlatadi va qachon.",
+      "Kirish va chiqishni yozing: foydalanuvchi nimani kiritadi, dastur nima qaytaradi.",
+      "Minimal versiyani belgilang: faqat bitta asosiy funksiya. Qolganlarini 'keyin' ro'yxatiga yozing."
+    ],
+    "checkpoint": "README.md da muammo, foydalanuvchi, kirish va chiqish aniq yozilgan bo'lsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Minimal versiya (MVP) nima?",
+        "options": [
+          "Asosiy funksiyasi ishlaydigan eng sodda versiya",
+          "Barcha funksiyalari bor to'liq versiya",
+          "Faqat dizayni tayyor versiya"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. MVP avval asosiy qiymatni tekshirish uchun yasaladi."
+      },
+      {
+        "question": "Loyiha boshida kirish va chiqishni yozish nima uchun foydali?",
+        "options": [
+          "Internet tezligini oshiradi",
+          "Kodning aniq yo'nalishini belgilaydi",
+          "Fayl hajmini kamaytiradi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Aniq kirish va chiqish kodni yozishni osonlashtiradi va chalkashlikni kamaytiradi."
+      },
+      {
+        "question": "Foydalanuvchini aniqlash nega muhim?",
+        "options": [
+          "Hosting narxini o'zgartirish uchun",
+          "Kodni yashirish uchun",
+          "Dizayn va javob uslubini shunga moslash uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Kimga yordam berayotganingizni bilsangiz, interfeys va javoblar shunga mos bo'ladi."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Brauzerda oddiy sahifa",
+    "goal": "HTML bilan kiritish maydoni va tugmali sahifa yasash.",
+    "tool": "VS Code (index.html) yoki brauzerdagi HTML muharriri",
+    "steps": [
+      "'index.html' fayl yarating va HTML5 skeletini yozing: <!doctype html>, <html>, <head>, <body>.",
+      "Sarlavha qo'shing: <h1>Mening AI yordamchim</h1>.",
+      "Matn kiritish maydoni va tugma qo'shing: <input id='savol'> va <button id='yuborish'>Yuborish</button>.",
+      "Javob chiqadigan joy qo'shing: <div id='javob'></div>.",
+      "Faylni brauzerda oching va sahifa ko'rinishini tekshiring."
+    ],
+    "checkpoint": "Sahifada sarlavha, maydon va tugma ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "HTML'da kiritish maydoni qaysi teg bilan yaratiladi?",
+        "options": [
+          "<img>",
+          "<input>",
+          "<br>"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. <input> foydalanuvchidan matn qabul qiladi."
+      },
+      {
+        "question": "id atributi nima uchun kerak?",
+        "options": [
+          "Rangni o'zgartirish uchun",
+          "Rasm qo'shish uchun",
+          "JavaScript elementni topishi uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. JavaScript elementni id bo'yicha topib, unga ishlov beradi."
+      },
+      {
+        "question": "HTML fayli qanday ochiladi?",
+        "options": [
+          "Brauzerda",
+          "Terminalda python bilan",
+          "Excel'da"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. HTML fayllari brauzer tomonidan ko'rsatiladi."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Backend: FastAPI bilan birinchi server",
+    "goal": "Python serveri yaratish va brauzerdan so'rov olishni ko'rish.",
+    "tool": "VS Code (terminal bilan)",
+    "steps": [
+      "Terminalda virtual muhit yarating: python -m venv .venv, so'ng uni faollashtiring.",
+      "O'rnating: pip install fastapi uvicorn.",
+      "'main.py' fayl yarating va ichiga FastAPI ilovasi va @app.get('/health') yo'lini yozing, u {'status': 'ok'} qaytarsin.",
+      "Serverni ishga tushiring: uvicorn main:app --reload.",
+      "Brauzerda http://127.0.0.1:8000/health manzilini oching va javobni tekshiring."
+    ],
+    "checkpoint": "Brauzerda {'status': 'ok'} javobi chiqsa, server ishlayapti.",
+    "quiz": [
+      {
+        "question": "uvicorn nima?",
+        "options": [
+          "Ma'lumotlar bazasi",
+          "Brauzer",
+          "ASGI serverini ishga tushiruvchi dastur"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. uvicorn FastAPI ilovasini so'rovlarni qabul qiladigan server sifatida ishga tushiradi."
+      },
+      {
+        "question": "Virtual muhit (venv) nima uchun kerak?",
+        "options": [
+          "Loyiha kutubxonalarini boshqa loyihalardan ajratish uchun",
+          "Kompyuterni tezlashtirish uchun",
+          "Kodni shifrlash uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Har bir loyiha o'z kutubxona versiyalariga ega bo'ladi."
+      },
+      {
+        "question": "/health yo'li nima uchun ishlatiladi?",
+        "options": [
+          "Parolni o'zgartirish uchun",
+          "Server ishlayotganini tekshirish uchun",
+          "Rasm yuklash uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Health tekshiruvi hosting va monitoring uchun keng qo'llaniladi."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Gemini API kalitini olish va xavfsiz saqlash",
+    "goal": "Google AI Studio'da API kalit olish va uni kodga yozmasdan ishlatish.",
+    "tool": "Brauzer (Google AI Studio) va VS Code",
+    "steps": [
+      "Google AI Studio sahifasiga kiring va Google hisobingiz bilan tizimga kiring. Bepul kvota va narxlarni shu yerda tekshiring.",
+      "API kalit yarating va uni darhol nusxalab oling.",
+      "Loyihada '.env' fayl yarating va ichiga GEMINI_API_KEY=... qatorini yozing.",
+      "'.gitignore' fayliga '.env' ni qo'shing, shunda kalit GitHub'ga tushmaydi.",
+      "Kodda kalitni os.getenv('GEMINI_API_KEY') orqali o'qing. Kalitni hech qachon kodga to'g'ridan-to'g'ri yozmang."
+    ],
+    "checkpoint": ".env fayli bor, .gitignore da u ko'rsatilgan va kod kalitni os.getenv orqali o'qiydi.",
+    "quiz": [
+      {
+        "question": "API kalitni nima uchun kodga yozmaslik kerak?",
+        "options": [
+          "Kod boshqalarga ko'rinib qolishi va kalit o'g'irlanishi mumkin",
+          "Kod sekin ishlaydi",
+          "Kalit ishlamay qoladi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kod GitHub yoki brauzerda ochilsa, kalitni hamma ko'radi va undan sizning hisobingizda foydalanishi mumkin."
+      },
+      {
+        "question": ".gitignore fayli nima qiladi?",
+        "options": [
+          "Kodni tarjima qiladi",
+          "Git'ga yuklanmasligi kerak bo'lgan fayllarni belgilaydi",
+          "Brauzer sozlamalarini o'zgartiradi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. .gitignore da ko'rsatilgan fayllar repozitoriyga qo'shilmaydi."
+      },
+      {
+        "question": "os.getenv('GEMINI_API_KEY') nima qiladi?",
+        "options": [
+          "Kalitni internetga yuboradi",
+          "Yangi kalit yaratadi",
+          "Muhit o'zgaruvchisidan kalitni o'qiydi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Kalit muhit o'zgaruvchisida saqlanadi, kod esa uni o'qiydi."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Gemini SDK o'rnatish va birinchi so'rov",
+    "goal": "Google Gemini kutubxonasini o'rnatib, kalit bilan birinchi so'rov yuborish.",
+    "tool": "VS Code terminali",
+    "steps": [
+      "Virtual muhitni faollashtiring va o'rnating: pip install google-genai python-dotenv.",
+      "Loyiha papkasida .env faylida GEMINI_API_KEY bor-yo'qligini tekshiring.",
+      "test_gemini.py yarating: from dotenv import load_dotenv; load_dotenv(); from google import genai; client = genai.Client().",
+      "response = client.models.generate_content(model='gemini-2.5-flash', contents='Salom, o‘zingizni bir jumlada tanishtiring') yozing, so'ng print(response.text).",
+      "Dasturni ishga tushiring: python test_gemini.py."
+    ],
+    "checkpoint": "Terminalda Gemini javobi matn ko'rinishida chiqsa, ulanish ishlayapti. Model nomini Google AI Studio hujjatidan tekshiring.",
+    "quiz": [
+      {
+        "question": "genai.Client() kalitni qayerdan oladi?",
+        "options": [
+          "Kod ichidagi matndan",
+          "GEMINI_API_KEY muhit o'zgaruvchisidan",
+          "Brauzer cookie'laridan"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. SDK kalitni muhit o'zgaruvchisidan avtomatik o'qiydi, shuning uchun uni kodga yozish shart emas."
+      },
+      {
+        "question": "generate_content() ga 'model' parametri nima uchun kerak?",
+        "options": [
+          "Dastur nomini berish uchun",
+          "Javob hajmini cheklash uchun",
+          "Qaysi AI modeli javob berishini belgilash uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Model nomi javob sifatiga va narxga ta'sir qiladi."
+      },
+      {
+        "question": "response.text nima?",
+        "options": [
+          "Modelning matnli javobi",
+          "Xato kodi",
+          "Kalit"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. response.text modelning yaratgan matnli javobini beradi."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Javobni boshqarish: parametrlar",
+    "goal": "Model javobining uslubi va uzunligiga ta'sir qiluvchi parametrlarni sinash.",
+    "tool": "VS Code",
+    "steps": [
+      "test_gemini.py dagi so'rovga config parametrini qo'shing: config=types.GenerateContentConfig(temperature=0.2).",
+      "Dasturni 3 marta ishga tushiring va javoblarni solishtiring.",
+      "temperature=1.0 qilib, yana 3 marta ishga tushiring.",
+      "Farqni yozib qo'ying: qaysi biri barqaror, qaysi biri ijodiy.",
+      "max_output_tokens parametri bilan javob uzunligini cheklab ko'ring."
+    ],
+    "checkpoint": "Past temperature javoblarni barqarorroq, yuqori temperature esa xilma-xilroq qilishini ko'rsangiz, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Past temperature qanday javob beradi?",
+        "options": [
+          "Har safar tasodifiy va ijodiy",
+          "Umuman javob bermaydi",
+          "Barqaror va aniqroq"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Past temperature eng ehtimolli tokenlarni tanlaydi, shu sababli javob takrorlanuvchan bo'ladi."
+      },
+      {
+        "question": "max_output_tokens nima qiladi?",
+        "options": [
+          "Javob uzunligini cheklaydi",
+          "Kirish matnini o'chiradi",
+          "Modelni tezlashtiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Bu parametr javobdagi tokenlar sonini chegaralaydi."
+      },
+      {
+        "question": "Faktli savollar uchun qaysi sozlama mos?",
+        "options": [
+          "Juda yuqori temperature",
+          "Past temperature",
+          "Sozlama muhim emas"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Aniqlik kerak bo'lgan vazifalarda past temperature xatolarni kamaytiradi."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Prompt tuzilishi: vazifa, kontekst, cheklov, format",
+    "goal": "Yaxshi prompt yozish uchun to'rt qismli shablonni o'rganish.",
+    "tool": "VS Code (prompts.txt fayli)",
+    "steps": [
+      "prompts.txt fayl yarating va to'rt bo'lim yozing: Vazifa, Kontekst, Cheklov, Format.",
+      "Loyiha uchun bitta vazifa yozing, masalan: 'Matnni 3 ta qisqa bandda xulosa qil'.",
+      "Kontekst qo'shing: kim o'qiydi va nima maqsadda.",
+      "Cheklov qo'shing: maksimal so'zlar soni, til, taqiqlangan mavzular.",
+      "Format belgilang: ro'yxat, JSON yoki jadval. Promptni Gemini ga yuboring."
+    ],
+    "checkpoint": "To'rt bo'limli prompt yozilgan va model u formatda javob bergan bo'lsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Prompt'da 'Format' bo'limi nima uchun kerak?",
+        "options": [
+          "Javob shaklini oldindan belgilash uchun",
+          "Modelning nomini o'zgartirish uchun",
+          "Kalitni saqlash uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Format berilsa, javob dastur tomonidan oson qayta ishlanadi."
+      },
+      {
+        "question": "Kontekst nima?",
+        "options": [
+          "Dastur kodi",
+          "Modelga vaziyat va maqsad haqida ma'lumot",
+          "Foydalanuvchi paroli"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kontekst modelning javobini aniq vaziyatga moslashtiradi."
+      },
+      {
+        "question": "Noaniq prompt qanday natija beradi?",
+        "options": [
+          "Har doim mukammal javob",
+          "Xato kodi",
+          "Umumiy va noaniq javob"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Aniq bo'lmagan ko'rsatma modelga taxmin qilish imkonini beradi."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Promptni sinash va yaxshilash",
+    "goal": "Bir vazifa uchun 3 ta prompt variantini solishtirib, eng yaxshisini tanlash.",
+    "tool": "VS Code",
+    "steps": [
+      "Bitta vazifa tanlang va uchta prompt yozing: qisqa, batafsil va formatli.",
+      "Har birini bir xil kirish matni bilan Gemini ga yuboring.",
+      "Javoblarni jadvalda solishtiring: to'g'rilik, uzunlik, format.",
+      "Eng yaxshi promptni tanlang va bitta o'zgarish bilan yana sinab ko'ring.",
+      "Natijalarni prompts.txt ga yozib qo'ying."
+    ],
+    "checkpoint": "Uchta variant solishtirilgan va tanlangan prompt sababi yozilgan bo'lsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Promptni yaxshilashning to'g'ri usuli qaysi?",
+        "options": [
+          "Hamma narsani bir vaqtda o'zgartirish",
+          "Bir o'zgarish kiritib, oldingi versiya bilan taqqoslash",
+          "Promptni yozmasdan natijaga qarash"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Bir vaqtda bir o'zgarish kiritilsa, qaysi o'zgarish yaxshi natija berganini bilasiz."
+      },
+      {
+        "question": "Nega bir xil kirish bilan sinash kerak?",
+        "options": [
+          "Model tezroq ishlashi uchun",
+          "Hisobdan pul yechilmasligi uchun",
+          "Prompt farqini adolatli solishtirish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Kirish o'zgarsa, natijadagi farq prompt tufayli ekanini aniqlab bo'lmaydi."
+      },
+      {
+        "question": "Natijalarni yozib qo'yish nima uchun foydali?",
+        "options": [
+          "Keyinchalik tajribani takrorlash va o'rganish uchun",
+          "Fayl hajmini oshirish uchun",
+          "Modelni o'chirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Yozilgan tajriba keyingi qarorlarni asoslaydi."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Tizim ko'rsatmasi (system instruction)",
+    "goal": "Modelning doimiy xulq-atvorini tizim ko'rsatmasi orqali belgilash.",
+    "tool": "VS Code",
+    "steps": [
+      "SYSTEM_PROMPT o'zgaruvchisini yarating: 'Siz o'quvchilarga aniq va qisqa javob beradigan yordamchisiz'.",
+      "config=types.GenerateContentConfig(system_instruction=SYSTEM_PROMPT) qo'shing.",
+      "Bir xil savolni tizim ko'rsatmasi bilan va undan keyin sinab ko'ring.",
+      "Tizim ko'rsatmasini o'zgartirib, javob uslubi qanday o'zgarishini kuzating.",
+      "Ko'rsatmani alohida fayl (system_prompt.txt) ga chiqaring."
+    ],
+    "checkpoint": "Tizim ko'rsatmasi o'zgarganda javob uslubi ham o'zgarsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Tizim ko'rsatmasi nima uchun kerak?",
+        "options": [
+          "Kalitni yashirish uchun",
+          "Faylni siqish uchun",
+          "Modelning doimiy xulq-atvorini belgilash uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Tizim ko'rsatmasi har bir so'rovda qo'llaniladigan asosiy yo'riqnoma."
+      },
+      {
+        "question": "Tizim ko'rsatmasi foydalanuvchi xabaridan qanday farq qiladi?",
+        "options": [
+          "U doimiy qoida sifatida ishlaydi",
+          "U faqat bir marta yoziladi va o'chadi",
+          "Farqi yo'q"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Tizim ko'rsatmasi suhbat davomida barqaror qoida bo'lib qoladi."
+      },
+      {
+        "question": "Tizim ko'rsatmasida nima yozish yaxshi?",
+        "options": [
+          "Sizning parolingiz",
+          "Rol, uslub va cheklovlar",
+          "Tasodifiy sonlar"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Rol, uslub va cheklovlar modelning javobini boshqaradi."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Javob formatini belgilash va tekshirish",
+    "goal": "Modeldan JSON formatida javob olish va uni dasturda o'qish.",
+    "tool": "VS Code",
+    "steps": [
+      "Promptga aniq yozing: 'Javobni faqat JSON ko'rinishida qaytaring: {\"sarlavha\": \"...\", \"xulosa\": \"...\"}'.",
+      "Javob matnini json.loads() bilan o'qing.",
+      "Agar JSON xato bo'lsa, try/except bilan ushlang va qayta so'rang.",
+      "Kalitlar borligini tekshiring: 'sarlavha' in data.",
+      "Bir necha marta sinab, xato ehtimolini kuzating."
+    ],
+    "checkpoint": "Model JSON qaytarib, dastur uni xatosiz o'qisa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "json.loads() nima qiladi?",
+        "options": [
+          "JSON matnini Python lug'atiga aylantiradi",
+          "Faylni yaratadi",
+          "Kodni ishga tushiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. json.loads() matnni dasturda ishlatish mumkin bo'lgan ma'lumot tuzilmasiga o'tkazadi."
+      },
+      {
+        "question": "Nega javob formatini tekshirish kerak?",
+        "options": [
+          "Formatlash tezlikni oshiradi",
+          "Model har doim kutilgan formatda javob bermasligi mumkin",
+          "Tekshirish shart emas"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Model format buzib javob berishi mumkin, shuning uchun dastur tekshirishi kerak."
+      },
+      {
+        "question": "JSON xato bo'lsa, to'g'ri yo'l qaysi?",
+        "options": [
+          "Dasturni o'chirish",
+          "Xatoni e'tiborsiz qoldirish",
+          "Ushlash va qayta so'rash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. try/except bilan ushlab, qayta so'rov yuborish ishonchli yechim."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Kirish matnini tozalash va uzunlikni cheklash",
+    "goal": "Foydalanuvchi kiritgan matnni modelga yuborishdan oldin tayyorlash.",
+    "tool": "VS Code",
+    "steps": [
+      "clean_input(text) funksiyasini yozing: matnni strip() qiling va ortiqcha bo'shliqlarni olib tashlang.",
+      "Bo'sh kiritishni rad eting: agar matn bo'sh bo'lsa, ValueError tashlang.",
+      "Maksimal uzunlik belgilang, masalan 4000 belgi, va undan uzun bo'lsa kesing yoki xato qaytaring.",
+      "Funksiyani 3 xil kirish bilan sinang: bo'sh, oddiy va juda uzun matn.",
+      "Gemini chaqiruvidan oldin clean_input ni chaqirishni unutmang."
+    ],
+    "checkpoint": "Bo'sh va juda uzun kirishlar to'g'ri ishlov berilsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Kirishni tozalash nima uchun kerak?",
+        "options": [
+          "Modelni o'chirish uchun",
+          "Xato va keraksiz so'rovlarni kamaytirish uchun",
+          "Kalitni yashirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Toza va chegaralangan kirish xatolarni va xarajatni kamaytiradi."
+      },
+      {
+        "question": "Juda uzun matn nega muammo?",
+        "options": [
+          "Model umuman ishlamaydi",
+          "Hech qanday muammo yo'q",
+          "Token sarfi va xarajat oshadi, javob sifati pasayishi mumkin"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Uzun kirish ham pulga, ham sifatga ta'sir qiladi."
+      },
+      {
+        "question": "Bo'sh kiritish uchun eng yaxshi yo'l qaysi?",
+        "options": [
+          "Erta xato berish",
+          "Modelga bo'sh matn yuborish",
+          "Dasturni to'xtatmasdan davom etish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Bo'sh kiritishni erta rad etish keraksiz so'rovni oldini oladi."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "API xatolarini ushlash",
+    "goal": "Gemini chaqiruvidagi xatolarni foydalanuvchiga tushunarli qilib ko'rsatish.",
+    "tool": "VS Code",
+    "steps": [
+      "generate_content chaqiruvini try bloki ichiga oling.",
+      "except Exception as e bilan ushlab, xatoni log'ga yozing (print yoki logging).",
+      "Foydalanuvchiga umumiy xabar qaytaring: 'Hozir javob berib bo'lmadi, qayta urinib ko'ring'.",
+      "Kalitni noto'g'ri qilib sinab ko'ring va xato xabarini kuzating (kalitni log'ga chiqarmang).",
+      "Kalitni tiklang va dastur ishlashini tekshiring."
+    ],
+    "checkpoint": "Noto'g'ri kalitda dastur qulamasdan, tushunarli xabar bersa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Foydalanuvchiga texnik xatoni to'liq ko'rsatish nega xavfli?",
+        "options": [
+          "Xato tezroq tuzatiladi",
+          "Hech qanday xavf yo'q",
+          "Ichki ma'lumot va kalit haqida ma'lumot sizib chiqishi mumkin"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Texnik xabarlar ichki tuzilma yoki kalit fragmentlarini oshkor qilishi mumkin."
+      },
+      {
+        "question": "try/except nima qiladi?",
+        "options": [
+          "Xatoni ushlab, dasturning qulashini oldini oladi",
+          "Kodni tezlashtiradi",
+          "Kalitni shifrlaydi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Ushlangan xato dasturni to'xtatmaydi va boshqarilgan tarzda javob beradi."
+      },
+      {
+        "question": "Xatoni log'ga yozish nima uchun kerak?",
+        "options": [
+          "Kodni kichraytirish uchun",
+          "Muammoni keyin tahlil qilish uchun",
+          "Modelni o'rgatish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Log yozuvlari sabab topishda yordam beradi."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "FastAPI endpoint: Gemini ga so'rov",
+    "goal": "Backend'da POST /api/ask endpointini yaratib, unda Gemini ni chaqirish.",
+    "tool": "VS Code (main.py)",
+    "steps": [
+      "Pydantic modelini yarating: class AskIn(BaseModel): question: str.",
+      "@app.post('/api/ask') endpointini yozing va unda clean_input ni chaqiring.",
+      "Gemini chaqiruvini shu endpoint ichida bajaring va {'answer': response.text} qaytaring.",
+      "uvicorn main:app --reload bilan ishga tushiring.",
+      "http://127.0.0.1:8000/docs sahifasida /api/ask ni sinab ko'ring."
+    ],
+    "checkpoint": "/docs sahifasida so'rov yuborganingizda javob keladi, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Pydantic modeli nima uchun kerak?",
+        "options": [
+          "Kiruvchi ma'lumot shaklini tekshirish uchun",
+          "Ma'lumotlar bazasini yaratish uchun",
+          "Rasmni siqish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Pydantic noto'g'ri shakldagi so'rovlarni avtomatik rad etadi."
+      },
+      {
+        "question": "POST va GET o'rtasidagi asosiy farq nimada?",
+        "options": [
+          "Ikkalasi bir xil",
+          "POST ma'lumot yuborish uchun, GET odatda olish uchun",
+          "GET ma'lumot yubormaydi, POST esa internet"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Savol kabi ma'lumotni yuborish uchun POST odatda ishlatiladi."
+      },
+      {
+        "question": "/docs sahifasi nima?",
+        "options": [
+          "Ma'lumotlar bazasi",
+          "Kalit saqlash joyi",
+          "API'ni brauzerda sinash imkonini beruvchi hujjat"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. FastAPI avtomatik hujjat va sinov sahifasini yaratadi."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Frontend: backendga so'rov yuborish",
+    "goal": "index.html dan fetch orqali /api/ask ga so'rov yuborish.",
+    "tool": "VS Code (index.html)",
+    "steps": [
+      "index.html ga <script> bloki qo'shing va tugma bosilganda ishlaydigan funksiya yozing.",
+      "Kiritish qiymatini document.getElementById('savol').value orqali oling.",
+      "fetch('http://127.0.0.1:8000/api/ask', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({question: savol})}) yuboring.",
+      "Javobni await res.json() bilan o'qing.",
+      "Xato bo'lsa (res.ok false) foydalanuvchiga xabar ko'rsating."
+    ],
+    "checkpoint": "Tugmani bosganingizda backend javobi sahifada chiqsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "fetch() ning body qismida nima yuboriladi?",
+        "options": [
+          "Brauzer tarixi",
+          "JSON ko'rinishidagi so'rov ma'lumoti",
+          "Faqat rasm"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Backend JSON formatidagi ma'lumotni kutadi, shuning uchun JSON.stringify ishlatiladi."
+      },
+      {
+        "question": "res.ok false bo'lsa, nima qilish kerak?",
+        "options": [
+          "Sahifani o'chirish",
+          "Hech narsa qilmaslik",
+          "Xato haqida foydalanuvchiga xabar berish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Xatolikni yashirmasdan ko'rsatish foydalanuvchi uchun yaxshi tajriba beradi."
+      },
+      {
+        "question": "Frontend va backend bir-biriga qaysi yo'l bilan murojaat qiladi?",
+        "options": [
+          "HTTP so'rovlari orqali",
+          "Bitta umumiy fayl orqali",
+          "Faqat elektron pochta orqali"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Veb ilovalar HTTP so'rovlari orqali ma'lumot almashadi."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Yuklanish holati va javobni ko'rsatish",
+    "goal": "So'rov davom etayotganda foydalanuvchiga 'Yuklanmoqda' holatini ko'rsatish.",
+    "tool": "VS Code (index.html)",
+    "steps": [
+      "Yuklanish matnini ko'rsatuvchi element qo'shing: <p id='holat'></p>.",
+      "So'rov boshlanishida holat.textContent = 'Javob tayyorlanmoqda...' qiling.",
+      "Tugaganda (finally bloki) tugmani qayta faollashtiring.",
+      "Javobni javob elementiga yozing, matnni innerHTML emas, textContent bilan.",
+      "Sekin tarmoqda sinab, holat xabari chiqishini tekshiring."
+    ],
+    "checkpoint": "So'rov davomida holat xabari ko'rinib, tugagach yo'qolsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Nega textContent innerHTML dan xavfsizroq?",
+        "options": [
+          "U tezroq ishlaydi",
+          "U rang beradi",
+          "Matnni HTML sifatida bajarmaydi, skript kiritish xavfi kamayadi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Model yoki foydalanuvchi matni HTML sifatida ishlasa, xavfli kod ishlashi mumkin."
+      },
+      {
+        "question": "finally bloki nima uchun kerak?",
+        "options": [
+          "Natija muvaffaqiyatli yoki xato bo'lishidan qat'i nazar bajariladi",
+          "Faqat xato bo'lganda ishlaydi",
+          "Kodni o'chiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. finally bloki tugmani har doim qayta yoqish uchun ishlatiladi."
+      },
+      {
+        "question": "Yuklanish holati nima uchun muhim?",
+        "options": [
+          "Modelni tezlashtirish uchun",
+          "Foydalanuvchi dastur ishlayotganini bilishi uchun",
+          "Kalitni yashirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Javob kechiksa ham foydalanuvchi sahifa qotib qolganini o'ylamaydi."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Oddiy suhbat tarixi (frontend)",
+    "goal": "Savol-javoblar ro'yxatini sahifada saqlash va ko'rsatish.",
+    "tool": "VS Code (index.html)",
+    "steps": [
+      "Massiv yarating: const tarix = [];.",
+      "Har bir savol va javobni tarix.push({savol, javob}) bilan saqlang.",
+      "tarix ni ro'yxat ko'rinishida sahifaga chiqaring (textContent bilan).",
+      "Sahifani yangilaganda tarix yo'qolishini ko'ring.",
+      "Keyingi darsda saqlashni qo'shish uchun belgi qo'ying (localStorage yoki backend)."
+    ],
+    "checkpoint": "Bir necha savoldan keyin barcha savol-javoblar ro'yxatda ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Massiv (array) nima uchun suhbat tarixi uchun mos?",
+        "options": [
+          "Ketma-ket yozuvlarni tartib bilan saqlaydi",
+          "Faqat bitta qiymat saqlaydi",
+          "Faylni shifrlaydi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Massiv tartibni saqlaydi, shuning uchun savollar ketma-ketligi buzilmaydi."
+      },
+      {
+        "question": "Sahifani yangilaganda tarix nega yo'qoladi?",
+        "options": [
+          "Kompyuter o'chirilgan",
+          "Massiv xotirada, sahifa qayta yuklanganda tozalanadi",
+          "Model o'chirilgan"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Oddiy o'zgaruvchi sahifa yangilanganda qayta boshlanadi, saqlash kerak bo'ladi."
+      },
+      {
+        "question": "Keyinchalik tarixni doimiy saqlash uchun qaysi usul mos?",
+        "options": [
+          "Faqat tugmani bosish",
+          "Kalitni o'zgartirish",
+          "localStorage yoki backend bazasi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Brauzer xotirasi yoki server bazasi ma'lumotni sahifa yangilanganidan keyin ham saqlaydi."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Ko'p bosqichli suhbat (chat sessiyasi)",
+    "goal": "Gemini chat sessiyasi orqali model oldingi xabarlarni eslab qolishini ta'minlash.",
+    "tool": "VS Code (main.py)",
+    "steps": [
+      "Chat obyektini yarating: chat = client.chats.create(model='gemini-2.5-flash').",
+      "Birinchi xabar: chat.send_message('Mening ismim Ali').",
+      "Ikkinchi xabar: chat.send_message('Ismimni eslaysanmi?') va javobni tekshiring.",
+      "Sessiyani foydalanuvchi bo'yicha saqlash g'oyasini yozing: har bir foydalanuvchiga alohida chat.",
+      "Oddiy oynaga sessiya chiqishini yozing: for xabar in chat.get_history(): ... (hujjatga qarab tekshiring)."
+    ],
+    "checkpoint": "Model ikkinchi savolga ismingizni to'g'ri javob bersa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Chat sessiyasi nima uchun kerak?",
+        "options": [
+          "Kalitni yangilash uchun",
+          "Model oldingi xabarlarni kontekst sifatida ishlatishi uchun",
+          "Faylni saqlash uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Sessiya oldingi xabarlarni kontekstga qo'shib, suhbatni davom ettirish imkonini beradi."
+      },
+      {
+        "question": "Har bir foydalanuvchi uchun alohida sessiya nega kerak?",
+        "options": [
+          "Model tezroq ishlashi uchun",
+          "Narxni pasaytirish uchun",
+          "Bir foydalanuvchining suhbati boshqasiga aralashmasligi uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Sessiyalarni ajratmasangiz, shaxsiy ma'lumot boshqa foydalanuvchiga ko'rinib qolishi mumkin."
+      },
+      {
+        "question": "Uzun suhbatda nima muammo bo'lishi mumkin?",
+        "options": [
+          "Kontekst oynasi to'lib, eski xabarlar e'tibordan chetda qolishi",
+          "Model umuman ishlamay qolishi",
+          "Hech narsa"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kontekst chegarasi bor, shuning uchun uzoq suhbatda eski ma'lumot yo'qolishi mumkin."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Foydalanuvchi profilini kontekstga qo'shish",
+    "goal": "Foydalanuvchi ismi va maqsadini tizim ko'rsatmasiga qo'shib, javobni shaxsiylashtirish.",
+    "tool": "VS Code",
+    "steps": [
+      "Foydalanuvchi maqsadini so'rang: masalan, 'Siz kim uchun yordam beryapsiz?' (bitta jumla).",
+      "Bu ma'lumotni tizim ko'rsatmasiga qo'shing: f-string bilan 'Foydalanuvchi: {ism}, maqsad: {maqsad}'.",
+      "Shu profil bilan bir savolni yuboring va oddiy savolga javobni solishtiring.",
+      "Profil maydonlari faqat kerakli ma'lumot bo'lishini tekshiring: parol yoki telefon raqami kiritilmasin.",
+      "Profilni sessiyaga bog'lang (4-darsdagi kabi)."
+    ],
+    "checkpoint": "Profil qo'shilganda javob foydalanuvchi maqsadiga moslashsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Profil ma'lumotini promptga qo'shish nima beradi?",
+        "options": [
+          "Modelni bepul qiladi",
+          "Kalitni yashiradi",
+          "Javobni foydalanuvchi ehtiyojiga moslashtiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Kontekst javobning uslubi va mazmunini aniqlashtiradi."
+      },
+      {
+        "question": "Profilga qaysi ma'lumotni qo'shmaslik kerak?",
+        "options": [
+          "Parol va bank kartasi ma'lumotlari",
+          "Qiziqishlar",
+          "Maqsad"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Parol va moliyaviy ma'lumot hech qachon AI so'roviga qo'shilmasligi kerak."
+      },
+      {
+        "question": "Profil ma'lumoti qaerda ishlatiladi?",
+        "options": [
+          "Faqat CSS da",
+          "Tizim ko'rsatmasi yoki kontekstda",
+          "Rasm nomida"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Profil kontekst sifatida modelga beriladi."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Uzun matnlarni bo'lib qayta ishlash",
+    "goal": "Kontekst chegarasidan katta matnni bo'laklarga bo'lib, har birini qayta ishlash.",
+    "tool": "VS Code",
+    "steps": [
+      "split_text(matn, hajm=3000) funksiyasini yozing: matnni xatboshi bo'yicha bo'ling.",
+      "Har bo'lakni alohida Gemini ga yuboring va natijalarni ro'yxatga yig'ing.",
+      "Barcha bo'lak xulosalarini birlashtirib, yakuniy so'rov yuboring.",
+      "Qisqa matn bilan sinang: u bitta bo'lakda qolishi kerak.",
+      "Bo'laklar orasida ma'lumot yo'qolmasligini tekshiring."
+    ],
+    "checkpoint": "Uzun matn bo'laklarga bo'linib, yakuniy xulosa chiqsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Nega uzun matnni bo'lish kerak?",
+        "options": [
+          "Kontekst chegarasidan oshmaslik va sifatni saqlash uchun",
+          "Modelni o'chirish uchun",
+          "Kalitni almashtirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Juda uzun kirish chegaradan oshishi yoki javob sifatini pasaytirishi mumkin."
+      },
+      {
+        "question": "Bo'laklarni xatboshi bo'yicha bo'lish nega yaxshi?",
+        "options": [
+          "Matn hajmini ko'paytirish uchun",
+          "Ma'no buzilmasligi uchun",
+          "Tezlikni kamaytirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Fikr o'rtasidan kesilsa, model noto'g'ri tushunishi mumkin."
+      },
+      {
+        "question": "Bo'lak xulosalarini nima qilish kerak?",
+        "options": [
+          "Ularni o'chirish",
+          "Har birini alohida ko'rsatish, boshqa hech narsa qilmaslik",
+          "Birlashtirib, yakuniy xulosa so'rash"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Ikki bosqichli xulosa uzun hujjatning asosiy mazmunini saqlaydi."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Hujjatni xulosa qilish funksiyasi",
+    "goal": "Foydalanuvchi yuklagan matnni xulosa qiladigan funksiya yasash.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "Frontend'ga textarea qo'shing: foydalanuvchi matnni shu yerga kiritadi.",
+      "Backend'da POST /api/summarize endpointini yarating, u matnni qabul qiladi.",
+      "Prompt: 'Quyidagi matnni 5 ta asosiy fikrda xulosa qil' va matnni shu so'rovga qo'shing.",
+      "Frontend'dan endpointni chaqiring va natijani chiqaring.",
+      "Uzun matn bilan sinang va 21-darsdagi bo'lish funksiyasini ulang."
+    ],
+    "checkpoint": "Matn kiritib, 5 ta fikrdan iborat xulosa olsangiz, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Xulosa so'rovida prompt nimani aniq ko'rsatishi kerak?",
+        "options": [
+          "Dasturchining ismi",
+          "Xulosa uzunligi va formati",
+          "Serverning manzili"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Aniq uzunlik va format natijani nazorat qilish imkonini beradi."
+      },
+      {
+        "question": "Foydalanuvchi matnini modelga yuborishdan oldin nima qilish kerak?",
+        "options": [
+          "Uni o'chirish",
+          "Uni shifrlash, chunki bu shart emas",
+          "Tozalash va uzunligini tekshirish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. 13-darsdagi tozalash va uzunlik chegarasi bu yerda ham kerak."
+      },
+      {
+        "question": "Xulosa natijasiga qanday munosabatda bo'lish kerak?",
+        "options": [
+          "Muhim faktlarni asl matn bilan tekshirish",
+          "Har doim to'liq ishonish",
+          "Hech qachon o'qimaslik"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Model xulosada xato yoki qo'shimcha ma'lumot qo'shishi mumkin."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Tarjima va uslub o'zgartirish funksiyasi",
+    "goal": "Matnni bir tildan boshqasiga yoki boshqa uslubga o'tkazuvchi funksiya yasash.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "Frontend'ga tanlov qo'shing: til (uz, en, ru) va uslub (rasmiy, oddiy).",
+      "Backend'da POST /api/transform endpointini yarating: matn, til va uslubni qabul qilsin.",
+      "Prompt'ni shakllantiring: 'Matnni {til} tiliga {uslub} uslubda tarjima qil. Faqat natijani qaytar.'",
+      "Bir matnni 3 xil uslubda sinab ko'ring.",
+      "Natija bo'sh yoki noto'g'ri bo'lsa, qayta so'rov yuboring."
+    ],
+    "checkpoint": "Bir matn uchun ikki xil uslubdagi natija ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "'Faqat natijani qaytar' degan ko'rsatma nima uchun kerak?",
+        "options": [
+          "Tarjimani tezlashtirish uchun",
+          "Kalitni yashirish uchun",
+          "Modelning ortiqcha izohlaridan qochish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Aniq cheklov javobni dastur uchun toza qiladi."
+      },
+      {
+        "question": "Til va uslubni prompt'da ajratib yozish nega muhim?",
+        "options": [
+          "Har bir parametr aniq ishlatilishi uchun",
+          "Prompt qisqaroq bo'lishi uchun",
+          "Ahamiyati yo'q"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Aniq parametrlar natijani nazorat qilishga yordam beradi."
+      },
+      {
+        "question": "Tarjima natijasi yomon chiqsa, nima qilish kerak?",
+        "options": [
+          "Tarjimani umuman ishlatmaslik",
+          "Promptni aniqlashtirib, qayta so'rash",
+          "Kalitni o'zgartirish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. 9–10-darslardagi kabi promptni yaxshilash eng samarali yo'l."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Rasm bilan ishlash (multimodal)",
+    "goal": "Foydalanuvchi yuborgan rasmni Gemini ga yuborib, rasm haqida savol berish.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "Frontend'ga rasm yuklash maydoni qo'shing: <input type='file' accept='image/*'>.",
+      "Backend'da rasm baytlarini qabul qiling: UploadFile yoki base64 matn.",
+      "google-genai da rasmni qismga aylantiring: types.Part.from_bytes(data=baytlar, mime_type='image/png').",
+      "contents=[rasm_qismi, 'Bu rasmda nima bor?'] ko'rinishida yuboring.",
+      "Kichik rasm bilan sinang va javobni tekshiring. Rasm hajmini cheklang."
+    ],
+    "checkpoint": "Rasm yuborilganda model rasm mazmuniga oid javob bersa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Multimodal model nima qila oladi?",
+        "options": [
+          "Matn va rasm kabi bir necha turdagi ma'lumotni qayta ishlaydi",
+          "Faqat raqamlar bilan ishlaydi",
+          "Faqat audio chiqaradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Multimodal modellar bir nechta ma'lumot turini birgalikda tushunadi."
+      },
+      {
+        "question": "Rasm yuklashda nima cheklash kerak?",
+        "options": [
+          "Foydalanuvchi ismi",
+          "Fayl hajmi va turi",
+          "Ekran o'lchami"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Katta yoki noto'g'ri turdagi fayllar xarajat va xavfsizlik muammosi tug'diradi."
+      },
+      {
+        "question": "Rasmda shaxsiy ma'lumot bo'lsa, nima qilish kerak?",
+        "options": [
+          "Hamma narsani modelga yuborish",
+          "Rasmni internetga joylash",
+          "Foydalanuvchini ogohlantirish va maxfiylikka e'tibor berish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Shaxsiy ma'lumotli rasmlar uchun foydalanuvchi roziligi va ehtiyotkorlik kerak."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Xatoliklarni qayta urinish bilan boshqarish",
+    "goal": "Vaqtincha xatoliklarda so'rovni bir necha marta qayta yuborish mexanizmini qo'shish.",
+    "tool": "VS Code",
+    "steps": [
+      "Gemini chaqiruvini funksiyaga o'rang: def ask_with_retry(prompt, urinishlar=3).",
+      "Har bir urinish orasida kutish qo'shing: time.sleep(2 ** urinish) (eksponensial kutish).",
+      "Faqat vaqtincha xatolarda qayta urinish qiling; noto'g'ri kalitda urinmang.",
+      "Barcha urinishlar tugasa, foydalanuvchiga tushunarli xabar qaytaring.",
+      "Tarmoqni o'chirib yoqib, funksiya qanday ishlashini sinab ko'ring."
+    ],
+    "checkpoint": "Vaqtincha xatoda dastur qayta urinadi va oxirida toza xabar qaytaradi, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Eksponensial kutish nima?",
+        "options": [
+          "Har safar bir xil kutish",
+          "Har safar kutish vaqtini ikki barobar oshirish",
+          "Kutishni umuman olmaslik"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Kutish vaqti har urinishda oshib, serverni ortiqcha yuklamaydi."
+      },
+      {
+        "question": "Qaysi xatoda qayta urinish foydasiz?",
+        "options": [
+          "Vaqtinchalik tarmoq uzilishi",
+          "Serverning band bo'lishi",
+          "Noto'g'ri API kalit"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Noto'g'ri kalit qayta urinishda ham xato beradi, shuning uchun uni tuzatish kerak."
+      },
+      {
+        "question": "Foydalanuvchiga xato haqida qanday xabar berish kerak?",
+        "options": [
+          "Qisqa va tushunarli xabar, ichki xato matnisiz",
+          "To'liq stack trace",
+          "Kalit qiymatini"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Maxfiy ma'lumot va ichki xatolar foydalanuvchiga ko'rsatilmasligi kerak."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "API kalitni xavfsiz saqlash",
+    "goal": "GEMINI_API_KEY ni kodga yozmasdan, muhit o'zgaruvchisi orqali ishlatish.",
+    "tool": "VS Code",
+    "steps": [
+      "Kalitni .env faylga yozing: GEMINI_API_KEY=sizning_kalitingiz.",
+      "load_dotenv() ni main.py boshida chaqiring.",
+      ".gitignore ga .env qatorini qo'shing, shunda u GitHub ga chiqmaydi.",
+      "Kodda kalitni qidiring: kalit matni biror joyda yozilgan bo'lmasligi kerak.",
+      "Kalit tasodifan oshkor bo'lsa, darhol Google AI Studio dan yangisini oling va eskisini o'chiring."
+    ],
+    "checkpoint": "Kalit faqat .env da turadi va kod ichida hech qayerda ko'rinmaydi, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "API kalitni kodga yozish nega xavfli?",
+        "options": [
+          "Kod sekin ishlaydi",
+          "Kalit eskiradi",
+          "Kod GitHub ga yuklansa, kalit begonalarga ochiladi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Ochiq kod ichidagi kalitni har kim ko'rib, sizning hisobingizda ishlatishi mumkin."
+      },
+      {
+        "question": ".env faylini nima uchun .gitignore ga qo'shamiz?",
+        "options": [
+          "Git uni yuklamasligi uchun",
+          "Uni tezroq o'qish uchun",
+          "Uni o'chirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. .gitignore git ga shu faylni e'tiborsiz qoldirishni aytadi."
+      },
+      {
+        "question": "Kalit oshkor bo'lsa, birinchi qadam nima?",
+        "options": [
+          "Hech narsa qilmaslik",
+          "Kalitni bekor qilib, yangisini yaratish",
+          "Kodni o'chirish, kalitni qoldirish"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Eski kalit bekor qilinmaguncha, uni ishlatish mumkin bo'lib qoladi."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "So'rovlar chastotasini cheklash",
+    "goal": "Bir foydalanuvchi juda tez-tez so'rov yubormasligi uchun cheklov qo'shish.",
+    "tool": "VS Code",
+    "steps": [
+      "Har bir foydalanuvchi uchun oxirgi so'rov vaqtini saqlang: oddiy lug'at, masalan last_call[user_id].",
+      "Qoidani belgilang: masalan, 3 soniyada bir so'rovdan ko'p bo'lmasin.",
+      "Cheklovdan oshsa, HTTP 429 (Too Many Requests) qaytaring.",
+      "Frontend'da 429 kelganda 'Biroz kuting' xabarini ko'rsating.",
+      "Tez ketma-ket 5 so'rov yuborib, cheklov ishlashini tekshiring."
+    ],
+    "checkpoint": "Tez so'rovlar rad etilib, 429 xabari ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Chastota cheklovi nima uchun kerak?",
+        "options": [
+          "Xarajat va suiiste'mollikdan himoya qilish uchun",
+          "Javobni sekinlashtirish uchun",
+          "Foydalanuvchini o'chirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Cheklov bir foydalanuvchi serverni yoki API byudjetini tugatib qo'yishining oldini oladi."
+      },
+      {
+        "question": "Qaysi HTTP kodi 'juda ko'p so'rov' degani?",
+        "options": [
+          "404",
+          "429",
+          "500"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. 429 Too Many Requests cheklov oshganini bildiradi."
+      },
+      {
+        "question": "Cheklovni faqat frontend'da qo'yish yetarlimi?",
+        "options": [
+          "Ha, yetarli",
+          "Faqat test vaqtida kerak",
+          "Yo'q, serverda ham bo'lishi kerak"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Frontend'ni chetlab o'tish mumkin, shuning uchun cheklov serverda bo'lishi shart."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Javob uslubini sozlash (temperature)",
+    "goal": "temperature va max_output_tokens parametrlari natijaga qanday ta'sir qilishini tajriba orqali ko'rish.",
+    "tool": "VS Code",
+    "steps": [
+      "Bir savolni temperature 0.0, 0.7 va 1.2 bilan uch marta yuboring.",
+      "Har bir javobni yonma-yon yozib, farqini belgilang (aniqlik yoki ijodkorlik).",
+      "max_output_tokens ni 50 ga tushirib, javob qanday qisqarishini kuzating.",
+      "Faktlar uchun past temperature, g'oyalar uchun yuqori temperature tanlash qoidasini yozing.",
+      "Eng yaxshi sozlamani config.py faylida saqlang."
+    ],
+    "checkpoint": "Uch xil temperature natijasi farqli ekanini ko'rsatsangiz, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Past temperature qanday javob beradi?",
+        "options": [
+          "Doim tasodifiy",
+          "Barqaror va aniqroq",
+          "Hech qachon javob bermaydi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Past temperature modelni ehtimoli eng yuqori so'zlarni tanlashga yaqinlashtiradi."
+      },
+      {
+        "question": "Faktlar va hisob-kitob uchun qaysi sozlama mos?",
+        "options": [
+          "Yuqori temperature",
+          "Temperature umuman yo'q",
+          "Past temperature"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Aniq javob kerak bo'lganda past temperature xatolarni kamaytiradi."
+      },
+      {
+        "question": "max_output_tokens nima qiladi?",
+        "options": [
+          "Javobning eng katta uzunligini cheklaydi",
+          "Kirish matnini o'chiradi",
+          "Modelni almashtiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Bu parametr javob uzunligiga chegara qo'yadi."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Suhbat tarixini cheklash",
+    "goal": "Uzun suhbatda faqat oxirgi N ta xabarni saqlab, xarajat va xatolikni kamaytirish.",
+    "tool": "VS Code",
+    "steps": [
+      "Har bir sessiya uchun xabarlar ro'yxatini saqlang.",
+      "Ro'yxat uzunligi MAX_HISTORY (masalan 10) dan oshsa, eng eski xabarlarni o'chiring.",
+      "O'chirishdan oldin tizim ko'rsatmasini doim saqlab qoling.",
+      "Ro'yxatni so'rovga qo'shib, javob sifatini tekshiring.",
+      "20 ta xabar yuborib, tarix qisqarishini loglarda ko'ring."
+    ],
+    "checkpoint": "Tarix MAX_HISTORY dan oshmaydi va suhbat davom etadi, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Tarixni cheklashning asosiy sababi nima?",
+        "options": [
+          "Modelni yangilash",
+          "Foydalanuvchi ismini o'zgartirish",
+          "Kontekst hajmi va xarajatni nazorat qilish"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Har bir so'rovda juda ko'p eski xabar yuborilsa, xarajat va kechikish oshadi."
+      },
+      {
+        "question": "Tarixni qisqartirganda nimani saqlash kerak?",
+        "options": [
+          "Tizim ko'rsatmasini",
+          "Eng eski xabarni",
+          "Hech narsani"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Tizim ko'rsatmasi model xulq-atvorini belgilaydi, u o'chirilmasligi kerak."
+      },
+      {
+        "question": "Eski xabarlar o'chirilganda nima yo'qoladi?",
+        "options": [
+          "Model ularni eslay olmaydi",
+          "Ma'lumotlar bazasidan ham o'chadi",
+          "Hech narsa"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Agar tarix ma'lumotlar bazasida saqlansa, u yerdan ham o'chirish kerak bo'ladi."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Suhbatlarni SQLite bazasiga saqlash",
+    "goal": "Xabarlarni SQLite jadvaliga yozib, sahifa yangilanganda ham tarix saqlanishini ta'minlash.",
+    "tool": "VS Code",
+    "steps": [
+      "messages jadvali yarating: id, user_id, role, content, created_at ustunlari bilan.",
+      "Har bir foydalanuvchi va javob uchun INSERT so'rovini yozing.",
+      "Sahifa ochilganda GET /api/history?user_id= orqali oxirgi 20 ta xabarni qaytaring.",
+      "SQL so'rovlarida parametrlardan foydalaning (?), matnni to'g'ridan-to'g'ri qo'shmang.",
+      "Serverni qayta ishga tushirib, tarix saqlanganini tekshiring."
+    ],
+    "checkpoint": "Sahifani yangilagandan keyin ham oldingi xabarlar ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "SQL so'rovlarida ? belgisi nima uchun ishlatiladi?",
+        "options": [
+          "Qiymatlarni xavfsiz uzatish uchun (SQL injection oldini olish)",
+          "Jadvalni o'chirish uchun",
+          "Tezlik uchun emas, faqat chiroy uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Parametr sifatida berilgan qiymat SQL kodi sifatida bajarilmaydi."
+      },
+      {
+        "question": "created_at ustuni nima uchun kerak?",
+        "options": [
+          "Parolni saqlash uchun",
+          "Xabarlarni vaqt bo'yicha tartiblash uchun",
+          "Kalitni yashirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Vaqt bo'yicha tartiblash suhbatni to'g'ri ketma-ketlikda ko'rsatadi."
+      },
+      {
+        "question": "Tarixni nechta xabar bilan cheklash kerak?",
+        "options": [
+          "Hammasini, cheksiz",
+          "Faqat bitta",
+          "Oxirgi 20 tasini"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Oxirgi 20 ta xabar odatda yetarli va sahifani yengil ushlab turadi."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Foydalanuvchi ro'yxatdan o'tishi",
+    "goal": "Telegram ID yoki oddiy ism orqali foydalanuvchini tanib olish va har biriga o'z tarixini berish.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "Brauzer uchun oddiy ism so'raydigan forma yarating va ismni localStorage ga saqlang.",
+      "Backend'da POST /api/users endpointi yarating: ism qabul qilib, user_id qaytarsin.",
+      "Har bir so'rovda user_id ni yuboring va tarixni shu foydalanuvchi uchun saqlang.",
+      "Ismni bo'sh yoki juda uzun bo'lishidan himoya qiling (1–30 belgi).",
+      "Ikki xil foydalanuvchi bilan kirib, tarixlar aralashmasligini tekshiring."
+    ],
+    "checkpoint": "Ikki foydalanuvchining tarixi alohida ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Har bir foydalanuvchi uchun user_id nima uchun kerak?",
+        "options": [
+          "Rangni o'zgartirish uchun",
+          "Tarixlarni ajratish uchun",
+          "Sahifani tezlashtirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. user_id bilan har kimning suhbati alohida saqlanadi."
+      },
+      {
+        "question": "Ism uchun uzunlik cheklovi nega kerak?",
+        "options": [
+          "Ismni qisqartirish uchun",
+          "Kalitni himoya qilish uchun",
+          "Bazani va sahifani buzilishdan saqlash uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Juda uzun yoki bo'sh kiritish xatolik va xavf tug'diradi."
+      },
+      {
+        "question": "localStorage da nimani saqlash mumkin?",
+        "options": [
+          "Kichik, foydalanuvchiga oid qulaylik ma'lumotlarini",
+          "Gemini kalitini",
+          "Boshqa foydalanuvchilarning parolini"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Brauzer xotirasi maxfiy ma'lumot uchun xavfsiz emas; kalit serverda turadi."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Chat interfeysini yaratish",
+    "goal": "Xabarlar xabarlar ro'yxati ko'rinishida chiqadigan, telefonda qulay chat oynasi yasash.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "Xabarlar uchun ikki xil uslub yarating: foydalanuvchi (o'ng) va AI (chap).",
+      "Ro'yxatni eng pastga avtomatik aylantiring: useEffect ichida scrollIntoView.",
+      "Matn kiritish maydoni va yuborish tugmasini yarating; Enter bosilganda yuborilsin.",
+      "Ekran kengligi 360px bo'lganda ham gorizontal aylanish bo'lmasligini tekshiring.",
+      "Bo'sh xabar yuborilmasligini qo'shing."
+    ],
+    "checkpoint": "Telefon o'lchamida chat qulay ko'rinsa va xabarlar ketma-ket chiqsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Chat oynasida xabarlar qanday tartibda chiqadi?",
+        "options": [
+          "Tasodifiy tartibda",
+          "Eng eskisi pastda",
+          "Eng yangisi pastda"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Chat odatda eng so'nggi xabarni pastda ko'rsatadi."
+      },
+      {
+        "question": "Telefon uchun dizaynda nimaga e'tibor berish kerak?",
+        "options": [
+          "Kichik ekranda ham matn o'qiladigan va tugma bosish oson bo'lishi",
+          "Eng katta shrift va bitta ustun",
+          "Oynani kengaytirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Mobil foydalanuvchi uchun o'qish va bosish qulayligi muhim."
+      },
+      {
+        "question": "Bo'sh xabar yuborilmasligi uchun nima qilinadi?",
+        "options": [
+          "Serverga yuboriladi",
+          "Matnni trim() qilib tekshiriladi",
+          "Tugma o'chiriladi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Bo'sh matn tekshiruvi odatda trim() qilingan qiymat bilan amalga oshiriladi, shuning uchun serverga yuborilmaydi."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Telegram WebApp bilan integratsiya",
+    "goal": "Ilovani Telegram ichida ochib, foydalanuvchi ma'lumotini xavfsiz olish.",
+    "tool": "VS Code va brauzer",
+    "steps": [
+      "index.html ga Telegram WebApp skriptini qo'shing: telegram-web-app.js.",
+      "Frontend'da window.Telegram.WebApp.ready() ni chaqiring va initData ni oling.",
+      "initData ni backend'ga yuboring; backend uni BOT_TOKEN bilan tekshirsin.",
+      "Tekshiruvdan o'tgan foydalanuvchi uchun user_id ni saqlang.",
+      "Brauzerda ochilganda ham ilova ishlashini ta'minlang (initData bo'lmasa, 31-darsdagi ism bilan)."
+    ],
+    "checkpoint": "Telegram ichida ochilganda foydalanuvchi ismi avtomatik ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "initData ni nima uchun backend'da tekshiramiz?",
+        "options": [
+          "Foydalanuvchi o'zgartirgan ma'lumotni rad etish uchun",
+          "Sahifani tezlashtirish uchun",
+          "Rangni o'zgartirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Frontend'dan kelgan ma'lumotni o'zgartirish mumkin, shuning uchun imzo tekshiriladi."
+      },
+      {
+        "question": "BOT_TOKEN qayerda saqlanadi?",
+        "options": [
+          "Frontend kodida, ochiq holda",
+          "Serverning .env faylida",
+          "Brauzer localStorage da"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Bot tokeni maxfiy; uni faqat server bilishi kerak."
+      },
+      {
+        "question": "Ilova brauzerda ochilganda nima qilinadi?",
+        "options": [
+          "Ilova ishlamay qoladi",
+          "Hisob o'chiriladi",
+          "Ism so'raladi va ishlash davom etadi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Telegram bo'lmagan foydalanuvchi uchun oddiy ro'yxatdan o'tish usuli ishlatiladi."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Avtomatik testlar yozish",
+    "goal": "Backend endpointlari to'g'ri ishlashini pytest bilan tekshirish.",
+    "tool": "VS Code",
+    "steps": [
+      "pip install pytest va httpx ni o'rnating.",
+      "tests/test_api.py faylini yarating va /api/health uchun test yozing.",
+      "POST /api/ask uchun bo'sh kiritish 400 qaytarishini tekshiring.",
+      "Gemini chaqiruvini soxta (mock) funksiya bilan almashtirib, javob formatini tekshiring.",
+      "pytest buyrug'ini ishga tushiring va hamma testlar o'tishini kuting."
+    ],
+    "checkpoint": "pytest barcha testlarni o'tkazsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Mock nima uchun ishlatiladi?",
+        "options": [
+          "Kodni shifrlash uchun",
+          "Tashqi xizmatga haqiqiy so'rov yubormasdan testlash uchun",
+          "Serverni yangilash uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Mock testlarni tez, bepul va takrorlanuvchi qiladi."
+      },
+      {
+        "question": "Bo'sh kiritish testi nimani tekshiradi?",
+        "options": [
+          "Rangni",
+          "Shriftni",
+          "Kirishni tekshirish qoidasi ishlashini"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Bo'sh kiritish rad etilishi kerak, aks holda xato kelib chiqadi."
+      },
+      {
+        "question": "Test o'tmasa nima qilish kerak?",
+        "options": [
+          "Xatoni topib, kodni tuzatish va qayta ishga tushirish",
+          "Testni o'chirish",
+          "Hech narsa qilmaslik"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Test xatoni ko'rsatadi; uni tuzatgach testni qayta ishga tushirish kerak."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Kodni fayllarga ajratish",
+    "goal": "Bitta katta main.py o'rniga sozlamalar, xizmat va marshrutlarni alohida fayllarda saqlash.",
+    "tool": "VS Code",
+    "steps": [
+      "config.py yarating: model nomi, MAX_HISTORY va boshqa sozlamalar shu yerda turadi.",
+      "services/gemini.py yarating: Gemini bilan ishlaydigan funksiyalar.",
+      "routes/chat.py yarating: FastAPI marshrutlari shu yerda bo'ladi.",
+      "main.py da faqat ilovani yig'ing va routerni ulang.",
+      "Ilovani qayta ishga tushirib, hamma endpointlar ishlashini tekshiring."
+    ],
+    "checkpoint": "main.py qisqa bo'lib, endpointlar oldingidek ishlasa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Sozlamalarni config.py da saqlashning foydasi nima?",
+        "options": [
+          "Kodni sekinlashtirish",
+          "Fayllarni yashirish",
+          "Bitta joyda o'zgartirish imkoni"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Model yoki limitni o'zgartirish uchun bir joyga qarash yetarli."
+      },
+      {
+        "question": "Xizmat qatlami (services) nima vazifani bajaradi?",
+        "options": [
+          "Tashqi API bilan ishlashni marshrutdan ajratadi",
+          "Frontend stilini yozadi",
+          "Ma'lumotni o'chiradi"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Gemini chaqiruvini xizmat qatlamiga chiqarsak, kodni tekshirish va almashtirish osonlashadi."
+      },
+      {
+        "question": "Fayllarga ajratgandan keyin nima tekshirilishi kerak?",
+        "options": [
+          "Fayl nomlari uzunligi",
+          "Import yo'llari va endpointlar ishlashi",
+          "Rang sxemasi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Import xatolari ilovani ishga tushishiga to'sqinlik qiladi."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Loglar va xarajatni kuzatish",
+    "goal": "Har bir so'rov uchun qisqa log yozish va so'rovlar sonini hisoblash.",
+    "tool": "VS Code",
+    "steps": [
+      "logging modulini sozlang: INFO darajasi va vaqt belgisi bilan.",
+      "Har bir Gemini chaqiruvi uchun foydalanuvchi ID, vaqt va xato holatini yozing (matn emas).",
+      "Kunlik so'rovlar sonini hisoblaydigan oddiy hisoblagich qo'shing.",
+      "Loglarda API kalit yoki shaxsiy matn ko'rinmasligini tekshiring.",
+      "Google AI Studio dagi kvota sahifasini ochib, sarfni solishtiring."
+    ],
+    "checkpoint": "Log faylida so'rovlar vaqti va holati ko'rinsa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Logga nimani yozmaslik kerak?",
+        "options": [
+          "API kalit va foydalanuvchi shaxsiy matni",
+          "Vaqt va xato turi",
+          "So'rov holati"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Log fayllar ko'p joyda saqlanadi, maxfiy ma'lumot ulardan oshkor bo'lishi mumkin."
+      },
+      {
+        "question": "Kunlik so'rovlarni hisoblash nima uchun kerak?",
+        "options": [
+          "Rangni tanlash uchun",
+          "Xarajat va limitni nazorat qilish uchun",
+          "Shriftni o'zgartirish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Bepul limit yoki to'lov byudjeti tugamasidan oldin ogohlantirish olasiz."
+      },
+      {
+        "question": "Log darajasi INFO va ERROR farqi nima?",
+        "options": [
+          "Ikkisi ham bir xil",
+          "INFO xato degani",
+          "ERROR muhim xatolarni, INFO oddiy hodisalarni bildiradi"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Daraja loglarni saralash va muammoni tez topish uchun ishlatiladi."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Loyihani GitHub ga yuklash",
+    "goal": "Loyihani git bilan boshqarib, GitHub omboriga xavfsiz yuklash.",
+    "tool": "VS Code va terminal",
+    "steps": [
+      "Loyiha papkasida git init buyrug'ini bering.",
+      ".gitignore tekshirilsin: .env, venv/, node_modules/, dist/ va *.db kiritilgan bo'lsin.",
+      "git add . va git commit -m 'Birinchi versiya' buyruqlarini bajaring.",
+      "GitHub da yangi bo'sh repo yarating va git remote add origin orqali ulang.",
+      "git push -u origin main bilan yuklang va GitHub da .env yo'qligini tekshiring."
+    ],
+    "checkpoint": "GitHub da kod ko'rinadi, lekin .env va kalit ko'rinmaydi, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "git add . dan oldin nima tekshirilishi kerak?",
+        "options": [
+          "Hech narsa",
+          ".gitignore dagi maxfiy fayllar kiritilganmi",
+          "Kompyuter yangilanganmi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Maxfiy fayl commit bo'lsa, tarixdan o'chirish qiyin bo'ladi."
+      },
+      {
+        "question": "Commit xabari nima uchun kerak?",
+        "options": [
+          "O'zgarish nima ekanini qisqa yozish uchun",
+          "Faylni shifrlash uchun",
+          "Serverni ishga tushirish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Yaxshi commit xabari loyiha tarixini tushunarli qiladi."
+      },
+      {
+        "question": "Kalit tasodifan commit bo'lib ketsa, nima qilish kerak?",
+        "options": [
+          "Kalitni darhol bekor qilish va yangisini olish",
+          "Hech narsa",
+          "Faqat GitHub da reponi o'chirish"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Kalitni o'chirish git tarixida saqlanib qoladi, shuning uchun uni bekor qilish shart."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Backend ni PythonAnywhere ga joylash",
+    "goal": "FastAPI backend ni PythonAnywhere da ishga tushirib, ochiq manzil olish.",
+    "tool": "PythonAnywhere (brauzer)",
+    "steps": [
+      "PythonAnywhere da bepul hisob oching va Files bo'limiga kodni yuklang (yoki git clone qiling).",
+      "Bash konsolida virtual muhit yarating va pip install -r requirements.txt ni bajaring.",
+      "Web bo'limida yangi web app yarating, Manual configuration ni tanlang va wsgi.py yo'lini ko'rsating.",
+      "Environment variables bo'limida GEMINI_API_KEY va FRONTEND_ORIGINS ni kiriting.",
+      "Reload tugmasini bosing va https://username.pythonanywhere.com/api/health manzilini oching."
+    ],
+    "checkpoint": "/api/health javob bersa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "PythonAnywhere da kalitni qayerga kiritamiz?",
+        "options": [
+          "Environment variables bo'limiga",
+          "Frontend faylga",
+          "Kodga yozib"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Maxfiy kalit kodda emas, serverning muhit sozlamasida turishi kerak."
+      },
+      {
+        "question": "Reload nima uchun kerak?",
+        "options": [
+          "Fayllarni o'chirish uchun",
+          "Kod va sozlamalar o'zgarganda ilovani qayta yuklash uchun",
+          "Parolni yangilash uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Yangi o'zgarishlar faqat reload dan keyin ishga tushadi."
+      },
+      {
+        "question": "/api/health nima uchun tekshiriladi?",
+        "options": [
+          "Gemini javobini olish uchun",
+          "Backend ishlayotganini tez tekshirish uchun",
+          "Foydalanuvchini ro'yxatdan o'tkazish uchun"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Oddiy health endpoint ilovaning tirikligini tekshirish uchun eng qulay yo'l."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Frontend ni Netlify ga joylash",
+    "goal": "React frontend ni build qilib, Netlify da ochiq holda chiqarish va backend manzilini ulash.",
+    "tool": "Brauzer va terminal",
+    "steps": [
+      ".env.production faylida VITE_API_URL=https://username.pythonanywhere.com yozing.",
+      "npm install va npm run build buyruqlarini bajaring; dist papkasi hosil bo'ladi.",
+      "Netlify da Add new site, Deploy manually orqali dist papkasini sudrab tashlang.",
+      "Chiqqan manzilni oching va chat ishlashini tekshiring.",
+      "Netlify manzilini backend FRONTEND_ORIGINS ga qo'shing va backend ni qayta yuklang."
+    ],
+    "checkpoint": "Netlify manzilida chat javob bersa, bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "VITE_API_URL nima uchun kerak?",
+        "options": [
+          "Frontend backend manzilini bilishi uchun",
+          "Netlify parolini saqlash uchun",
+          "Rangni o'zgartirish uchun"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Frontend so'rovlarni shu manzilga yuboradi."
+      },
+      {
+        "question": "CORS xatosi chiqsa, nima tekshiriladi?",
+        "options": [
+          "Shrift turi",
+          "Netlify manzili FRONTEND_ORIGINS da bormi",
+          "Fayl hajmi"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Backend faqat ruxsat berilgan manzildan so'rovni qabul qiladi."
+      },
+      {
+        "question": "dist papkasi nima?",
+        "options": [
+          "Tayyor, yig'ilgan sayt fayllari",
+          "Manba kodining zaxira nusxasi",
+          "Gemini modeli"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Build natijasi brauzerda ochiladigan tayyor fayllardan iborat."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Yakuniy loyiha va keyingi qadamlar",
+    "goal": "Loyihani to'liq tekshirib, o'zingizning AI ilovangizni rasmiy ishga tayyorlash.",
+    "tool": "Brauzer va VS Code",
+    "steps": [
+      "Tekshiruv ro'yxatini bajaring: chat, tarix, xato xabari, log, mobil ko'rinish.",
+      "Ikki xil telefon yoki brauzerda sinab ko'ring va tarix ajratilganini tekshiring.",
+      "README faylga loyiha tavsifi, ishga tushirish va sozlash qadamlarini yozing.",
+      "Keyingi g'oyani tanlang: ovozli yordamchi, hujjat xulosachisi yoki o'quv bot.",
+      "Loyihani do'stingizga ko'rsatib, fikr-mulohaza oling va keyingi versiyani rejalashtiring."
+    ],
+    "checkpoint": "Loyiha ishlaydi, hujjatlangan va keyingi versiya rejasi tayyor bo'lsa, amaliy bosqich tugallangan.",
+    "quiz": [
+      {
+        "question": "Yakuniy tekshiruvda birinchi navbatda nimaga e'tibor beriladi?",
+        "options": [
+          "Faqat logotip rangi",
+          "Asosiy oqim: kiritish, javob, xato holati",
+          "Fayl nomlari"
+        ],
+        "correct": 1,
+        "explanation": "To'g'ri javob: B. Foydalanuvchi uchun asosiy ish oqimi ishlashi eng muhim."
+      },
+      {
+        "question": "README nima uchun yoziladi?",
+        "options": [
+          "Loyihani boshqalar va o'zingiz qayta ishga tushira olishi uchun",
+          "Serverni tezlashtirish uchun",
+          "Kodni yashirish uchun"
+        ],
+        "correct": 2,
+        "explanation": "To'g'ri javob: C. Yaxshi hujjat loyihani tushunarli va takrorlanadigan qiladi."
+      },
+      {
+        "question": "Keyingi versiyani rejalashtirishda nima muhim?",
+        "options": [
+          "Hech narsani o'zgartirmaslik",
+          "Foydalanuvchi fikrini hisobga olish",
+          "Faqat eski kodni saqlash"
+        ],
+        "correct": 0,
+        "explanation": "To'g'ri javob: A. Real foydalanuvchi fikri yangi versiyani yo'naltiradi."
+      }
+    ]
+  }
+]
