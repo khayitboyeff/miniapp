@@ -5,9 +5,11 @@
 html,
 body {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: #fafafa;
+  color: #18181b;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html.dark body {
@@ -16,4 +18,29 @@ html.dark body {
 
 button {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Standart ko'k fokus/tanlash rangi o'rniga oltin aksent */
+:root {
+  --accent: #d4a017;
+  --accent-strong: #f5b82e;
+}
+a, button, input, textarea, select {
+  accent-color: var(--accent);
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.25);
+}
+::selection {
+  background: rgba(212, 160, 23, 0.35);
+}
+
+html.dark body {
+  color: #fafafa;
 }

@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Times New Roman"', "Times", "serif"],
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
       },
     },
   },

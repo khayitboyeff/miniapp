@@ -50,16 +50,11 @@ async function api(path, body) {
 function Logo({ className = 'h-9 w-9' }) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-label="AI Full Course logotipi">
-      <rect x="2" y="2" width="44" height="44" rx="12" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      {[16, 24, 32].map((x) => (
-        <g key={x} stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-          <line x1={x} y1="6" x2={x} y2="11" />
-          <line x1={x} y1="37" x2={x} y2="42" />
-        </g>
-      ))}
-      <rect x="13" y="13" width="22" height="22" rx="4" fill="currentColor" />
-      <text x="24" y="29" textAnchor="middle" fontSize="11" fontWeight="700"
-        fontFamily="'Times New Roman', Times, serif" className="fill-white dark:fill-zinc-900">AI</text>
+      <rect x="1" y="1" width="46" height="46" rx="13" fill="#18181b" />
+      <rect x="5.5" y="5.5" width="37" height="37" rx="9" fill="none" stroke="#f5b82e" strokeOpacity="0.55" strokeWidth="1" />
+      <text x="24" y="28" textAnchor="middle" fontSize="15" fontWeight="800" letterSpacing="-0.6"
+        fontFamily="Inter, system-ui, sans-serif" fill="#fafafa">AI</text>
+      <rect x="14" y="33" width="20" height="3" rx="1.5" fill="#f5b82e" />
     </svg>
   );
 }
@@ -98,8 +93,8 @@ function Icon({ name, className = 'h-5 w-5' }) {
 /* ------------------------------------------------------------------ */
 
 const card = 'rounded-2xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900';
-const btnPrimary = 'inline-flex w-full items-center justify-center gap-2 rounded-xl bg-zinc-900 px-4 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300';
-const btnGhost = 'inline-flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-300 px-4 py-3 text-sm font-bold transition hover:bg-zinc-100 disabled:opacity-40 dark:border-zinc-700 dark:hover:bg-zinc-800';
+const btnPrimary = 'inline-flex w-full items-center justify-center gap-2 rounded-xl bg-zinc-900 px-4 py-3 text-sm font-semibold tracking-wide text-white shadow-sm transition hover:bg-zinc-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40 dark:bg-amber-400 dark:text-zinc-950 dark:hover:bg-amber-300';
+const btnGhost = 'inline-flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-300 px-4 py-3 text-sm font-semibold transition hover:bg-zinc-100 active:scale-[0.99] disabled:opacity-40 dark:border-zinc-700 dark:hover:bg-zinc-800';
 const linkBtn = 'inline-flex items-center gap-1 text-sm text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100';
 
 /* ------------------------------------------------------------------ */
@@ -123,14 +118,37 @@ function Modal({ title, onClose, children }) {
 }
 
 function Seal({ gold }) {
-  const color = gold ? '#b8860b' : '#6b7178';
+  const c = gold ? '#b8860b' : '#6b7178';
+  const id = gold ? 'seal-path-gold' : 'seal-path-silver';
   return (
-    <svg viewBox="0 0 80 80" className="h-16 w-16" aria-label="Rasmiy muhr">
-      <circle cx="40" cy="40" r="37" fill="none" stroke={color} strokeWidth="2.5" />
-      <circle cx="40" cy="40" r="30" fill={color} />
-      <text x="40" y="37" textAnchor="middle" fontSize="8" fontWeight="700" fill="#fff" fontFamily="'Times New Roman', serif">RASMIY</text>
-      <text x="40" y="48" textAnchor="middle" fontSize="8" fontWeight="700" fill="#fff" fontFamily="'Times New Roman', serif">MUHR</text>
+    <svg viewBox="0 0 120 120" className="h-20 w-20 shrink-0" aria-label="Rasmiy muhr">
+      <defs>
+        <path id={id} d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
+      </defs>
+      <circle cx="60" cy="60" r="57" fill={c} />
+      <circle cx="60" cy="60" r="50" fill="none" stroke="#fff" strokeWidth="1" strokeDasharray="2 3" opacity="0.7" />
+      <circle cx="60" cy="60" r="36" fill="none" stroke="#fff" strokeWidth="1.2" opacity="0.8" />
+      <text fontSize="8.5" fontWeight="700" letterSpacing="2" fill="#fff" fontFamily="Inter, sans-serif">
+        <textPath href={`#${id}`}>AI FULL COURSE • RASMIY MUHR •</textPath>
+      </text>
+      <path d="M60 42 L64.7 53.5 L77 54 L67.3 61.6 L70.5 73.5 L60 66.7 L49.5 73.5 L52.7 61.6 L43 54 L55.3 53.5 Z" fill="#fff" />
     </svg>
+  );
+}
+
+function Signature({ name, title, src }) {
+  return (
+    <div className="w-[40%]">
+      {src ? (
+        <img src={src} alt={`${title} imzosi`} className="mx-auto h-8 w-auto object-contain" />
+      ) : (
+      <svg viewBox="0 0 120 36" className="mx-auto h-8 w-full text-zinc-800" aria-hidden="true">
+        <path d="M4 26 C 14 8, 24 6, 28 20 S 38 32, 48 18 S 60 6, 70 22 S 86 30, 96 12 S 108 20, 116 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+      )}
+      <div className="border-t border-zinc-900 pt-1 text-[12px] font-bold">{name}</div>
+      <div className="text-[10px] uppercase tracking-wider text-zinc-600">{title}</div>
+    </div>
   );
 }
 
@@ -144,9 +162,9 @@ function Certificate({ name, tier, xp }) {
     <div id="certificate" className={`mx-auto max-w-md border-[10px] border-double bg-white p-7 text-center text-zinc-900 ${frame}`}>
       <Logo className="mx-auto h-10 w-10 text-zinc-900" />
       <p className="mt-2 text-[11px] tracking-[0.3em]">AI FULL COURSE</p>
-      <h3 className="mt-4 text-2xl font-bold tracking-[0.2em]">SERTIFIKAT</h3>
+      <h3 className="font-display mt-4 text-2xl font-bold tracking-[0.2em]">SERTIFIKAT</h3>
       <p className="mt-3 text-xs text-zinc-600">Ushbu sertifikat quyidagi shaxsga berildi:</p>
-      <p className="mt-2 border-b border-zinc-900 pb-1 text-2xl font-bold italic">{name}</p>
+      <p className="font-display mt-2 border-b border-zinc-900 pb-1 text-2xl font-bold italic">{name}</p>
       <p className="mt-3 text-xs leading-relaxed text-zinc-600">
         {gold
           ? "Sun'iy intellekt va prompt injiniring yakuniy imtihonini 100% natija bilan topshirgani uchun."
@@ -155,10 +173,10 @@ function Certificate({ name, tier, xp }) {
       <div className={`mt-4 inline-block rounded-md px-4 py-1.5 text-sm font-bold ${ribbon}`}>
         {gold ? 'AI MUTAXASSISI' : 'AI PRO'} · {xp} XP
       </div>
-      <div className="mt-7 flex items-end justify-between text-[11px]">
-        <div className="w-1/3"><div className="h-7" /><div className="border-t border-zinc-900 pt-1">Direktor</div></div>
+      <div className="mt-7 flex items-end justify-between">
+        <Signature name={siteConfig.director} title="Direktor" src={siteConfig.director_signature} />
         <Seal gold={gold} />
-        <div className="w-1/3"><div className="h-7" /><div className="border-t border-zinc-900 pt-1">Kurs rahbari</div></div>
+        <Signature name={siteConfig.course_lead} title="Kurs rahbari" src={siteConfig.course_lead_signature} />
       </div>
     </div>
   );
@@ -168,7 +186,7 @@ function ProgressBar({ value, max }) {
   const pct = Math.min(100, Math.round((value / max) * 100));
   return (
     <div className="h-2 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
-      <div className="h-full rounded-full bg-gradient-to-r from-zinc-400 via-zinc-600 to-zinc-900 transition-all duration-500 dark:from-zinc-500 dark:via-zinc-300 dark:to-zinc-100" style={{ width: `${pct}%` }} />
+      <div className="h-full rounded-full bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 transition-all duration-500" style={{ width: `${pct}%` }} />
     </div>
   );
 }
@@ -219,6 +237,13 @@ export default function App() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark);
     writeStore(THEME_KEY, dark ? 'dark' : 'light');
+    try {
+      const bg = dark ? '#09090b' : '#fafafa';
+      tgApp?.setHeaderColor?.(bg);
+      tgApp?.setBackgroundColor?.(bg);
+    } catch {
+      /* eski Telegram versiyalarida bu metodlar bo'lmasligi mumkin */
+    }
   }, [dark]);
 
   /* Telegram va ma'lumotlarni yuklash */
@@ -341,7 +366,7 @@ export default function App() {
     setScreen('practice');
     if (!practice && user) {
       try {
-        setPractice(await api(`/api/practice?telegram_id=${encodeURIComponent(user.telegram_id)}`));
+        setPractice(await api(`/api/practice?telegram_id=${encodeURIComponent(user.telegram_id)}&init_data=${encodeURIComponent(tgApp?.initData || '')}`));
       } catch (e) {
         setError(e.message);
       }
@@ -381,7 +406,7 @@ export default function App() {
   /* ---------------------------------------------------------------- */
 
   return (
-    <div className="min-h-screen bg-zinc-50 font-serif text-zinc-900 transition-colors dark:bg-zinc-950 dark:text-zinc-100">
+    <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100">
       <style>{`@media print {
         body * { visibility: hidden !important; }
         #certificate, #certificate * { visibility: visible !important; }
@@ -424,11 +449,12 @@ export default function App() {
         {/* ---------- BOSH SAHIFA ---------- */}
         {screen === 'home' && (
           <section className="pt-8 text-center">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-zinc-900 text-white shadow-xl dark:bg-zinc-100 dark:text-zinc-900">
-              <Logo className="h-12 w-12" />
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl shadow-xl ring-1 ring-amber-400/40">
+              <Logo className="h-20 w-20" />
             </div>
-            <p className="mt-6 text-[11px] uppercase tracking-[0.35em] text-zinc-500">Sun'iy intellekt kursi</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-[0.12em]">AI FULL COURSE</h1>
+            <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-600 dark:text-amber-400">Sun'iy intellekt kursi</p>
+            <h1 className="font-display mt-2 text-4xl font-bold tracking-[0.08em]">AI FULL COURSE</h1>
+            <div className="mx-auto mt-4 h-0.5 w-12 rounded-full bg-amber-400" />
             <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
               60 ta dars, har bir darsdan so'ng test va yakuniy imtihon. 60% va undan yuqori natija — sertifikat.
             </p>
@@ -462,7 +488,7 @@ export default function App() {
                     <Icon name="trophy" className="h-4 w-4" /> Reyting
                   </button>
                 </div>
-                <button onClick={openPractice} className={btnPrimary}>
+                <button onClick={openPractice} className={`${btnGhost} border-amber-400/70 text-amber-700 hover:bg-amber-50 dark:text-amber-300 dark:hover:bg-amber-400/10`}>
                   <Icon name="zap" className="h-4 w-4" /> AMALIY LOYIHA (2-BOSQICH)
                 </button>
                 {!course && !error && <p className="text-xs text-zinc-500">Yuklanmoqda…</p>}
