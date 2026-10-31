@@ -195,7 +195,7 @@ def exam_questions():
 
 @app.get("/api/practice")
 def practice(telegram_id: str, init_data: Optional[str] = None):
-    require_self(init_data, telegram_id)
+    # Amaliy darslar matni umumiy, foydalanuvchiga bog'liq emas: initData talab qilinmaydi
     return [{"id":p["id"],"title":p["title"],"goal":p["goal"],"tool":p["tool"],"steps":p["steps"],
              "checkpoint":p["checkpoint"],
              "quiz":[{"question":q["question"],"options":q["options"],"correct":q["correct"],"explanation":q["explanation"]} for q in p["quiz"]]}
