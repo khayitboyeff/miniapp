@@ -15,7 +15,7 @@ DB_PATH = Path(os.getenv("DATABASE_PATH") or (ROOT / "ai_course.db"))
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
 TG_WEBHOOK_SECRET = os.getenv("TG_WEBHOOK_SECRET", "").strip()
 WEBAPP_URL = os.getenv("WEBAPP_URL", "").strip()
-PRACTICE_PRICE_STARS = int(os.getenv("PRACTICE_PRICE_STARS", "300") or 300)
+PRACTICE_PRICE_STARS = int(os.getenv("PRACTICE_PRICE_STARS", "100") or 100)
 FRONTEND_ORIGINS = [x.strip() for x in os.getenv("FRONTEND_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if x.strip()]
 LESSONS = json.loads((ROOT / "course.json").read_text(encoding="utf-8"))
 FINAL_QUESTIONS = json.loads((ROOT / "final_exam.json").read_text(encoding="utf-8"))
@@ -61,6 +61,9 @@ def init_db():
         CREATE TABLE IF NOT EXISTS payments (
           charge_id TEXT PRIMARY KEY, telegram_id TEXT NOT NULL,
           amount INTEGER NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        );
+        CREATE TABLE IF NOT EXISTS promo_codes (
+          code_hash TEXT PRIMARY KEY, used_by TEXT, used_at TEXT
         );
         """)
 init_db()
@@ -198,15 +201,46 @@ def course():
 def exam_questions():
     return [{"id":q["id"],"question":q["question"],"options":q["options"]} for q in FINAL_QUESTIONS]
 
+def has_practice_access(con, tid):
+    paid = con.execute("SELECT 1 FROM payments WHERE telegram_id=? LIMIT 1", (tid,)).fetchone()
+    promo = con.execute("SELECT 1 FROM promo_codes WHERE used_by=? LIMIT 1", (tid,)).fetchone()
+    return bool(paid or promo)
+
+def hash_code(code: str) -> str:
+    return hashlib.sha256(code.strip().upper().encode("utf-8")).hexdigest()
+
+class RedeemIn(BaseModel):
+    telegram_id: str = Field(min_length=1, max_length=64)
+    code: str = Field(min_length=3, max_length=64)
+    init_data: Optional[str] = None
+
+@app.post("/api/practice/redeem")
+def redeem_practice_code(data: RedeemIn):
+    if BOT_TOKEN and verify_init_data(data.init_data) != data.telegram_id:
+        raise HTTPException(403, "Telegram foydalanuvchi identifikatori mos emas.")
+    h = hash_code(data.code)
+    with connect() as con:
+        # Kod faqat bitta foydalanuvchi uchun bir marta ishlaydi (atomik UPDATE)
+        cur = con.execute("UPDATE promo_codes SET used_by=?, used_at=CURRENT_TIMESTAMP WHERE code_hash=? AND used_by IS NULL",
+                          (data.telegram_id, h))
+        if cur.rowcount == 0:
+            row = con.execute("SELECT used_by FROM promo_codes WHERE code_hash=?", (h,)).fetchone()
+            if row is None:
+                raise HTTPException(400, "Promokod noto'g'ri.")
+            if row["used_by"] == data.telegram_id:
+                return {"ok": True}
+            raise HTTPException(409, "Bu promokod allaqachon ishlatilgan.")
+        return {"ok": True}
+
 @app.get("/api/practice")
 def practice(telegram_id: str, init_data: Optional[str] = None):
-    # 2-bosqich pullik: faqat to'lov qilgan foydalanuvchi ko'ra oladi
+    # 2-bosqich pullik: to'lov qilgan yoki promokod kiritgan foydalanuvchi ko'ra oladi
     if BOT_TOKEN:
         if verify_init_data(init_data) != telegram_id:
             raise HTTPException(403, "Telegram foydalanuvchi identifikatori mos emas.")
         with connect() as con:
-            paid = con.execute("SELECT 1 FROM payments WHERE telegram_id=? LIMIT 1", (telegram_id,)).fetchone()
-        if not paid:
+            allowed = has_practice_access(con, telegram_id)
+        if not allowed:
             raise HTTPException(402, "2-bosqich pullik.")
     return [{"id":p["id"],"title":p["title"],"goal":p["goal"],"tool":p["tool"],"steps":p["steps"],
              "checkpoint":p["checkpoint"],

@@ -231,6 +231,9 @@ export default function App() {
   const [practiceOpen, setPracticeOpen] = useState(null);
   const [practiceAnswers, setPracticeAnswers] = useState({});
   const [practiceDone, setPracticeDone] = useState(() => readStore('aifc-practice-done') || {});
+  const [promoCode, setPromoCode] = useState('');
+  const [promoBusy, setPromoBusy] = useState(false);
+  const [promoMsg, setPromoMsg] = useState('');
 
   const initData = tgApp?.initData || null;
   const completed = new Set(user?.completed_lessons || []);
@@ -376,6 +379,23 @@ export default function App() {
         if (e.status === 402) setPracticeLocked(true);
         else setError(e.message);
       }
+    }
+  }
+
+  async function redeemPromo() {
+    if (!user || !promoCode.trim()) return;
+    setPromoBusy(true);
+    setPromoMsg('');
+    try {
+      await api('/api/practice/redeem', { telegram_id: user.telegram_id, code: promoCode.trim(), init_data: tgApp?.initData || null });
+      setPromoMsg('Kod qabul qilindi!');
+      setPracticeLocked(false);
+      setPromoCode('');
+      await openPractice();
+    } catch (e) {
+      setPromoMsg(e.message || 'Xatolik yuz berdi.');
+    } finally {
+      setPromoBusy(false);
     }
   }
 
@@ -762,11 +782,27 @@ export default function App() {
               <div className={`${card} p-5`}>
                 <p className="font-semibold">2-bosqich pullik</p>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-                  40 ta amaliy dars va mini-testlar. To'lov Telegram Stars orqali amalga oshiriladi.
+                  40 ta amaliy dars va mini-testlar. Telegram Stars orqali yoki promokod bilan ochiladi.
                 </p>
                 <button onClick={buyPractice} disabled={buying} className={`${btnPrimary} mt-4`}>
-                  <Icon name="zap" className="h-4 w-4" /> {buying ? 'Yuklanmoqda…' : "Sotib olish"}
+                  <Icon name="zap" className="h-4 w-4" /> {buying ? 'Yuklanmoqda…' : "100 ⭐ bilan ochish"}
                 </button>
+                <div className="my-4 flex items-center gap-3 text-xs text-zinc-500">
+                  <span className="h-px flex-1 bg-zinc-300 dark:bg-zinc-700" /> yoki <span className="h-px flex-1 bg-zinc-300 dark:bg-zinc-700" />
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    value={promoCode}
+                    onChange={(e) => setPromoCode(e.target.value.toUpperCase())}
+                    placeholder="AIFC-XXXX-XXXX"
+                    maxLength={64}
+                    className="min-w-0 flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-2 text-sm uppercase tracking-wider dark:border-zinc-700"
+                  />
+                  <button onClick={redeemPromo} disabled={promoBusy || !promoCode.trim()} className={btnGhost}>
+                    {promoBusy ? '…' : 'Tekshirish'}
+                  </button>
+                </div>
+                {promoMsg && <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{promoMsg}</p>}
               </div>
             ) : !practice ? (
               <p className="text-sm text-zinc-500">Yuklanmoqda…</p>
